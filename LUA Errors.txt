@@ -1,0 +1,37 @@
+=== Lua Error Report ===
+Time: 2026-07-26 22:33:56
+Mod: AutoExpedition (async)
+
+Error:
+[handle_unreal_property_value]: Was unable to retrieve property 'Get' mapped to 'ScriptStruct /Script/CoreUObject.Guid'
+
+Traceback:
+[handle_unreal_property_value]: Was unable to retrieve property 'Get' mapped to 'ScriptStruct /Script/CoreUObject.Guid'
+stack traceback:
+	[C]: in metamethod 'index'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:118: in function <...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:118>
+	[C]: in function 'pcall'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:118: in upvalue 'unwrap'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:163: in upvalue 'guidString'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:189: in upvalue 'modelKey'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:1067: in function 'ProcessExpeditionLoop'
+
+=== Lua Error Report ===
+Time: 2026-07-26 22:35:27
+Mod: AutoExpedition (async)
+
+Error:
+[handle_unreal_property_value]: Was unable to retrieve property 'Get' mapped to 'ScriptStruct /Script/CoreUObject.Guid'
+
+Traceback:
+[handle_unreal_property_value]: Was unable to retrieve property 'Get' mapped to 'ScriptStruct /Script/CoreUObject.Guid'
+stack traceback:
+	[C]: in metamethod 'index'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:118: in function <...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:118>
+	[C]: in function 'pcall'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:118: in upvalue 'unwrap'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:163: in upvalue 'guidString'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:189: in upvalue 'modelKey'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:616: in upvalue 'getUiModelFor'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:984: in upvalue 'startDispatch'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:1088: in function 'ProcessExpeditionLoop'
