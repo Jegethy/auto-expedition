@@ -206,6 +206,24 @@ local function filledSlotCount(container)
     return count
 end
 
+local function filledSlotIds(container)
+    local slots = getSlots(container)
+    local result = {}
+    if not slots then return result end
+
+    pcall(function()
+        for index = 1, #slots do
+            local slot = unwrap(slots[index])
+            if valid(slot) and slotCount(slot) > 0 then
+                local id = slotId(slot)
+                if id then result[#result + 1] = id end
+            end
+        end
+    end)
+
+    return result
+end
+
 local function snapshotInventory(controller)
     local inventory = getInventory(controller)
     if not inventory then return nil end
@@ -302,16 +320,29 @@ local function getUiModelFor(model, key)
         if valid(candidate) then candidates[#candidates + 1] = candidate end
     end
 
+    local targetKey = modelKey(model)
+    for _, candidate in ipairs(candidates) do
+        if modelKey(candidate) == targetKey then
+            return candidate
+        end
+    end
+
+    local targetBaseCampId = getBaseCampId(model)
+    if targetBaseCampId ~= nil then
+        for _, candidate in ipairs(candidates) do
+            if getBaseCampId(candidate) == targetBaseCampId then
+                return candidate
+            end
+        end
+    end
+
     if #candidates == 1 then return candidates[1] end
     if #candidates == 0 then
         logOnce(key, "No expedition UI model is loaded; waiting for the station menu to replicate.")
         return nil
     end
 
-    -- GetConcreteModelInstanceId uses an out parameter. Calling it without a
-    -- destination is unsafe on some UE4SS Lua builds, so do not guess when
-    -- more than one station menu exists.
-    logOnce(key, "Found %d expedition UI models; waiting until one station menu remains open.", #candidates)
+    logOnce(key, "Found %d expedition UI models; waiting for the matching station menu to replicate.", #candidates)
     return nil
 end
 
@@ -359,9 +390,9 @@ local function beginBulkStorage(model, key, workflow)
         return
     end
 
-    local slotIds = changedInventorySlots(controller, workflow.inventorySnapshot)
+    local slotIds = workflow.slotIds or changedInventorySlots(controller, workflow.inventorySnapshot)
     if #slotIds == 0 then
-        log("Reward container emptied, but no newly filled inventory slots were found; nothing to bulk-store.")
+        log("No transferable item slots were found; nothing to bulk-store.")
         workflow.phase = "wait_state"
         schedule(key, model, Config.StorageFinishDelay)
         return
@@ -387,26 +418,6 @@ local function beginBulkStorage(model, key, workflow)
     workflow.slotIds = slotIds
     workflow.baseCampId = baseCampId
     schedule(key, model, Config.StorageReadyDelay)
-end
-
-local function collectExpeditionLoot(inventory, containerId)
-    local methodNames = {
-        "RequestMoveItemToInventoryFromTargetContainer_ToServer",
-        "RequestMoveItemFromTargetContainerToInventory_ToServer",
-        "RequestFillSlotToInventoryFromTargetContainer_ToServer",
-    }
-
-    for _, methodName in ipairs(methodNames) do
-        local method = value(function() return inventory[methodName] end)
-        if type(method) == "function" then
-            local ok = invoke("collect expedition loot via " .. methodName, function()
-                return method(inventory, containerId)
-            end)
-            if ok then return true end
-        end
-    end
-
-    return false
 end
 
 workflowStep = function(model, key, workflow)
@@ -512,6 +523,16 @@ workflowStep = function(model, key, workflow)
             return
         end
 
+        if Config.EnableEasyBulkStorage ~= false and workflow.rewardBulkStorageTried ~= true then
+            local slotIds = filledSlotIds(container)
+            if #slotIds > 0 then
+                workflow.rewardBulkStorageTried = true
+                workflow.slotIds = slotIds
+                beginBulkStorage(model, key, workflow)
+                return
+            end
+        end
+
         if filledSlotCount(container) == 0 then
             beginBulkStorage(model, key, workflow)
             return
@@ -526,9 +547,9 @@ workflowStep = function(model, key, workflow)
             return
         end
 
-        if not collectExpeditionLoot(inventory, containerId) then
-            logOnce(key, "No supported loot transfer RPC was available for the expedition reward container.")
-        end
+        invoke("collect expedition loot", function()
+            return inventory:RequestFillSlotToInventoryFromTargetContainer_ToServer(containerId)
+        end)
         workflow.phase = "collect"
         workflow.attempts = (workflow.attempts or 0) + 1
         if workflow.attempts > Config.MaxCollectionRetries then
