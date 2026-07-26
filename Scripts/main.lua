@@ -423,6 +423,13 @@ local function getBaseCampId(model)
     return value(function() return baseCamp.ID end)
 end
 
+local function sameGuid(left, right)
+    local leftText = guidString(left)
+    local rightText = guidString(right)
+    if leftText == nil or rightText == nil then return false end
+    return leftText == rightText
+end
+
 local function getRewardContainer(model)
     local module = value(function() return model:GetItemContainerModule() end)
     if not valid(module) then
@@ -493,17 +500,13 @@ local function buildSlotMoves(container)
 end
 
 local function getStorageTargetContainerId(model)
-    local baseCampId = getBaseCampId(model)
-    if baseCampId == nil then
-        dlog("No base camp id available for station %s", tostring(modelKey(model)))
-        return nil
-    end
-
     local candidateClassNames = {
         "PalMapObjectGuildChestModel",
         "PalMapObjectItemChestModel",
         "PalMapObjectGlobalPalStorageModel",
     }
+
+    local fallbackContainerId = nil
 
     for _, className in ipairs(candidateClassNames) do
         local candidates = value(function()
@@ -515,8 +518,10 @@ local function getStorageTargetContainerId(model)
         end
 
         for _, candidate in ipairs(candidates) do
-            if valid(candidate) and getBaseCampId(candidate) == baseCampId then
+            if valid(candidate) then
                 local candidateKey = modelKey(candidate)
+                local candidateInstanceId = value(function() return candidate:GetInstanceId() end)
+                    or value(function() return candidate:GetModelInstanceId() end)
                 local access = value(function() return candidate:GetItemChestContainerAccess() end)
                 if not valid(access) then
                     access = value(function() return candidate:GetItemContainerAccess() end)
@@ -528,20 +533,43 @@ local function getStorageTargetContainerId(model)
                     end)
                     local containerId = getContainerId(container)
                     if containerId ~= nil then
-                        dlog(
-                            "Selected storage target: class=%s station=%s containerId=%s",
-                            tostring(className),
-                            tostring(candidateKey),
-                            shortValue(containerId)
-                        )
-                        return containerId
+                        local ownerId = value(function() return container.OwnerMapObjectInstanceId end)
+                        local ownerMatches = ownerId ~= nil and candidateInstanceId ~= nil and sameGuid(ownerId, candidateInstanceId)
+
+                        if ownerMatches then
+                            dlog(
+                                "Selected storage target: class=%s station=%s owner=%s containerId=%s",
+                                tostring(className),
+                                tostring(candidateKey),
+                                shortValue(ownerId),
+                                shortValue(containerId)
+                            )
+                            return containerId
+                        end
+
+                        if fallbackContainerId == nil then
+                            fallbackContainerId = containerId
+                            dlog(
+                                "Queued fallback storage target: class=%s station=%s owner=%s containerId=%s",
+                                tostring(className),
+                                tostring(candidateKey),
+                                shortValue(ownerId),
+                                shortValue(containerId)
+                            )
+                        end
+                    else
+                        dlog("Container access found but no container id for class=%s station=%s", tostring(className), tostring(candidateKey))
                     end
-                    dlog("Container access found but no container id for class=%s station=%s", tostring(className), tostring(candidateKey))
                 elseif debugVerbose() then
                     dlog("Candidate has no valid container access: class=%s station=%s", tostring(className), tostring(candidateKey))
                 end
             end
         end
+    end
+
+    if fallbackContainerId ~= nil then
+        dlog("Using fallback storage target container %s for station %s", shortValue(fallbackContainerId), tostring(modelKey(model)))
+        return fallbackContainerId
     end
 
     dlog("No base storage target container matched station %s", tostring(modelKey(model)))
