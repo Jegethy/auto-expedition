@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_BP_Status_PlayerInflictEffect_MuddyAttackDown_HPP
+#define UE4SS_SDK_BP_Status_PlayerInflictEffect_MuddyAttackDown_HPP
+
+class UBP_Status_PlayerInflictEffect_MuddyAttackDown_C : public UBP_Status_PlayerInflictEffect_PoisonedAttackDown_C
+{
+}; // Size: 0x101
+
+#endif

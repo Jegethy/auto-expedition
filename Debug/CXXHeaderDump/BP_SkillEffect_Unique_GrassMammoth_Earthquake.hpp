@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_BP_SkillEffect_Unique_GrassMammoth_Earthquake_HPP
+#define UE4SS_SDK_BP_SkillEffect_Unique_GrassMammoth_Earthquake_HPP
+
+class ABP_SkillEffect_Unique_GrassMammoth_Earthquake_C : public ABP_SkillEffect_ExpandingAreaDamageBase_C
+{
+}; // Size: 0x529
+
+#endif

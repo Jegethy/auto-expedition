@@ -1,0 +1,10 @@
+#ifndef UE4SS_SDK_PalWazaBulletEmiiterOverlap_Unique_ThunderDragonMan_ThunderSwordAttack_HPP
+#define UE4SS_SDK_PalWazaBulletEmiiterOverlap_Unique_ThunderDragonMan_ThunderSwordAttack_HPP
+
+class UPalWazaBulletEmiiterOverlap_Unique_ThunderDragonMan_ThunderSwordAttack_C : public UPalWazaBulletEmiiterOverlapBase
+{
+
+    void GetBulletEmiiterOverlapSphere(TArray<FPalWazaBulletEmiiterOverlapSphere>& Spheres);
+}; // Size: 0x28
+
+#endif

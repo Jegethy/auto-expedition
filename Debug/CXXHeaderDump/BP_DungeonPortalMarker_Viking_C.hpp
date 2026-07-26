@@ -1,0 +1,11 @@
+#ifndef UE4SS_SDK_BP_DungeonPortalMarker_Viking_C_HPP
+#define UE4SS_SDK_BP_DungeonPortalMarker_Viking_C_HPP
+
+class ABP_DungeonPortalMarker_Viking_C_C : public APalDungeonPointMarker
+{
+    class UStaticMeshComponent* StaticMesh;                                           // 0x02E0 (size: 0x8)
+    class USceneComponent* DefaultSceneRoot;                                          // 0x02E8 (size: 0x8)
+
+}; // Size: 0x2F0
+
+#endif

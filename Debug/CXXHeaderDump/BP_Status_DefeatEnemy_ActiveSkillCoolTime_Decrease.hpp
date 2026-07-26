@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_BP_Status_DefeatEnemy_ActiveSkillCoolTime_Decrease_HPP
+#define UE4SS_SDK_BP_Status_DefeatEnemy_ActiveSkillCoolTime_Decrease_HPP
+
+class UBP_Status_DefeatEnemy_ActiveSkillCoolTime_Decrease_C : public UPalStatus_DefeatActiveSkillCTDecrease
+{
+}; // Size: 0xD0
+
+#endif

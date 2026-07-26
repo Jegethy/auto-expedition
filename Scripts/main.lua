@@ -616,7 +616,8 @@ local function getUiModelFor(model, key)
     end
 
     if #candidates > 1 then
-        logOnce(key, "Found multiple expedition UI models; waiting for one that matches this station/base.")
+        dlog("Found multiple expedition UI models; falling back to the first valid candidate for station %s", tostring(key))
+        return candidates[1]
     end
     return nil
 end

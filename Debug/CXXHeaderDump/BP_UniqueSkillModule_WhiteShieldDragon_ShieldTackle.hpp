@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_BP_UniqueSkillModule_WhiteShieldDragon_ShieldTackle_HPP
+#define UE4SS_SDK_BP_UniqueSkillModule_WhiteShieldDragon_ShieldTackle_HPP
+
+class UBP_UniqueSkillModule_WhiteShieldDragon_ShieldTackle_C : public UBP_UniqueSkillModule_Tackle_C
+{
+}; // Size: 0x239
+
+#endif

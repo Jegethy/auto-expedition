@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_BP_BuildObjectInstallStrategy_ItemProvider_CrudeOil_HPP
+#define UE4SS_SDK_BP_BuildObjectInstallStrategy_ItemProvider_CrudeOil_HPP
+
+class UBP_BuildObjectInstallStrategy_ItemProvider_CrudeOil_C : public UPalBuildObjectInstallStrategyPlaceOnItemProvider
+{
+}; // Size: 0x60
+
+#endif

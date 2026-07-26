@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_BP_MonsterAIController_RaidBoss_LegendDeer_2_HPP
+#define UE4SS_SDK_BP_MonsterAIController_RaidBoss_LegendDeer_2_HPP
+
+class ABP_MonsterAIController_RaidBoss_LegendDeer_2_C : public ABP_MonsterAIController_RaidBoss_LegendDeer_C
+{
+}; // Size: 0x5C0
+
+#endif

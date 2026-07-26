@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_BP_UniqueSkillModule_Tackle_FireKirin_Dark_New_HPP
+#define UE4SS_SDK_BP_UniqueSkillModule_Tackle_FireKirin_Dark_New_HPP
+
+class UBP_UniqueSkillModule_Tackle_FireKirin_Dark_New_C : public UBP_UniqueSkillModule_Tackle_FireKirin_New_C
+{
+}; // Size: 0x350
+
+#endif

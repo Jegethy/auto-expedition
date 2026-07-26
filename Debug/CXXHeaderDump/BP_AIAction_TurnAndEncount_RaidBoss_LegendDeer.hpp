@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_BP_AIAction_TurnAndEncount_RaidBoss_LegendDeer_HPP
+#define UE4SS_SDK_BP_AIAction_TurnAndEncount_RaidBoss_LegendDeer_HPP
+
+class UBP_AIAction_TurnAndEncount_RaidBoss_LegendDeer_C : public UBP_AIAction_TurnAndEncount_RaidBoss_C
+{
+}; // Size: 0x189
+
+#endif

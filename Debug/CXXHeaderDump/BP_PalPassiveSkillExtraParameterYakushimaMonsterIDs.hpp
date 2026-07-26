@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_BP_PalPassiveSkillExtraParameterYakushimaMonsterIDs_HPP
+#define UE4SS_SDK_BP_PalPassiveSkillExtraParameterYakushimaMonsterIDs_HPP
+
+class UBP_PalPassiveSkillExtraParameterYakushimaMonsterIDs_C : public UPalPassiveSkillExtraParameterTribeIDList
+{
+}; // Size: 0x38
+
+#endif

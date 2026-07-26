@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_BP_UniqueSkillEffect_LegendDeer_BarrierRelease_Release_Grass_HPP
+#define UE4SS_SDK_BP_UniqueSkillEffect_LegendDeer_BarrierRelease_Release_Grass_HPP
+
+class ABP_UniqueSkillEffect_LegendDeer_BarrierRelease_Release_Grass_C : public ABP_UniqueSkillEffect_LegendDeer_BarrierRelease_Release_C
+{
+}; // Size: 0x450
+
+#endif
