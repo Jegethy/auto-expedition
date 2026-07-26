@@ -932,10 +932,10 @@ local function startDispatch(model, key, workflow)
     end
 
     workflow.ui = ui
-    setPhase(workflow, "select", "dispatch started")
+    setPhase(workflow, "ui_ready", "dispatch started")
     workflow.attempts = 0
-    local ok = invoke("select expedition " .. targetExpeditionID(), function()
-        return ui:RequestSelectMission(targetExpeditionID())
+    local ok = invoke("start expedition UI replication", function()
+        return ui:RequestStartReplication()
     end)
     if not ok then
         clearWorkflow(key, true)
