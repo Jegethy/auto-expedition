@@ -151,11 +151,19 @@ local function guidString(guid)
     guid = unwrap(guid)
     if guid == nil then return nil end
 
-    local text = value(function() return guid:ToString() end)
-    if text ~= nil then return tostring(text) end
+    local function part(name)
+        return tonumber(value(function() return guid[name] end))
+    end
 
     local formatted = value(function()
-        return string.format("%08X-%08X-%08X-%08X", guid.A, guid.B, guid.C, guid.D)
+        local a = part("A") or part("X")
+        local b = part("B") or part("Y")
+        local c = part("C") or part("Z")
+        local d = part("D") or part("W")
+        if a and b and c and d then
+            return string.format("%08X-%08X-%08X-%08X", a, b, c, d)
+        end
+        return tostring(guid)
     end)
     return formatted and tostring(formatted) or nil
 end
