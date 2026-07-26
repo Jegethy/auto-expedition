@@ -116,6 +116,12 @@ local function clearWorkflow(key, cooldown)
     local workflow = workflowFor(key)
     workflow.phase = nil
     workflow.ui = nil
+    workflow.attempts = nil
+    workflow.slotIds = nil
+    workflow.baseCampId = nil
+    workflow.inventorySnapshot = nil
+    workflow.rewardDirectAttempted = nil
+    workflow.inventoryFallbackNeeded = nil
     workflow.nextTry = cooldown and retryTime() or 0
 end
 
@@ -342,7 +348,9 @@ local function getUiModelFor(model, key)
         return nil
     end
 
-    logOnce(key, "Found %d expedition UI models; waiting for the matching station menu to replicate.", #candidates)
+    if #candidates == 1 then
+        logOnce(key, "Expedition UI model is present, but it does not match the active station yet.")
+    end
     return nil
 end
 
@@ -523,10 +531,10 @@ workflowStep = function(model, key, workflow)
             return
         end
 
-        if Config.EnableEasyBulkStorage ~= false and workflow.rewardBulkStorageTried ~= true then
+        if Config.EnableEasyBulkStorage ~= false and workflow.inventoryFallbackNeeded ~= true and workflow.rewardDirectAttempted ~= true then
             local slotIds = filledSlotIds(container)
             if #slotIds > 0 then
-                workflow.rewardBulkStorageTried = true
+                workflow.rewardDirectAttempted = true
                 workflow.slotIds = slotIds
                 beginBulkStorage(model, key, workflow)
                 return
@@ -602,6 +610,13 @@ workflowStep = function(model, key, workflow)
         if currentState == STATE.Reward then
             local container = getRewardContainer(model)
             if container and filledSlotCount(container) > 0 then
+                if workflow.rewardDirectAttempted == true and workflow.inventoryFallbackNeeded ~= true then
+                    workflow.inventoryFallbackNeeded = true
+                    workflow.phase = "collect"
+                    workflow.attempts = 0
+                    schedule(key, model)
+                    return
+                end
                 workflow.phase = "collect"
                 workflow.attempts = 0
                 schedule(key, model)
@@ -627,7 +642,7 @@ local function startDispatch(model, key, workflow)
         -- Mission selection is exposed safely by the local UI model. The
         -- concrete model's TargetMissionId is an FName and must not be read or
         -- written directly from Lua on affected UE4SS builds.
-        workflow.nextTry = 0
+        workflow.nextTry = retryTime()
         return
     end
 
