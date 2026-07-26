@@ -2518,8 +2518,3 @@ stack traceback:
 [20:21:08.9911566] [Lua] [AutoExpedition][Debug] UI model matching for station 328612B3-476A3547-FFFFFFFFF6F176A9-FFFFFFFFC1194A0A found 1 candidate(s)
 [20:21:08.9915649] [Lua] [AutoExpedition][Debug] Workflow 328612B3-476A3547-FFFFFFFFF6F176A9-FFFFFFFFC1194A0A phase: nil -> select (dispatch started)
 [20:21:08.9915997] [Lua] [AutoExpedition][Debug] RPC attempt: select expedition Dungeon_Desert
-[20:21:10.9742226] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after palbox creation: 6 update(s).
-[20:21:11.0172136] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after base camp point creation: 6 update(s).
-[20:21:17.6236853] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after base camp model creation: 6 update(s).
-[20:21:20.9864030] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after palbox creation: 6 update(s).
-[20:21:21.0375823] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after base camp point creation: 6 update(s).
