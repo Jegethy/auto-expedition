@@ -782,21 +782,17 @@ workflowStep = function(model, key, workflow)
             return
         end
 
+        local canStart = value(function() return workflow.ui:CanStartMission() end)
         local count = assignedCount(model)
-        if count > 0 then
-            local canStart = value(function() return workflow.ui:CanStartMission() end)
-            if canStart == false then
-                workflow.attempts = (workflow.attempts or 0) + 1
-                if workflow.attempts > Config.MaxRequestRetries then
-                    log("Auto-assign selected %d Pal(s), but the station still reports that the mission cannot start.", count)
-                    clearWorkflow(key, true)
-                    return
-                end
-                invoke("retry auto-assign expedition party", function()
-                    return workflow.ui:RequestSelectAuto()
-                end)
-                schedule(key, model, Config.AutoAssignDelay)
-                return
+
+        if canStart == true or (canStart == nil and count > 0) then
+            if debugVerbose() then
+                dlog(
+                    "Auto-assign ready for station %s (canStart=%s assigned=%d); starting mission.",
+                    tostring(key),
+                    tostring(canStart),
+                    count
+                )
             end
 
             invoke("start expedition", function()
@@ -805,6 +801,20 @@ workflowStep = function(model, key, workflow)
             setPhase(workflow, "start", "start mission request sent")
             workflow.attempts = 0
             schedule(key, model)
+            return
+        end
+
+        if canStart == false then
+            workflow.attempts = (workflow.attempts or 0) + 1
+            if workflow.attempts > Config.MaxRequestRetries then
+                log("Auto-assign selected %d Pal(s), but the station still reports that the mission cannot start.", count)
+                clearWorkflow(key, true)
+                return
+            end
+            invoke("retry auto-assign expedition party", function()
+                return workflow.ui:RequestSelectAuto()
+            end)
+            schedule(key, model, Config.AutoAssignDelay)
             return
         end
 
