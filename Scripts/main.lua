@@ -399,6 +399,19 @@ local function copySlotIdValue(slotIdValue)
     }
 end
 
+local function copyContainerIdValue(containerIdValue)
+    if containerIdValue == nil then return nil end
+
+    local copiedGuid = copyGuidValue(value(function() return containerIdValue.ID end))
+    if copiedGuid == nil then
+        return nil
+    end
+
+    return {
+        ID = copiedGuid,
+    }
+end
+
 local function filledSlotCount(container)
     local slots = getSlots(container)
     if not slots then return 0 end
@@ -1006,20 +1019,28 @@ workflowStep = function(model, key, workflow)
 
         local requestId = value(function() return model:GetInstanceId() end)
             or value(function() return model.InstanceId end)
+        local requestIdTable = copyGuidValue(requestId)
+        local targetContainerTable = copyContainerIdValue(workflow.storageTargetContainerId)
+        if requestIdTable == nil or targetContainerTable == nil then
+            logOnce(key, "Easy Bulk Storage was prepared, but the RPC payload could not be serialized.")
+            setPhase(workflow, "wait_state", "invalid storage rpc payload")
+            schedule(key, model, Config.StorageFinishDelay)
+            return
+        end
         if debugEnabled() then
             dlog(
                 "Storage move request: station=%s targetContainer=%s slotMoves=%d requestId=%s",
                 tostring(key),
                 shortValue(workflow.storageTargetContainerId),
                 #workflow.storageSlotMoves,
-                shortValue(requestId)
+                shortValue(requestIdTable)
             )
         end
 
         invoke("move expedition loot to base storage", function()
             return networkItem:RequestMoveToContainer_ToServer(
-                requestId,
-                workflow.storageTargetContainerId,
+                requestIdTable,
+                targetContainerTable,
                 workflow.storageSlotMoves
             )
         end)
