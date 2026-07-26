@@ -103,8 +103,20 @@ end
 
 local function unwrap(value)
     if value == nil then return nil end
-    local ok, unwrapped = pcall(function() return value:get() end)
-    return ok and unwrapped or value
+    if type(value) ~= "userdata" then return value end
+
+    local mt = getmetatable(value)
+    local kind = type(mt) == "table" and (rawget(mt, "__name") or rawget(mt, "__type")) or nil
+    if type(kind) == "string"
+        and (kind:find("ScriptStruct", 1, true)
+            or kind:find("UObject", 1, true)
+            or kind:find("Class", 1, true)
+            or kind:find("Function", 1, true)) then
+        return value
+    end
+
+    local okGet, unwrapped = pcall(function() return value:get() end)
+    return okGet and unwrapped or value
 end
 
 local function valid(object)
