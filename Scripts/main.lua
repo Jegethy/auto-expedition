@@ -159,6 +159,25 @@ local function targetExpeditionID()
     return Config.TargetExpeditionID
 end
 
+local function makeFName(name)
+    if type(name) ~= "string" or name == "" then return nil end
+
+    local constructors = {
+        function() return FName(name) end,
+        function() return FName:new(name) end,
+        function() return FName.New(name) end,
+    }
+
+    for _, ctor in ipairs(constructors) do
+        local ok, result = pcall(ctor)
+        if ok and result ~= nil then
+            return result
+        end
+    end
+
+    return nil
+end
+
 local function guidString(guid)
     guid = unwrap(guid)
     if guid == nil then return nil end
@@ -771,6 +790,34 @@ workflowStep = function(model, key, workflow)
                 return
             end
             schedule(key, model, Config.AutoAssignDelay)
+            return
+        end
+
+        local missionId = makeFName(targetExpeditionID())
+        if missionId == nil then
+            log("Unable to construct a mission FName for expedition %s; dispatch was not started.", targetExpeditionID())
+            clearWorkflow(key, true)
+            return
+        end
+
+        local ok = invoke("select mission", function()
+            return workflow.ui:RequestSelectMission(missionId)
+        end)
+        if not ok then
+            clearWorkflow(key, true)
+            return
+        end
+
+        setPhase(workflow, "mission_selected", "mission select request sent")
+        workflow.attempts = 0
+        schedule(key, model, Config.AutoAssignDelay)
+        return
+    end
+
+    if workflow.phase == "mission_selected" then
+        if not valid(workflow.ui) then
+            logOnce(key, "Expedition UI model closed before auto-assign; waiting for the station menu again.")
+            clearWorkflow(key, true)
             return
         end
 
