@@ -106,17 +106,15 @@ local function unwrap(value)
     if type(value) ~= "userdata" then return value end
 
     local mt = getmetatable(value)
-    local kind = type(mt) == "table" and (rawget(mt, "__name") or rawget(mt, "__type")) or nil
-    if type(kind) == "string"
-        and (kind:find("ScriptStruct", 1, true)
-            or kind:find("UObject", 1, true)
-            or kind:find("Class", 1, true)
-            or kind:find("Function", 1, true)) then
-        return value
+    if type(mt) == "table" then
+        local kind = rawget(mt, "__name") or rawget(mt, "__type")
+        if type(kind) == "string" and (kind == "WeakObjectPtr" or kind == "TWeakObjectPtr") then
+            local okGet, unwrapped = pcall(function() return value:get() end)
+            return okGet and unwrapped or value
+        end
     end
 
-    local okGet, unwrapped = pcall(function() return value:get() end)
-    return okGet and unwrapped or value
+    return value
 end
 
 local function valid(object)
@@ -363,6 +361,44 @@ local function slotCount(slot)
     return tonumber(value(function() return slot.StackCount end)) or 0
 end
 
+local function copyGuidValue(guid)
+    if guid == nil then return nil end
+
+    local function part(name)
+        return tonumber(value(function() return guid[name] end))
+    end
+
+    local a = part("A") or part("X")
+    local b = part("B") or part("Y")
+    local c = part("C") or part("Z")
+    local d = part("D") or part("W")
+    if a == nil or b == nil or c == nil or d == nil then
+        return nil
+    end
+
+    return { A = a, B = b, C = c, D = d }
+end
+
+local function copySlotIdValue(slotIdValue)
+    if slotIdValue == nil then return nil end
+
+    local containerId = value(function() return slotIdValue.ContainerId end)
+    local containerGuid = value(function() return containerId.ID end)
+    local copiedGuid = copyGuidValue(containerGuid)
+    local slotIndex = tonumber(value(function() return slotIdValue.SlotIndex end))
+
+    if copiedGuid == nil or slotIndex == nil then
+        return nil
+    end
+
+    return {
+        ContainerId = {
+            ID = copiedGuid,
+        },
+        SlotIndex = slotIndex,
+    }
+end
+
 local function filledSlotCount(container)
     local slots = getSlots(container)
     if not slots then return 0 end
@@ -506,8 +542,9 @@ local function buildSlotMoves(container)
                 local count = slotCount(slot)
                 local id = slotId(slot)
                 if id ~= nil and count > 0 then
+                    local slotMoveId = copySlotIdValue(id)
                     moves[#moves + 1] = {
-                        SlotId = id,
+                        SlotId = slotMoveId or id,
                         Num = count,
                     }
                     if debugSlotsEnabled() then
@@ -519,7 +556,7 @@ local function buildSlotMoves(container)
                             index,
                             count,
                             tostring(itemName),
-                            shortValue(id)
+                            shortValue(slotMoveId or id)
                         )
                     end
                 end
