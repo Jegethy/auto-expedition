@@ -50,10 +50,13 @@ local Config = {
 
     -- Debug logging:
     --   DebugEnabled: master switch for in-depth instrumentation.
+    --   DebugWarmupMs: delay debug tracing after script init to avoid
+    --                  world-load replication churn crashes in UE4SS.
     --   DebugVerbose: includes per-phase scheduling and retry details.
     --   DebugSlotDetails: includes per-slot move details during reward routing.
     --   DebugLoopHeartbeat: logs each polling loop, even without state changes.
     DebugEnabled = false,
+    DebugWarmupMs = 30000,
     DebugVerbose = false,
     DebugSlotDetails = false,
     DebugLoopHeartbeat = false,

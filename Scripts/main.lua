@@ -26,6 +26,8 @@ local baseCampUtility = nil
 local workflowStep
 local schedule
 local stationSnapshots = {}
+local debugStartClock = os.clock() + (math.max(0, tonumber(Config.DebugWarmupMs) or 0) / 1000)
+local debugWarmupNotified = false
 
 local function log(message, ...)
     if select("#", ...) > 0 then
@@ -35,7 +37,14 @@ local function log(message, ...)
 end
 
 local function debugEnabled()
-    return Config.DebugEnabled == true
+    if Config.DebugEnabled ~= true then return false end
+
+    local ready = os.clock() >= debugStartClock
+    if ready and not debugWarmupNotified then
+        debugWarmupNotified = true
+        print("[AutoExpedition][Debug] Debug tracing is now active.")
+    end
+    return ready
 end
 
 local function debugVerbose()
@@ -59,14 +68,7 @@ local function dlog(message, ...)
         if kind == "boolean" or kind == "number" or kind == "string" then
             return tostring(any)
         end
-        if kind == "table" then
-            local count = 0
-            for _ in pairs(any) do
-                count = count + 1
-                if count > 20 then break end
-            end
-            return string.format("table(size~%d)", count)
-        end
+        if kind == "table" then return "<table>" end
         return string.format("<%s>", kind)
     end
 
@@ -95,14 +97,7 @@ local function shortValue(any)
     if kind == "boolean" or kind == "number" or kind == "string" then
         return tostring(any)
     end
-    if kind == "table" then
-        local count = 0
-        for _ in pairs(any) do
-            count = count + 1
-            if count > 20 then break end
-        end
-        return string.format("table(size~%d)", count)
-    end
+    if kind == "table" then return "<table>" end
     return string.format("<%s>", kind)
 end
 
