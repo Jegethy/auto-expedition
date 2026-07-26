@@ -25,12 +25,54 @@ local loggedReasons = {}
 local baseCampUtility = nil
 local workflowStep
 local schedule
+local stationSnapshots = {}
 
 local function log(message, ...)
     if select("#", ...) > 0 then
         message = string.format(message, ...)
     end
     print("[AutoExpedition] " .. tostring(message))
+end
+
+local function debugEnabled()
+    return Config.DebugEnabled == true
+end
+
+local function debugVerbose()
+    return Config.DebugEnabled == true and Config.DebugVerbose == true
+end
+
+local function debugSlotsEnabled()
+    return Config.DebugEnabled == true and Config.DebugSlotDetails == true
+end
+
+local function debugHeartbeatEnabled()
+    return Config.DebugEnabled == true and Config.DebugLoopHeartbeat == true
+end
+
+local function dlog(message, ...)
+    if not debugEnabled() then return end
+    if select("#", ...) > 0 then
+        message = string.format(message, ...)
+    end
+    print("[AutoExpedition][Debug] " .. tostring(message))
+end
+
+local function shortValue(any)
+    local kind = type(any)
+    if kind == "nil" then return "nil" end
+    if kind == "boolean" or kind == "number" or kind == "string" then
+        return tostring(any)
+    end
+    if kind == "table" then
+        local count = 0
+        for _ in pairs(any) do
+            count = count + 1
+            if count > 20 then break end
+        end
+        return string.format("table(size~%d)", count)
+    end
+    return tostring(any)
 end
 
 local function unwrap(value)
@@ -47,10 +89,20 @@ local function valid(object)
 end
 
 local function invoke(label, callback)
+    local started = os.clock()
+    if debugEnabled() then
+        dlog("RPC attempt: %s", label)
+    end
+
     local ok, result = pcall(callback)
     if not ok then
         log("%s failed: %s", label, tostring(result))
+        dlog("RPC failure: %s (elapsed=%.4fs)", label, os.clock() - started)
         return false, nil
+    end
+
+    if debugEnabled() then
+        dlog("RPC success: %s (elapsed=%.4fs, return=%s)", label, os.clock() - started, shortValue(result))
     end
     return true, result
 end
@@ -99,6 +151,20 @@ local function stateName(state)
     return tostring(state)
 end
 
+local function setPhase(workflow, newPhase, reason)
+    local oldPhase = workflow.phase
+    workflow.phase = newPhase
+    if debugEnabled() and oldPhase ~= newPhase then
+        dlog(
+            "Workflow %s phase: %s -> %s (%s)",
+            tostring(workflow.key),
+            tostring(oldPhase),
+            tostring(newPhase),
+            tostring(reason or "no reason")
+        )
+    end
+end
+
 local function retryTime()
     return os.time() + math.max(1, math.ceil((Config.RetryCooldown or 30000) / 1000))
 end
@@ -108,16 +174,28 @@ local function workflowFor(key)
     if not workflow then
         workflow = { key = key, phase = nil, nextTry = 0 }
         workflows[key] = workflow
+        dlog("Created workflow for station %s", tostring(key))
     end
     return workflow
 end
 
 local function clearWorkflow(key, cooldown)
     local workflow = workflowFor(key)
+    if debugEnabled() then
+        dlog(
+            "Clearing workflow %s (phase=%s attempts=%s cooldown=%s)",
+            tostring(key),
+            tostring(workflow.phase),
+            tostring(workflow.attempts),
+            tostring(cooldown)
+        )
+    end
     workflow.phase = nil
     workflow.ui = nil
     workflow.attempts = nil
     workflow.slotIds = nil
+    workflow.storageTargetContainerId = nil
+    workflow.storageSlotMoves = nil
     workflow.baseCampId = nil
     workflow.inventorySnapshot = nil
     workflow.rewardDirectAttempted = nil
@@ -174,6 +252,27 @@ local function getContainer(context, containerId)
     if not manager then return nil end
     local container = value(function() return manager:GetContainer(containerId) end)
     return valid(container) and container or nil
+end
+
+local function getContainerId(container)
+    if not valid(container) then return nil end
+
+    local id = value(function() return container:GetId() end)
+    if id == nil then id = value(function() return container.ID end) end
+    return id
+end
+
+local function getNetworkItemComponent(context)
+    local utility = value(function()
+        return StaticFindObject("/Script/Pal.Default__PalUtility")
+    end)
+    if not valid(utility) then return nil end
+
+    local transmitter = value(function() return utility:GetNetworkTransmitter(context) end)
+    if not valid(transmitter) then return nil end
+
+    local item = value(function() return transmitter:GetItem() end)
+    return valid(item) and item or nil
 end
 
 local function getSlots(container)
@@ -299,18 +398,127 @@ end
 
 local function getRewardContainer(model)
     local module = value(function() return model:GetItemContainerModule() end)
-    if not valid(module) then return nil, nil end
+    if not valid(module) then
+        dlog("Reward container module missing for station %s", tostring(modelKey(model)))
+        return nil, nil
+    end
 
     local container = value(function() return module:GetContainer() end)
     if not valid(container) then
         container = value(function() return module.TargetContainer end)
     end
-    if not valid(container) then return nil, nil end
+    if not valid(container) then
+        dlog("Reward container object missing for station %s", tostring(modelKey(model)))
+        return nil, nil
+    end
 
     local id = value(function() return module:GetContainerId() end)
     if id == nil then id = value(function() return container:GetId() end) end
     if id == nil then id = value(function() return container.ID end) end
+    if debugVerbose() then
+        dlog("Resolved reward container for station %s (containerId=%s)", tostring(modelKey(model)), shortValue(id))
+    end
     return container, id
+end
+
+local function buildSlotMoves(container)
+    local moves = {}
+    local slots = getSlots(container)
+    if not slots then return moves end
+
+    pcall(function()
+        for index = 1, #slots do
+            local slot = unwrap(slots[index])
+            if valid(slot) then
+                local count = slotCount(slot)
+                local id = slotId(slot)
+                if id ~= nil and count > 0 then
+                    moves[#moves + 1] = {
+                        SlotId = id,
+                        Num = count,
+                    }
+                    if debugSlotsEnabled() then
+                        local itemName = value(function() return slot.ItemId.StaticId end)
+                            or value(function() return slot:GetItemId().StaticId end)
+                            or "unknown"
+                        dlog(
+                            "Slot move prepared: index=%d count=%d item=%s slotId=%s",
+                            index,
+                            count,
+                            tostring(itemName),
+                            shortValue(id)
+                        )
+                    end
+                end
+            end
+        end
+    end)
+
+    if debugEnabled() then
+        local totalCount = 0
+        for _, move in ipairs(moves) do
+            totalCount = totalCount + (tonumber(move.Num) or 0)
+        end
+        dlog("Prepared %d slot move(s), total stack count=%d", #moves, totalCount)
+    end
+
+    return moves
+end
+
+local function getStorageTargetContainerId(model)
+    local baseCampId = getBaseCampId(model)
+    if baseCampId == nil then
+        dlog("No base camp id available for station %s", tostring(modelKey(model)))
+        return nil
+    end
+
+    local candidateClassNames = {
+        "PalMapObjectGuildChestModel",
+        "PalMapObjectItemChestModel",
+        "PalMapObjectGlobalPalStorageModel",
+    }
+
+    for _, className in ipairs(candidateClassNames) do
+        local candidates = value(function()
+            return FindAllOf(className)
+        end) or {}
+
+        if debugVerbose() then
+            dlog("Scanning %d candidates of class %s", #candidates, tostring(className))
+        end
+
+        for _, candidate in ipairs(candidates) do
+            if valid(candidate) and getBaseCampId(candidate) == baseCampId then
+                local candidateKey = modelKey(candidate)
+                local access = value(function() return candidate:GetItemChestContainerAccess() end)
+                if not valid(access) then
+                    access = value(function() return candidate:GetItemContainerAccess() end)
+                end
+
+                if valid(access) then
+                    local container = value(function()
+                        return access:GetItemContainer_ItemContainerAccessInterface()
+                    end)
+                    local containerId = getContainerId(container)
+                    if containerId ~= nil then
+                        dlog(
+                            "Selected storage target: class=%s station=%s containerId=%s",
+                            tostring(className),
+                            tostring(candidateKey),
+                            shortValue(containerId)
+                        )
+                        return containerId
+                    end
+                    dlog("Container access found but no container id for class=%s station=%s", tostring(className), tostring(candidateKey))
+                elseif debugVerbose() then
+                    dlog("Candidate has no valid container access: class=%s station=%s", tostring(className), tostring(candidateKey))
+                end
+            end
+        end
+    end
+
+    dlog("No base storage target container matched station %s", tostring(modelKey(model)))
+    return nil
 end
 
 local function getUiModels()
@@ -324,6 +532,10 @@ local function getUiModelFor(model, key)
     local candidates = {}
     for _, candidate in ipairs(getUiModels()) do
         if valid(candidate) then candidates[#candidates + 1] = candidate end
+    end
+
+    if debugVerbose() then
+        dlog("UI model matching for station %s found %d candidate(s)", tostring(key), #candidates)
     end
 
     local targetKey = modelKey(model)
@@ -348,8 +560,8 @@ local function getUiModelFor(model, key)
         return nil
     end
 
-    if #candidates == 1 then
-        logOnce(key, "Expedition UI model is present, but it does not match the active station yet.")
+    if #candidates > 1 then
+        logOnce(key, "Found multiple expedition UI models; waiting for one that matches this station/base.")
     end
     return nil
 end
@@ -372,6 +584,16 @@ local function assignedCount(model)
 end
 
 schedule = function(key, model, delay)
+    if debugVerbose() then
+        dlog(
+            "Scheduling workflow step for station %s in %dms (phase=%s state=%s)",
+            tostring(key),
+            tonumber(delay or Config.ActionDelay) or 0,
+            tostring(workflows[key] and workflows[key].phase or nil),
+            tostring(stateName(stateOf(model)))
+        )
+    end
+
     ExecuteWithDelay(delay or Config.ActionDelay, function()
         if valid(model) then
             local workflow = workflows[key]
@@ -384,53 +606,57 @@ end
 
 local function beginBulkStorage(model, key, workflow)
     if Config.EnableEasyBulkStorage == false then
-        workflow.phase = "wait_state"
+        dlog("Bulk storage disabled by config; skipping for station %s", tostring(key))
+        setPhase(workflow, "wait_state", "bulk storage disabled")
         schedule(key, model, Config.StorageFinishDelay)
         return
     end
 
-    local controller = getController()
-    local baseCampId = getBaseCampId(model)
-    if not controller or baseCampId == nil then
-        logOnce(key, "Cannot run Easy Bulk Storage yet: player controller or expedition base camp is unavailable.")
-        workflow.phase = "wait_state"
+    dlog("Preparing bulk storage operation for station %s", tostring(key))
+
+    local container = value(function() return getRewardContainer(model) end)
+    if not container then
+        logOnce(key, "Reward container is unavailable; cannot route loot to base storage yet.")
+        setPhase(workflow, "wait_state", "reward container unavailable")
         schedule(key, model, Config.StorageFinishDelay)
         return
     end
 
-    local slotIds = workflow.slotIds or changedInventorySlots(controller, workflow.inventorySnapshot)
-    if #slotIds == 0 then
-        log("No transferable item slots were found; nothing to bulk-store.")
-        workflow.phase = "wait_state"
+    local storageTargetContainerId = getStorageTargetContainerId(model)
+    if storageTargetContainerId == nil then
+        logOnce(key, "No eligible base storage chest is loaded yet; waiting to move loot into storage.")
+        setPhase(workflow, "wait_state", "storage target unavailable")
         schedule(key, model, Config.StorageFinishDelay)
         return
     end
 
-    if not valid(baseCampUtility) then
-        baseCampUtility = value(function()
-            return StaticFindObject("/Script/Pal.Default__PalBaseCampUtility")
-        end)
-    end
-    if not valid(baseCampUtility) then
-        logOnce(key, "PalBaseCampUtility is unavailable; loot was collected but could not be sent to base storage.")
-        workflow.phase = "wait_state"
+    local slotMoves = buildSlotMoves(container)
+    if #slotMoves == 0 then
+        dlog("Reward container had no movable slots for station %s", tostring(key))
+        setPhase(workflow, "wait_state", "no slot moves")
         schedule(key, model, Config.StorageFinishDelay)
         return
     end
 
-    invoke("start Easy Bulk Storage replication", function()
-        return baseCampUtility:RequestStartReplicateLocalPlayerBaseCampItemStackInfo(controller)
-    end)
-
-    workflow.phase = "storage_ready"
-    workflow.slotIds = slotIds
-    workflow.baseCampId = baseCampId
+    workflow.storageTargetContainerId = storageTargetContainerId
+    workflow.storageSlotMoves = slotMoves
+    setPhase(workflow, "storage_ready", "slot moves prepared")
     schedule(key, model, Config.StorageReadyDelay)
 end
 
 workflowStep = function(model, key, workflow)
     local currentState = stateOf(model)
     if currentState == nil then return end
+
+    if debugVerbose() then
+        dlog(
+            "workflowStep station=%s phase=%s state=%s attempts=%s",
+            tostring(key),
+            tostring(workflow.phase),
+            tostring(stateName(currentState)),
+            tostring(workflow.attempts)
+        )
+    end
 
     if workflow.phase == "select" then
         if not valid(workflow.ui) then
@@ -446,7 +672,7 @@ workflowStep = function(model, key, workflow)
             clearWorkflow(key, true)
             return
         end
-        workflow.phase = "auto"
+        setPhase(workflow, "auto", "auto-assign request sent")
         workflow.attempts = 0
         schedule(key, model)
         return
@@ -479,7 +705,7 @@ workflowStep = function(model, key, workflow)
             invoke("start expedition", function()
                 return workflow.ui:RequestStartMission()
             end)
-            workflow.phase = "start"
+            setPhase(workflow, "start", "start mission request sent")
             workflow.attempts = 0
             schedule(key, model)
             return
@@ -531,40 +757,22 @@ workflowStep = function(model, key, workflow)
             return
         end
 
-        if Config.EnableEasyBulkStorage ~= false and workflow.inventoryFallbackNeeded ~= true and workflow.rewardDirectAttempted ~= true then
-            local slotIds = filledSlotIds(container)
-            if #slotIds > 0 then
-                workflow.rewardDirectAttempted = true
-                workflow.slotIds = slotIds
-                beginBulkStorage(model, key, workflow)
-                return
-            end
-        end
-
         if filledSlotCount(container) == 0 then
-            beginBulkStorage(model, key, workflow)
+            setPhase(workflow, "wait_state", "reward container already empty")
+            workflow.attempts = 0
+            schedule(key, model, Config.StorageFinishDelay)
             return
         end
 
-        local controller = getController()
-        local inventory = controller and getInventory(controller) or nil
-        local _, containerId = getRewardContainer(model)
-        if not inventory or containerId == nil then
-            logOnce(key, "Cannot collect expedition loot yet: player inventory or reward container ID is unavailable.")
-            schedule(key, model)
-            return
-        end
-
-        invoke("collect expedition loot", function()
-            return inventory:RequestFillSlotToInventoryFromTargetContainer_ToServer(containerId)
-        end)
-        workflow.phase = "collect"
-        workflow.attempts = (workflow.attempts or 0) + 1
-        if workflow.attempts > Config.MaxCollectionRetries then
-            log("Expedition loot is still present after %d collection requests; leaving the station in Reward state.", Config.MaxCollectionRetries)
-            clearWorkflow(key, true)
-        else
-            schedule(key, model)
+        beginBulkStorage(model, key, workflow)
+        if workflow.phase ~= "storage_ready" then
+            workflow.attempts = (workflow.attempts or 0) + 1
+            if workflow.attempts > Config.MaxCollectionRetries then
+                log("Expedition loot is still present after %d collection requests; leaving the station in Reward state.", Config.MaxCollectionRetries)
+                clearWorkflow(key, true)
+            else
+                schedule(key, model)
+            end
         end
         return
     end
@@ -573,34 +781,51 @@ workflowStep = function(model, key, workflow)
         local controller = getController()
         if not controller then
             logOnce(key, "Easy Bulk Storage was prepared, but the local player controller is no longer available.")
-            workflow.phase = "wait_state"
+            setPhase(workflow, "wait_state", "controller unavailable")
             schedule(key, model, Config.StorageFinishDelay)
             return
         end
-        invoke("Easy Bulk Storage", function()
-            return baseCampUtility:RequestMoveInventoryItemToBaseCamp(
-                controller,
-                workflow.baseCampId,
-                workflow.slotIds,
-                true
+
+        local networkItem = getNetworkItemComponent(controller)
+        if not valid(networkItem) then
+            logOnce(key, "Easy Bulk Storage was prepared, but the network item component is no longer available.")
+            setPhase(workflow, "wait_state", "network item component unavailable")
+            schedule(key, model, Config.StorageFinishDelay)
+            return
+        end
+
+        if workflow.storageTargetContainerId == nil or workflow.storageSlotMoves == nil or #workflow.storageSlotMoves == 0 then
+            dlog("storage_ready has incomplete payload for station %s; target=%s slots=%s", tostring(key), shortValue(workflow.storageTargetContainerId), shortValue(workflow.storageSlotMoves))
+            setPhase(workflow, "wait_state", "incomplete storage payload")
+            schedule(key, model, Config.StorageFinishDelay)
+            return
+        end
+
+        local requestId = NewGuid()
+        if debugEnabled() then
+            dlog(
+                "Storage move request: station=%s targetContainer=%s slotMoves=%d requestId=%s",
+                tostring(key),
+                shortValue(workflow.storageTargetContainerId),
+                #workflow.storageSlotMoves,
+                shortValue(requestId)
+            )
+        end
+
+        invoke("move expedition loot to base storage", function()
+            return networkItem:RequestMoveToContainer_ToServer(
+                requestId,
+                workflow.storageTargetContainerId,
+                workflow.storageSlotMoves
             )
         end)
-        workflow.phase = "storage_done"
+        setPhase(workflow, "storage_done", "storage move request sent")
         schedule(key, model, Config.StorageFinishDelay)
         return
     end
 
     if workflow.phase == "storage_done" then
-        local controller = getController()
-        if not controller then
-            workflow.phase = "wait_state"
-            schedule(key, model, Config.StorageFinishDelay)
-            return
-        end
-        invoke("finish Easy Bulk Storage replication", function()
-            return baseCampUtility:RequestEndReplicateLocalPlayerBaseCampItemStackInfo(controller)
-        end)
-        workflow.phase = "wait_state"
+        setPhase(workflow, "wait_state", "waiting for reward-state reconciliation")
         workflow.attempts = 0
         schedule(key, model, Config.StorageFinishDelay)
         return
@@ -610,14 +835,7 @@ workflowStep = function(model, key, workflow)
         if currentState == STATE.Reward then
             local container = getRewardContainer(model)
             if container and filledSlotCount(container) > 0 then
-                if workflow.rewardDirectAttempted == true and workflow.inventoryFallbackNeeded ~= true then
-                    workflow.inventoryFallbackNeeded = true
-                    workflow.phase = "collect"
-                    workflow.attempts = 0
-                    schedule(key, model)
-                    return
-                end
-                workflow.phase = "collect"
+                setPhase(workflow, "collect", "reward items still present")
                 workflow.attempts = 0
                 schedule(key, model)
                 return
@@ -634,20 +852,27 @@ workflowStep = function(model, key, workflow)
         clearWorkflow(key, false)
         return
     end
+
+    if debugVerbose() then
+        dlog("No phase handler matched for station=%s phase=%s", tostring(key), tostring(workflow.phase))
+    end
 end
 
 local function startDispatch(model, key, workflow)
+    dlog("Dispatch check for station %s (state=%s)", tostring(key), tostring(stateName(stateOf(model))))
+
     local ui = getUiModelFor(model, key)
     if not ui then
         -- Mission selection is exposed safely by the local UI model. The
         -- concrete model's TargetMissionId is an FName and must not be read or
         -- written directly from Lua on affected UE4SS builds.
         workflow.nextTry = retryTime()
+        dlog("Dispatch delayed for station %s: no matching UI model yet", tostring(key))
         return
     end
 
     workflow.ui = ui
-    workflow.phase = "select"
+    setPhase(workflow, "select", "dispatch started")
     workflow.attempts = 0
     local ok = invoke("select expedition " .. targetExpeditionID(), function()
         return ui:RequestSelectMission(targetExpeditionID())
@@ -660,6 +885,8 @@ local function startDispatch(model, key, workflow)
 end
 
 local function startCollection(model, key, workflow)
+    dlog("Collection check for station %s (state=%s)", tostring(key), tostring(stateName(stateOf(model))))
+
     local container = getRewardContainer(model)
     if not container then
         logOnce(key, "Reward state is active, but the expedition reward container is not available yet.")
@@ -668,7 +895,7 @@ local function startCollection(model, key, workflow)
     end
 
     if filledSlotCount(container) == 0 then
-        workflow.phase = "wait_state"
+        setPhase(workflow, "wait_state", "reward container empty")
         workflow.attempts = 0
         schedule(key, model, Config.StorageFinishDelay)
         return
@@ -682,7 +909,10 @@ local function startCollection(model, key, workflow)
     end
 
     workflow.inventorySnapshot = snapshotInventory(controller)
-    workflow.phase = "collect"
+    if debugVerbose() then
+        dlog("Captured inventory snapshot for station %s before collection", tostring(key))
+    end
+    setPhase(workflow, "collect", "reward container has loot")
     workflow.attempts = 0
     workflowStep(model, key, workflow)
 end
@@ -708,11 +938,28 @@ function ProcessExpeditionLoop()
         return FindAllOf("PalMapObjectCharacterTeamMissionModel")
     end) or {}
 
+    if debugHeartbeatEnabled() then
+        dlog("Loop heartbeat: discovered %d expedition station model(s)", #models)
+    end
+
     for _, model in ipairs(models) do
         if valid(model) then
             local key = modelKey(model)
             local workflow = workflowFor(key)
             local currentState = stateOf(model)
+
+            local snapshot = tostring(stateName(currentState)) .. "|" .. tostring(workflow.phase) .. "|" .. tostring(workflow.attempts)
+            if stationSnapshots[key] ~= snapshot then
+                stationSnapshots[key] = snapshot
+                dlog(
+                    "Station snapshot: key=%s state=%s phase=%s attempts=%s nextTry=%s",
+                    tostring(key),
+                    tostring(stateName(currentState)),
+                    tostring(workflow.phase),
+                    tostring(workflow.attempts),
+                    tostring(workflow.nextTry)
+                )
+            end
 
             if workflow.phase == nil and os.time() >= (workflow.nextTry or 0) then
                 if currentState == STATE.Reward then
@@ -730,6 +977,13 @@ end
 RegisterHook("/Script/Engine.PlayerController:ServerAcknowledgePossession", function()
     if loopStarted then return end
     loopStarted = true
+    dlog(
+        "Hook fired: ServerAcknowledgePossession (config: DebugEnabled=%s DebugVerbose=%s DebugSlotDetails=%s DebugLoopHeartbeat=%s)",
+        tostring(Config.DebugEnabled),
+        tostring(Config.DebugVerbose),
+        tostring(Config.DebugSlotDetails),
+        tostring(Config.DebugLoopHeartbeat)
+    )
     ExecuteWithDelay(Config.StartDelay, function()
         dumpMissionInfo()
         log("Automated expedition loop started.")

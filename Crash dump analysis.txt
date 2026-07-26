@@ -19,7 +19,7 @@ Deferred                                       srv*
 
 ************* Waiting for Debugger Extensions Gallery to Initialize **************
 
->>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.031 seconds
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.032 seconds
    ----> Repository : UserExtensions, Enabled: true, Packages count: 0
    ----> Repository : LocalInstalled, Enabled: true, Packages count: 46
 
@@ -27,7 +27,7 @@ Microsoft (R) Windows Debugger Version 10.0.29617.1000 AMD64
 Copyright (c) Microsoft Corporation. All rights reserved.
 
 
-Loading Dump File [F:\SteamLibrary\steamapps\common\Palworld\Mods\NativeMods\UE4SS\crash_2026_07_26_15_33_02.6311998.dmp]
+Loading Dump File [E:\Documents\GitHub\auto-expedition\crash_2026_07_26_20_21_08.9917385.dmp]
 User Mini Dump File: Only registers, stack and portions of memory are available
 
 
@@ -39,16 +39,16 @@ Executable search path is:
 Windows 10 Version 26200 MP (32 procs) Free x64
 Product: WinNt, suite: SingleUserTS Personal
 Edition build lab: 26100.1.amd64fre.ge_release.240331-1435
-Debug session time: Sun Jul 26 15:33:02.000 2026 (UTC + 1:00)
-System Uptime: 7 days 9:34:07.251
-Process Uptime: 0 days 0:00:32.000
+Debug session time: Sun Jul 26 20:21:09.000 2026 (UTC + 1:00)
+System Uptime: 7 days 14:22:13.612
+Process Uptime: 0 days 0:00:34.000
 ................................................................
 ................................................................
 ................................................................
 ..................
 This dump file has an exception of interest stored in it.
 The stored exception information can be accessed via .ecxr
-(98cc.79a8): Access violation - code c0000005 (first/second chance not available)
+(c450.b1bc): Access violation - code c0000005 (first/second chance not available)
 
 +------------------------------------------------------------------------+
 | This target supports Hardware-enforced Stack Protection. A HW based    |
@@ -62,7 +62,7 @@ The stored exception information can be accessed via .ecxr
 For analysis of this file, run !analyze -v
 ntdll!NtGetContextThread+0x14:
 00007ffc`b0081fb4 c3              ret
-0:208> !analyze -v
+0:206> !analyze -v
 ................................................................
 ................................................................
 ................................................................
@@ -80,10 +80,10 @@ KEY_VALUES_STRING: 1
     Value: Read
 
     Key  : Analysis.CPU.mSec
-    Value: 343
+    Value: 312
 
     Key  : Analysis.Elapsed.mSec
-    Value: 379
+    Value: 310
 
     Key  : Analysis.IO.Other.Mb
     Value: 0
@@ -95,13 +95,13 @@ KEY_VALUES_STRING: 1
     Value: 0
 
     Key  : Analysis.Init.CPU.mSec
-    Value: 234
+    Value: 187
 
     Key  : Analysis.Init.Elapsed.mSec
-    Value: 3895
+    Value: 2267
 
     Key  : Analysis.Memory.CommitPeak.Mb
-    Value: 420
+    Value: 423
 
     Key  : Analysis.Version.DbgEng
     Value: 10.0.29617.1000
@@ -119,7 +119,7 @@ KEY_VALUES_STRING: 1
     Value: 0xc0000005
 
     Key  : Failure.Exception.IP.Address
-    Value: 0x7ffb98816501
+    Value: 0x7ffb94b66501
 
     Key  : Failure.Exception.IP.Module
     Value: UE4SS
@@ -137,10 +137,10 @@ KEY_VALUES_STRING: 1
     Value: Paged
 
     Key  : Timeline.OS.Boot.DeltaSec
-    Value: 639247
+    Value: 656533
 
     Key  : Timeline.Process.Start.DeltaSec
-    Value: 32
+    Value: 34
 
     Key  : WER.OS.Branch
     Value: ge_release
@@ -152,25 +152,25 @@ KEY_VALUES_STRING: 1
     Value: 5.1.1.0
 
 
-FILE_IN_CAB:  crash_2026_07_26_15_33_02.6311998.dmp
+FILE_IN_CAB:  crash_2026_07_26_20_21_08.9917385.dmp
 
 NTGLOBALFLAG:  0
 
 CONTEXT:  (.ecxr)
-rax=0000000000000000 rbx=000000f87114e760 rcx=00007ffb9951a240
-rdx=0000000000000000 rsi=00007ffb99317d48 rdi=000000f87114e890
-rip=00007ffb98816501 rsp=000000f87114e4e0 rbp=000000f87114e6b0
- r8=ffffffffffffffff  r9=000000f801cde000 r10=000002c41d167e80
-r11=000002c41d167e70 r12=0000000000000000 r13=000002c4fa9643e0
-r14=000002c31241e300 r15=000002c40054f060
+rax=0000000000000000 rbx=000000af6bb0e910 rcx=00007ffb9586a240
+rdx=0000000000000000 rsi=00007ffb95667d48 rdi=000000af6bb0ea40
+rip=00007ffb94b66501 rsp=000000af6bb0e690 rbp=000000af6bb0e860
+ r8=ffffffffffffffff  r9=000000af7e2aa000 r10=000002038eda2250
+r11=000002038eda2240 r12=0000000000000000 r13=0000020486840ec0
+r14=000002035935e280 r15=00000203773c4410
 iopl=0         nv up ei pl nz na po nc
 cs=0033  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00010202
 UE4SS!RC::LuaType::push_nameproperty+0x111:
-00007ffb`98816501 488b4870        mov     rcx,qword ptr [rax+70h] ds:00000000`00000070=????????????????
+00007ffb`94b66501 488b4870        mov     rcx,qword ptr [rax+70h] ds:00000000`00000070=????????????????
 Resetting default scope
 
 EXCEPTION_RECORD:  (.exr -1)
-ExceptionAddress: 00007ffb98816501 (UE4SS!RC::LuaType::push_nameproperty+0x0000000000000111)
+ExceptionAddress: 00007ffb94b66501 (UE4SS!RC::LuaType::push_nameproperty+0x0000000000000111)
    ExceptionCode: c0000005 (Access violation)
   ExceptionFlags: 00000000
 NumberParameters: 2
@@ -191,36 +191,36 @@ EXCEPTION_PARAMETER1:  0000000000000000
 EXCEPTION_PARAMETER2:  0000000000000070
 
 STACK_TEXT:  
-000000f8`7114e4e0 00007ffb`9880eb33     : 00000000`000002c3 000002c3`e479fde0 000002c3`e479fde0 00000000`00000001 : UE4SS!RC::LuaType::push_nameproperty+0x111
-000000f8`7114e5b0 00007ffb`98e17ab4     : 00007b3b`3ecc47d4 00000000`00000000 000002c4`00542798 00007ffb`98eea774 : UE4SS!RC::Unreal::FUtf8String::operator=+0xf23
-000000f8`7114eb00 00007ffb`98e1c8bc     : 00000000`00000000 00007ffb`98ee38f9 000002c4`00542798 00007ffb`98efab70 : UE4SS!RC::SinglePassScanner::string_to_vector+0x3f4
-000000f8`7114eb80 00007ffb`98eeb75e     : 000002c3`114da7a4 000002c4`00542798 000002c3`114da7a4 000002c4`00542798 : UE4SS!RC::LuaMadeSimple::process_lua_function+0x40c
-000000f8`7114ec80 00007ffb`98ef6a49     : 000002c4`1d167e60 00000000`00000003 00000000`00000000 000002c3`114da7b0 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x1484e
-000000f8`7114ecd0 00007ffb`98eea129     : 000002c4`00542798 000002c3`f9cb7f80 00000000`00000000 000002c4`0070ca74 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x1fb39
-000000f8`7114ee70 00007ffb`98eeaeb3     : 00000000`00000000 000002c3`31470d80 00000000`00000039 00000000`00000000 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x13219
-000000f8`7114eec0 00007ffb`98eea774     : 000002c4`00542798 000000f8`7114f190 00007ffc`ad6298b0 000002c3`31540000 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x13fa3
-000000f8`7114f040 00007ffb`98ee282c     : 00000000`00000000 00007ffb`98ee38f9 00000000`00000000 00007ffb`98efab70 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x13864
-000000f8`7114f0a0 00007ffb`98efb121     : 000002c4`00542798 000002c4`1d167e30 00007ffb`98efb0c0 000002c4`00542798 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0xb91c
-000000f8`7114f110 00007ffb`98eeb75e     : 000002c3`36f6ff80 00007ffb`98ef8357 000002c4`00542798 000002c4`00542798 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x24211
-000000f8`7114f150 00007ffb`98eea960     : 000002c3`1a840a08 000002c4`00542798 000002c3`1a840a08 00007ffb`98eebf27 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x1484e
-000000f8`7114f1a0 00007ffb`98ef642b     : 000002c4`008aff84 000002c4`008aff84 00000000`00000000 000002c4`00826dd0 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x13a50
-000000f8`7114f1f0 00007ffb`98eea129     : 000002c4`00542798 000002c3`f9cb7d50 00000000`00000000 000002c3`1a840a0c : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x1f51b
-000000f8`7114f390 00007ffb`98eeaeb3     : 00000000`00000000 00000000`00000000 00000000`00000000 00007ffc`aff75545 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x13219
-000000f8`7114f3e0 00007ffb`98eea774     : 00000000`00000002 00000000`00000000 00000000`00000000 00000000`00000000 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x13fa3
-000000f8`7114f560 00007ffb`98ee282c     : 00000000`00000001 00000000`00000000 00000000`00000000 00000000`00000000 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x13864
-000000f8`7114f5c0 00007ffb`98e191e5     : 00000000`00000000 000002c4`00542798 00000000`00000000 00000000`00000000 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0xb91c
-000000f8`7114f630 00007ffb`9885637d     : 00000000`00000000 00000000`00000000 000002c4`002d7301 00000000`00000000 : UE4SS!RC::LuaMadeSimple::Lua::call_function+0x75
-000000f8`7114f710 00007ffb`988561bd     : 000002c4`002d7301 000002c3`19e3b950 000002c3`19e3b968 00000000`00000000 : UE4SS!RC::Unreal::Hook::FCallbackOptions::FCallbackOptions+0x38d
-000000f8`7114f7b0 00007ffb`9886329f     : 00000000`261a2259 00000000`00000005 00024564`46a78158 000002c3`2862fcf0 : UE4SS!RC::Unreal::Hook::FCallbackOptions::FCallbackOptions+0x1cd
-000000f8`7114f820 00007ffc`ad51cd30     : 000002c4`002d6bc0 00000000`00000000 00000000`00000000 00000000`00000000 : UE4SS!RC::Unreal::Hook::FCallbackOptions::FCallbackOptions+0xd2af
-000000f8`7114f850 00007ffc`afb1e957     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : ucrtbase!thread_start<unsigned int (__cdecl*)(void *),1>+0x30
-000000f8`7114f880 00007ffc`affcad6c     : 00000000`00000000 00000000`00000000 000004f0`fffffb30 000004d0`fffffb30 : kernel32!BaseThreadInitThunk+0x17
-000000f8`7114f8b0 00000000`00000000     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : ntdll!RtlUserThreadStart+0x2c
+000000af`6bb0e690 00007ffb`94b5eb33     : 00000000`00000202 00000203`4e60fde0 00000203`4e60fde0 00000000`00000001 : UE4SS!RC::LuaType::push_nameproperty+0x111
+000000af`6bb0e760 00007ffb`95167ab4     : 0000a75e`3452fe4c 00000203`773138f8 00000202`982d94e8 00007ffb`9523a774 : UE4SS!RC::Unreal::FUtf8String::operator=+0xf23
+000000af`6bb0ecb0 00007ffb`9516c8bc     : 00000000`00000000 00007ffb`952338f9 00000202`982d94e8 00007ffb`9524ab70 : UE4SS!RC::SinglePassScanner::string_to_vector+0x3f4
+000000af`6bb0ed30 00007ffb`9523b75e     : 00000202`97db75e4 00000202`982d94e8 00000202`97db75e4 00000202`982d94e8 : UE4SS!RC::LuaMadeSimple::process_lua_function+0x40c
+000000af`6bb0ee30 00007ffb`95246a49     : 00000203`8eda2230 00000000`00000003 00000000`00000000 00000202`97db75f0 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x1484e
+000000af`6bb0ee80 00007ffb`9523a129     : 00000202`982d94e8 00000203`4931a4c0 00000000`00000000 00000202`9812f0d4 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x1fb39
+000000af`6bb0f020 00007ffb`9523aeb3     : 00000000`00000000 00000203`773c4410 00000202`814778b0 00000000`0000004b : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x13219
+000000af`6bb0f070 00007ffb`9523a774     : 00000000`00000098 00007ffb`9516c8c8 00007ffc`ad6298b0 00007ffb`9524b220 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x13fa3
+000000af`6bb0f1f0 00007ffb`9523282c     : 00000000`00000000 00007ffb`952338f9 00000000`00000000 00000203`8eda2290 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x13864
+000000af`6bb0f250 00007ffb`9524b121     : 00000202`982d94e8 00000203`8eda2200 00007ffb`9524b0c0 00000202`982d94e8 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0xb91c
+000000af`6bb0f2c0 00007ffb`9523b75e     : 00000202`982d94e8 00000203`8eda2250 00000203`8eda2280 00000202`982d94e8 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x24211
+000000af`6bb0f300 00007ffb`9523a960     : 00000202`980e37e4 00000202`982d94e8 00000202`980e37e4 0000a75e`3452e63c : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x1484e
+000000af`6bb0f350 00007ffb`9524642b     : 00000000`00020135 00000000`00020135 00000202`9835682c 00000000`00020135 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x13a50
+000000af`6bb0f3a0 00007ffb`9523a129     : 00000202`982d94e8 00000203`4931ab00 00000000`00000000 00000202`980e37e8 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x1f51b
+000000af`6bb0f540 00007ffb`9523aeb3     : 00000000`00000000 00000000`00000000 00000000`00000000 00007ffc`aff75545 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x13219
+000000af`6bb0f590 00007ffb`9523a774     : 00000000`00000002 00000000`00000000 00000000`00000000 00000000`00000000 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x13fa3
+000000af`6bb0f710 00007ffb`9523282c     : 00000000`00000001 00000000`00000000 00000000`00000000 00000000`00000000 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0x13864
+000000af`6bb0f770 00007ffb`951691e5     : 00000000`00000000 00000202`982d94e8 00000000`00000000 00000000`00000000 : UE4SS!RC::ASM::resolve_function_address_from_potential_jmp+0xb91c
+000000af`6bb0f7e0 00007ffb`94ba637d     : 00000000`00000000 00000000`00000000 00000203`773bfe01 00000000`00000000 : UE4SS!RC::LuaMadeSimple::Lua::call_function+0x75
+000000af`6bb0f8c0 00007ffb`94ba61bd     : 00000203`773bfe01 00000203`894eb1e0 00000203`894eb1f8 00000000`00000000 : UE4SS!RC::Unreal::Hook::FCallbackOptions::FCallbackOptions+0x38d
+000000af`6bb0f960 00007ffb`94bb329f     : 00000000`2721e731 00000000`00000005 0002551d`12020ec8 00000202`98314860 : UE4SS!RC::Unreal::Hook::FCallbackOptions::FCallbackOptions+0x1cd
+000000af`6bb0f9d0 00007ffc`ad51cd30     : 00000203`773bfd20 00000000`00000000 00000000`00000000 00000000`00000000 : UE4SS!RC::Unreal::Hook::FCallbackOptions::FCallbackOptions+0xd2af
+000000af`6bb0fa00 00007ffc`afb1e957     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : ucrtbase!thread_start<unsigned int (__cdecl*)(void *),1>+0x30
+000000af`6bb0fa30 00007ffc`affcad6c     : 00000000`00000000 00000000`00000000 000004f0`fffffb30 000004d0`fffffb30 : kernel32!BaseThreadInitThunk+0x17
+000000af`6bb0fa60 00000000`00000000     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : ntdll!RtlUserThreadStart+0x2c
 
 
 IP_IN_PAGED_CODE: 
 UE4SS!RC::LuaType::push_nameproperty+111
-00007ffb`98816501 488b4870        mov     rcx,qword ptr [rax+70h]
+00007ffb`94b66501 488b4870        mov     rcx,qword ptr [rax+70h]
 
 SYMBOL_NAME:  UE4SS+276501
 
@@ -228,7 +228,7 @@ MODULE_NAME: UE4SS
 
 IMAGE_NAME:  UE4SS.dll
 
-STACK_COMMAND: ~208s; .ecxr ; kb
+STACK_COMMAND: ~206s; .ecxr ; kb
 
 FAILURE_BUCKET_ID:  INVALID_POINTER_READ_c0000005_UE4SS.dll!Unknown
 

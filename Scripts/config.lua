@@ -42,11 +42,21 @@ local Config = {
     MaxCollectionRetries = 3,
     RetryCooldown = 30000,
 
-    -- Native Easy Bulk Storage (quick-stack mode) is used for the newly
-    -- collected inventory slots. Set false to leave loot in player inventory.
+    -- When enabled, expedition reward items are routed into a base storage
+    -- container. Set false to leave rewards in the expedition reward container.
     EnableEasyBulkStorage = true,
     StorageReadyDelay = 500,
     StorageFinishDelay = 1000,
+
+    -- Debug logging:
+    --   DebugEnabled: master switch for in-depth instrumentation.
+    --   DebugVerbose: includes per-phase scheduling and retry details.
+    --   DebugSlotDetails: includes per-slot move details during reward routing.
+    --   DebugLoopHeartbeat: logs each polling loop, even without state changes.
+    DebugEnabled = false,
+    DebugVerbose = false,
+    DebugSlotDetails = false,
+    DebugLoopHeartbeat = false,
 }
 
 function Config.GetTargetExpeditionID()
