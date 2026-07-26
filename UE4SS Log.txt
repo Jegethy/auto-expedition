@@ -1,0 +1,2626 @@
+[15:01:45.2241174] Console created
+[15:01:45.2241907] UE4SS - v3.0.1 Beta #0 - Git SHA #c838a8ac
+[15:01:45.2242245] Timezone: Europe/London
+[15:01:45.2242481] UE4SS Build Configuration: Game__Shipping__Win64 (MSVC)
+[15:01:45.2255712] Setting up mods...
+[15:01:45.2256017] Loading mods from: F:\SteamLibrary\steamapps\common\Palworld\Mods\NativeMods\UE4SS\Mods
+[15:01:45.2276733] Starting mods (from mods.txt (F:\SteamLibrary\steamapps\common\Palworld\Mods\NativeMods\UE4SS\Mods\mods.txt) load order)...
+[15:01:45.2278574] Starting C++ mod 'PalSchema'
+[15:01:45.2280514] [PalSchema] Config loaded.
+[15:01:45.2644275] [PalSchema] Found UBlueprintGeneratedClass::PostLoadDefaultObject: 0x7ff6758bfa10
+[15:01:45.3372086] [PalSchema] Found UDataTable::Serialize: 0x7ff675a32ab0
+[15:01:45.3685973] [PalSchema] Found UWorld::CleanupWorld: 0x7ff6760d1890
+[15:01:45.3746674] [PalSchema] Found AGameModeBase::InitGameState: 0x7ff675abcf10
+[15:01:45.4614882] [PalSchema] Found FName::ToString_Wchar: 0x7ff673d22e10
+[15:01:45.5153287] [PalSchema] Found UClass::GetDefaultObject: 0x7ff6720ffa00
+[15:01:45.6075991] [PalSchema] Found UPalDynamicItemWorldSubsystem::Create_ServerInternal: 0x7ff6736f32b0
+[15:01:45.6076295] [PalSchema] Found UPalDynamicItemWorldSubsystem::ApplyWorldSaveData: 0x7ff6736ec7e8
+[15:01:45.6122073] [PalSchema] Found ValidateDynamicItemSaveData: 0x7ff67370a730
+[15:01:45.6498698] [PalSchema] Found UPalItemSlot::UpdateItem_ServerInternal: 0x7ff6738069e0
+[15:01:45.6499431] [PalSchema] Found UPalItemContainer::ApplySaveData: 0x7ff6737dd66e
+[15:01:45.7575735] [PalSchema] Found ValidateWorldSaveDynamicItemStaticIds: 0x7ff673a60dc0
+[15:01:45.7706728] [PalSchema] Found GetObjectsOfClass: 0x7ff673ec1bb0
+[15:01:45.8139162] [PalSchema] Found AsyncTask: 0x7ff673bd7b70
+[15:01:45.8508312] [PalSchema] Found FMemory::Free: 0x7ff673c25aa0
+[15:01:45.8564095] [PalSchema] Found FName::Constructor: 0x7ff673d119c0
+[15:01:45.8822647] [PalSchema] Found UStruct::StaticLink: 0x7ff673dcea80
+[15:01:45.8842004] [PalSchema] Found UClass::AssembleReferenceTokenStream: 0x7ff673ddb0a0
+[15:01:45.9108717] [PalSchema] Found FFieldClass::GetNameToFieldClassMap: 0x7ff673de6930
+[15:01:45.9172309] [PalSchema] Found UObjectGlobals::StaticFindObject: 0x7ff673eb8ea0
+[15:01:45.9878058] [PalSchema] Found FField::IsA: 0x7ff671a0ccd0
+[15:01:46.0084395] [PalSchema] Found FPakPlatformFile::GetPakFolders: 0x7ff67560a070
+[15:01:46.0984076] [PalSchema] PalSchema v0.6.1 by Okaetsu loaded.
+[15:01:46.0984805] Starting mods (from enabled.txt (F:\SteamLibrary\steamapps\common\Palworld\Mods\NativeMods\UE4SS\Mods), no defined load order)...
+[15:01:46.0986799] Mod 'StutterFixPack' has enabled.txt, starting mod.
+[15:01:46.0987260] No specific game configuration found, using default configuration file
+[15:01:46.0987443] Config: F:\SteamLibrary\steamapps\common\Palworld\Mods\NativeMods\UE4SS\UE4SS-settings.ini
+[15:01:46.0987618] root directory: F:\SteamLibrary\steamapps\common\Palworld\Mods\NativeMods\UE4SS
+[15:01:46.0987810] working directory: F:\SteamLibrary\steamapps\common\Palworld\Mods\NativeMods\UE4SS
+[15:01:46.0987984] game executable directory: F:\SteamLibrary\steamapps\common\Palworld\Pal\Binaries\Win64
+[15:01:46.0988209] game executable: F:\SteamLibrary\steamapps\common\Palworld\Pal\Binaries\Win64\Palworld-Win64-Shipping.exe (161348096 bytes)
+
+[15:01:46.0988391] mods directories: 
+[15:01:46.0988554] [0] F:\SteamLibrary\steamapps\common\Palworld\Mods\NativeMods\UE4SS\Mods
+[15:01:46.0988732] 
+[15:01:46.0988890] log directory: F:\SteamLibrary\steamapps\common\Palworld\Mods\NativeMods\UE4SS
+[15:01:46.0989306] object dumper directory: F:\SteamLibrary\steamapps\common\Palworld\Mods\NativeMods\UE4SS
+
+[15:01:46.1042098] MemberVariableLayout.ini loaded
+[15:01:46.1042345] 
+##### MEMBER OFFSETS START (MemberVariableLayout) #####
+[15:01:46.1042531] UObjectBase::bUseSoftwareCursorWidgets = 0x250
+[15:01:46.1042700] UObjectBase::ClassPrivate = 0x10
+[15:01:46.1042861] UObjectBase::ViewportFrame = 0xF0
+[15:01:46.1043019] UObjectBase::MouseLockMode = 0x39C
+[15:01:46.1043185] UObjectBase::bFindCameraComponentWhenViewTarget = 0x5A
+[15:01:46.1043350] UObjectBase::InternalIndex = 0xC
+[15:01:46.1043508] UObjectBase::ObjectFlags = 0x8
+[15:01:46.1043662] UObjectBase::World = 0x78
+[15:01:46.1043819] UObjectBase::ActiveSplitscreenType = 0x70
+[15:01:46.1043978] UObjectBase::OnEndCursorOver = 0x1D6
+[15:01:46.1044151] UObjectBase::CustomTimeDilation = 0x64
+[15:01:46.1044357] UObjectBase::NamePrivate = 0x18
+[15:01:46.1044514] UObjectBase::InitialLifeSpan = 0x60
+[15:01:46.1044808] UObjectBase::AudioDeviceHandle = 0xF8
+[15:01:46.1044992] UObjectBase::bForceNetAddressable = 0x59
+[15:01:46.1045151] UObjectBase::InputPriority = 0x154
+[15:01:46.1045361] UObjectBase::bDisableSplitScreenOverride = 0x398
+[15:01:46.1045533] UObjectBase::Window = 0x100
+[15:01:46.1045690] UObjectBase::OuterPrivate = 0x20
+[15:01:46.1045845] UObjectBase::CurrentBufferVisualizationMode = 0x130
+[15:01:46.1046006] UObjectBase::bSuppressTransitionMessage = 0x88
+[15:01:46.1046167] UObjectBase::CurrentLumenVisualizationMode = 0x140
+[15:01:46.1046329] UObjectBase::CurrentNaniteVisualizationMode = 0x138
+[15:01:46.1046491] UObjectBase::CurrentVirtualShadowMapVisualizationMode = 0x148
+[15:01:46.1046653] UObjectBase::DebugProperties = 0x48
+[15:01:46.1046812] UObjectBase::EngineShowFlags = 0xB8
+[15:01:46.1046971] UObjectBase::AutoReceiveInput = 0x153
+[15:01:46.1047130] UObjectBase::GameLayerManagerPtr = 0x120
+[15:01:46.1047288] UObjectBase::OnClicked = 0x1D7
+[15:01:46.1047447] UObjectBase::OnActorBeginOverlap = 0x1D3
+[15:01:46.1047604] UObjectBase::HighResScreenshotDialog = 0x150
+[15:01:46.1047763] UObjectBase::OnInputTouchEnter = 0x1DB
+[15:01:46.1047920] UObjectBase::bHasAudioFocus = 0xFC
+[15:01:46.1048078] UObjectBase::OnEndPlay = 0x1DF
+[15:01:46.1048235] UObjectBase::ViewportOverlayWidget = 0x110
+[15:01:46.1048395] UObjectBase::MaxSplitscreenPlayers = 0x68
+[15:01:46.1048553] UObjectBase::MouseCaptureMode = 0x39A
+[15:01:46.1048711] UObjectBase::Layers = 0x1A8
+[15:01:46.1048871] UObjectBase::SplitscreenInfo = 0x58
+[15:01:46.1049029] UObjectBase::StatHitchesData = 0x390
+[15:01:46.1049187] UObjectBase::OnBeginCursorOver = 0x1D5
+[15:01:46.1049345] UObjectBase::StatUnitData = 0x388
+[15:01:46.1049503] UObjectBase::ViewModeIndex = 0xB0
+[15:01:46.1049661] UObjectBase::Viewport = 0xE8
+[15:01:46.1049819] UObjectBase::ViewportConsole = 0x40
+[15:01:46.1049993] UObjectBase::bHideCursorDuringCapture = 0x39B
+[15:01:46.1050154] UObjectBase::DetachFence = 0x280
+[15:01:46.1050311] UObjectBase::CreationTime = 0x158
+[15:01:46.1050468] UObjectBase::bIgnoreInput = 0x399
+[15:01:46.1050629] UObjectBase::bActorEnableCollision = 0x5C
+[15:01:46.1050788] UObjectBase::bIsMouseOverClient = 0x39D
+[15:01:46.1050947] UObjectBase::OnInputTouchEnd = 0x1DA
+[15:01:46.1051107] UObjectBase::bHasDeferredComponentRegistration = 0x5C
+[15:01:46.1051267] UObjectBase::AttachmentReplication = 0x70
+[15:01:46.1051430] UObjectBase::DefaultUpdateOverlapsMethodDuringLevelStreaming = 0x5F
+[15:01:46.1051929] UObjectBase::InputComponent = 0x160
+[15:01:46.1052102] UObjectBase::LastRenderTime = 0x17C
+[15:01:46.1052263] UObjectBase::MinNetUpdateFrequency = 0x174
+[15:01:46.1052426] UObjectBase::NetCullDistanceSquared = 0x168
+[15:01:46.1052589] UObjectBase::OnActorEndOverlap = 0x1D4
+[15:01:46.1052748] UObjectBase::NetDormancy = 0x151
+[15:01:46.1052908] UObjectBase::NetDriverName = 0x148
+[15:01:46.1053066] UObjectBase::NetTag = 0x16C
+[15:01:46.1053223] UObjectBase::NetPriority = 0x178
+[15:01:46.1053384] UObjectBase::NetUpdateFrequency = 0x170
+[15:01:46.1053544] UObjectBase::OnActorHit = 0x1DD
+[15:01:46.1053703] UObjectBase::OnDestroyed = 0x1DE
+[15:01:46.1053863] UObjectBase::OnInputTouchBegin = 0x1D9
+[15:01:46.1054030] UObjectBase::OnInputTouchLeave = 0x1DC
+[15:01:46.1054189] UObjectBase::OnReleased = 0x1D8
+[15:01:46.1054347] UObjectBase::OnTakeAnyDamage = 0x1D0
+[15:01:46.1054507] UObjectBase::OnTakePointDamage = 0x1D1
+[15:01:46.1054665] UObjectBase::OnTakeRadialDamage = 0x1D2
+[15:01:46.1054823] UObjectBase::ParentComponent = 0x1B8
+[15:01:46.1054984] UObjectBase::PrimaryActorTick = 0x28
+[15:01:46.1055143] UObjectBase::RayTracingGroupId = 0x6C
+[15:01:46.1055304] UObjectBase::RemoteRole = 0x68
+[15:01:46.1055465] UObjectBase::ReplicatedComponentsInfo = 0x1F0
+[15:01:46.1055625] UObjectBase::ReplicatedMovement = 0xD0
+[15:01:46.1055784] UObjectBase::ReplicatedSubObjects = 0x1E0
+[15:01:46.1055944] UObjectBase::Role = 0x150
+[15:01:46.1056102] UObjectBase::RootComponent = 0x198
+[15:01:46.1056261] UObjectBase::SpawnCollisionHandlingMethod = 0x152
+[15:01:46.1056423] UObjectBase::Tags = 0x1C0
+[15:01:46.1056584] UObjectBase::TimerHandle_LifeSpanExpired = 0x1A0
+[15:01:46.1056752] UObjectBase::UpdateOverlapsMethodDuringLevelStreaming = 0x5E
+[15:01:46.1056916] UObjectBase::InternalIndex_Private = 0xC
+[15:01:46.1057077] UObjectBase::UEP_TotalSize = 0x28
+[15:01:46.1057238] UObjectBase::bShowTitleSafeZone = 0x6C
+[15:01:46.1057397] UObjectBase::bIsPlayInEditorViewport = 0x6C
+[15:01:46.1057557] UObjectBase::bDisableWorldRendering = 0x6C
+[15:01:46.1057716] UObjectBase::HardwareCursorCache = 0x160
+[15:01:46.1057892] UObjectBase::HardwareCursors = 0x1B0
+[15:01:46.1058055] UObjectBase::CursorWidgets = 0x200
+[15:01:46.1058213] UObjectBase::ActorHasBegunPlay = 0x5D
+[15:01:46.1058371] UObjectBase::bNetTemporary = 0x58
+[15:01:46.1058531] UObjectBase::bActorIsBeingConstructed = 0x5D
+[15:01:46.1058692] UObjectBase::bNetStartup = 0x58
+[15:01:46.1058849] UObjectBase::bOnlyRelevantToOwner = 0x58
+[15:01:46.1059009] UObjectBase::bAlwaysRelevant = 0x58
+[15:01:46.1059167] UObjectBase::bReplicateMovement = 0x58
+[15:01:46.1059325] UObjectBase::bCallPreReplication = 0x58
+[15:01:46.1059485] UObjectBase::bCallPreReplicationForReplay = 0x58
+[15:01:46.1059649] UObjectBase::bHidden = 0x58
+[15:01:46.1059813] UObjectBase::bTearOff = 0x59
+[15:01:46.1059979] UObjectBase::bExchangedRoles = 0x59
+[15:01:46.1060143] UObjectBase::bNetLoadOnClient = 0x59
+[15:01:46.1060315] UObjectBase::bNetUseOwnerRelevancy = 0x59
+[15:01:46.1060483] UObjectBase::bRelevantForNetworkReplays = 0x59
+[15:01:46.1060644] UObjectBase::bRelevantForLevelBounds = 0x59
+[15:01:46.1060812] UObjectBase::bReplayRewindable = 0x59
+[15:01:46.1060982] UObjectBase::bAllowTickBeforeBeginPlay = 0x5A
+[15:01:46.1061147] UObjectBase::bAutoDestroyWhenFinished = 0x5A
+[15:01:46.1061312] UObjectBase::bCanBeDamaged = 0x5A
+[15:01:46.1061472] UObjectBase::bBlockInput = 0x5A
+[15:01:46.1061652] UObjectBase::bCollideWhenPlacing = 0x5A
+[15:01:46.1061829] UObjectBase::bGenerateOverlapEventsDuringLevelStreaming = 0x5A
+[15:01:46.1061999] UObjectBase::bIgnoresOriginShifting = 0x5A
+[15:01:46.1062170] UObjectBase::bHasRegisteredAllComponents = 0x5C
+[15:01:46.1062335] UObjectBase::bEnableAutoLODGeneration = 0x5B
+[15:01:46.1062496] UObjectBase::bIsEditorOnlyActor = 0x5B
+[15:01:46.1062665] UObjectBase::bActorSeamlessTraveled = 0x5B
+[15:01:46.1062831] UObjectBase::bReplicates = 0x5B
+[15:01:46.1062991] UObjectBase::bCanBeInCluster = 0x5B
+[15:01:46.1063157] UObjectBase::bAllowReceiveTickEventOnDedicatedServer = 0x5B
+[15:01:46.1063324] UObjectBase::bNetCheckedInitialPhysicsState = 0x5B
+[15:01:46.1063487] UObjectBase::bReplicateUsingRegisteredSubObjectList = 0x5B
+[15:01:46.1063652] UObjectBase::bHasFinishedSpawning = 0x5C
+[15:01:46.1063820] UObjectBase::bActorInitialized = 0x5C
+[15:01:46.1063991] UObjectBase::bActorBeginningPlayFromLevelStreaming = 0x5C
+[15:01:46.1064160] UObjectBase::bTickFunctionsRegistered = 0x5C
+[15:01:46.1064324] UObjectBase::bRunningUserConstructionScript = 0x5C
+[15:01:46.1064488] UObjectBase::bActorIsBeingDestroyed = 0x5D
+[15:01:46.1064975] UObjectBase::bActorWantsDestroyDuringBeginPlay = 0x5D
+[15:01:46.1065306] UObjectBase::bAsyncPhysicsTickEnabled = 0x5D
+[15:01:46.1065485] UObjectBase::Owner = 0x140
+[15:01:46.1065658] UObjectBase::Children = 0x188
+[15:01:46.1065822] UScriptStruct::ICppStructOps::Alignment = 0xC
+[15:01:46.1065988] UScriptStruct::ICppStructOps::Size = 0x8
+[15:01:46.1066159] UScriptStruct::ICppStructOps::UEP_TotalSize = 0x10
+[15:01:46.1066327] UStruct::DestructorLink = 0x80
+[15:01:46.1066489] UStruct::Children = 0x48
+[15:01:46.1066658] UStruct::ChildProperties = 0x50
+[15:01:46.1066820] UStruct::PostConstructLink = 0x88
+[15:01:46.1066983] UStruct::UnresolvedScriptProperties = 0xA0
+[15:01:46.1067144] UStruct::MinAlignment = 0x5C
+[15:01:46.1067305] UStruct::PropertiesSize = 0x58
+[15:01:46.1067464] UStruct::PropertyLink = 0x70
+[15:01:46.1067639] UStruct::RefLink = 0x78
+[15:01:46.1067800] UStruct::Script = 0x60
+[15:01:46.1067961] UStruct::ScriptAndPropertyObjectReferences = 0x90
+[15:01:46.1068123] UStruct::SuperStruct = 0x40
+[15:01:46.1068282] UStruct::UEP_TotalSize = 0xB0
+[15:01:46.1068445] UScriptStruct::UEP_TotalSize = 0xC0
+[15:01:46.1068606] UScriptStruct::StructFlags = 0xB0
+[15:01:46.1068765] UScriptStruct::CppStructOps = 0xB8
+[15:01:46.1068928] UScriptStruct::bPrepareCppStructOpsCompleted = 0xB4
+[15:01:46.1069133] UClass::ClassCastFlags = 0xD8
+[15:01:46.1069294] UClass::bLayoutChanging = 0xD1
+[15:01:46.1069452] UClass::ClassWithin = 0xE0
+[15:01:46.1069611] UClass::bCooked = 0xD0
+[15:01:46.1069766] UClass::ClassConfigName = 0xE8
+[15:01:46.1069955] UClass::ClassConstructor = 0xB0
+[15:01:46.1070116] UClass::ClassDefaultObject = 0x110
+[15:01:46.1070275] UClass::ClassFlags = 0xD4
+[15:01:46.1070435] UClass::ClassUnique = 0xC8
+[15:01:46.1070593] UClass::ClassVTableHelperCtorCaller = 0xB8
+[15:01:46.1070755] UClass::ReferenceTokenStream = 0x1E0
+[15:01:46.1070918] UClass::FirstOwnedClassRep = 0xCC
+[15:01:46.1071079] UClass::Interfaces = 0x1D0
+[15:01:46.1071239] UClass::NetFields = 0x100
+[15:01:46.1071395] UClass::SparseClassData = 0x118
+[15:01:46.1071555] UClass::SparseClassDataStruct = 0x120
+[15:01:46.1071718] UClass::FuncMap = 0x128
+[15:01:46.1071876] UClass::SuperFuncMap = 0x178
+[15:01:46.1072042] UClass::NativeFunctionLookupTable = 0x220
+[15:01:46.1072230] UClass::UEP_TotalSize = 0x230
+[15:01:46.1072405] UEnum::CppForm = 0x58
+[15:01:46.1072564] UEnum::CppType = 0x30
+[15:01:46.1072725] UEnum::EnumDisplayNameFn = 0x60
+[15:01:46.1072885] UEnum::Names = 0x48
+[15:01:46.1073047] UEnum::EnumFlags_Internal = 0x5C
+[15:01:46.1073207] UEnum::EnumPackage = 0x68
+[15:01:46.1073368] UEnum::UEP_TotalSize = 0x68
+[15:01:46.1073530] UFunction::EventGraphCallOffset = 0xD0
+[15:01:46.1073692] UFunction::EventGraphFunction = 0xC8
+[15:01:46.1073853] UFunction::RPCId = 0xBA
+[15:01:46.1074010] UFunction::FirstPropertyToInit = 0xC0
+[15:01:46.1074171] UFunction::Func = 0xD8
+[15:01:46.1074329] UFunction::FunctionFlags = 0xB0
+[15:01:46.1074490] UFunction::NumParms = 0xB4
+[15:01:46.1074648] UFunction::ParmsSize = 0xB6
+[15:01:46.1074808] UFunction::RPCResponseId = 0xBC
+[15:01:46.1074968] UFunction::ReturnValueOffset = 0xB8
+[15:01:46.1075129] UFunction::UEP_TotalSize = 0xE0
+[15:01:46.1075291] UField::Next = 0x28
+[15:01:46.1075451] UField::UEP_TotalSize = 0x30
+[15:01:46.1075612] FField::ClassPrivate = 0x8
+[15:01:46.1075772] FField::NamePrivate = 0x28
+[15:01:46.1075931] FField::FlagsPrivate = 0x30
+[15:01:46.1076098] FField::Next = 0x20
+[15:01:46.1076277] FField::Owner = 0x10
+[15:01:46.1076445] FField::UEP_TotalSize = 0x38
+[15:01:46.1076610] FProperty::ArrayDim = 0x38
+[15:01:46.1076784] FProperty::DestructorLinkNext = 0x68
+[15:01:46.1076948] FProperty::ElementSize = 0x3C
+[15:01:46.1077109] FProperty::NextRef = 0x60
+[15:01:46.1077269] FProperty::Offset_Internal = 0x4C
+[15:01:46.1077429] FProperty::PostConstructLinkNext = 0x70
+[15:01:46.1077592] FProperty::PropertyLinkNext = 0x58
+[15:01:46.1077751] FProperty::PropertyFlags = 0x40
+[15:01:46.1077912] FProperty::RepIndex = 0x48
+[15:01:46.1078070] FProperty::RepNotifyFunc = 0x50
+[15:01:46.1078228] FProperty::UEP_TotalSize = 0x78
+[15:01:46.1078390] FNumericProperty::ArrayDim = 0x38
+[15:01:46.1078556] FNumericProperty::DestructorLinkNext = 0x68
+[15:01:46.1078722] FNumericProperty::ElementSize = 0x3C
+[15:01:46.1078886] FNumericProperty::NextRef = 0x60
+[15:01:46.1079047] FNumericProperty::Offset_Internal = 0x4C
+[15:01:46.1079210] FNumericProperty::PostConstructLinkNext = 0x70
+[15:01:46.1079371] FNumericProperty::PropertyLinkNext = 0x58
+[15:01:46.1079533] FNumericProperty::PropertyFlags = 0x40
+[15:01:46.1079695] FNumericProperty::RepIndex = 0x48
+[15:01:46.1079859] FNumericProperty::RepNotifyFunc = 0x50
+[15:01:46.1080019] FNumericProperty::UEP_TotalSize = 0x78
+[15:01:46.1080182] FObjectPropertyBase::PropertyClass = 0x78
+[15:01:46.1080355] FObjectPropertyBase::UEP_TotalSize = 0x80
+[15:01:46.1080515] FStructProperty::Struct = 0x78
+[15:01:46.1080679] FStructProperty::UEP_TotalSize = 0x80
+[15:01:46.1080840] FArrayProperty::ArrayFlags = 0x80
+[15:01:46.1081001] FArrayProperty::Inner = 0x78
+[15:01:46.1081166] FArrayProperty::UEP_TotalSize = 0x88
+[15:01:46.1081330] FMapProperty::KeyProp = 0x78
+[15:01:46.1081493] FMapProperty::MapLayout = 0x88
+[15:01:46.1081662] FMapProperty::ValueProp = 0x80
+[15:01:46.1081826] FMapProperty::MapFlags = 0xA0
+[15:01:46.1082001] FMapProperty::UEP_TotalSize = 0xA8
+[15:01:46.1082242] FSetProperty::ElementProp = 0x78
+[15:01:46.1082406] FSetProperty::UEP_TotalSize = 0x98
+[15:01:46.1082571] FSetProperty::SetLayout = 0x80
+[15:01:46.1082735] FBoolProperty::FieldMask = 0x7B
+[15:01:46.1082894] FBoolProperty::ByteMask = 0x7A
+[15:01:46.1083074] FBoolProperty::FieldSize = 0x78
+[15:01:46.1083243] FBoolProperty::ByteOffset = 0x79
+[15:01:46.1083406] FBoolProperty::UEP_TotalSize = 0x80
+[15:01:46.1083576] FByteProperty::Enum = 0x78
+[15:01:46.1083739] FByteProperty::UEP_TotalSize = 0x80
+[15:01:46.1083901] FEnumProperty::Enum = 0x80
+[15:01:46.1084061] FEnumProperty::UEP_TotalSize = 0x88
+[15:01:46.1084224] FEnumProperty::UnderlyingProp = 0x78
+[15:01:46.1084384] FClassProperty::MetaClass = 0x80
+[15:01:46.1084547] FClassProperty::UEP_TotalSize = 0x88
+[15:01:46.1084720] FSoftClassProperty::MetaClass = 0x80
+[15:01:46.1084887] FSoftClassProperty::UEP_TotalSize = 0x88
+[15:01:46.1085056] FDelegateProperty::SignatureFunction = 0x78
+[15:01:46.1085224] FDelegateProperty::UEP_TotalSize = 0x80
+[15:01:46.1085455] FMulticastDelegateProperty::SignatureFunction = 0x78
+[15:01:46.1085665] FMulticastDelegateProperty::UEP_TotalSize = 0x80
+[15:01:46.1085888] FInterfaceProperty::InterfaceClass = 0x78
+[15:01:46.1086137] FInterfaceProperty::UEP_TotalSize = 0x80
+[15:01:46.1086382] FFieldPathProperty::PropertyClass = 0x78
+[15:01:46.1086624] FFieldPathProperty::UEP_TotalSize = 0x80
+[15:01:46.1086798] FWorldContext::ThisCurrentWorld = 0x2C0
+[15:01:46.1086960] FWorldContext::ExternalReferences = 0x2B0
+[15:01:46.1087122] FWorldContext::LastRemoteURL = 0x128
+[15:01:46.1087282] FWorldContext::ContextHandle = 0xA0
+[15:01:46.1087474] FWorldContext::PendingMapChangeFailureDescription = 0x1C8
+[15:01:46.1087762] FWorldContext::TravelURL = 0xA8
+[15:01:46.1087996] FWorldContext::TravelType = 0xB8
+[15:01:46.1088237] FWorldContext::LastURL = 0xC0
+[15:01:46.1088418] FWorldContext::LevelsToLoadForPendingMapChange = 0x1A8
+[15:01:46.1088660] FWorldContext::GarbageObjectsToVerify = 0x260
+[15:01:46.1088906] FWorldContext::bShouldCommitPendingMapChange = 0x1D8
+[15:01:46.1089173] FWorldContext::GameViewport = 0x200
+[15:01:46.1089419] FWorldContext::PIEInstance = 0x220
+[15:01:46.1089675] FWorldContext::PIEFixedTickSeconds = 0x258
+[15:01:46.1089933] FWorldContext::PIEPrefix = 0x228
+[15:01:46.1090190] FWorldContext::RunAsDedicated = 0x23C
+[15:01:46.1090424] FWorldContext::bWaitingOnOnlineSubsystem = 0x23D
+[15:01:46.1090638] FWorldContext::bIsPrimaryPIEInstance = 0x23E
+[15:01:46.1090890] FWorldContext::AudioDeviceID = 0x240
+[15:01:46.1091153] FWorldContext::CustomDescription = 0x248
+[15:01:46.1091356] FWorldContext::PIEAccumulatedTickSeconds = 0x25C
+[15:01:46.1091522] FWorldContext::UEP_TotalSize = 0x2C8
+[15:01:46.1091717] FOutputDevice::bAutoEmitLineTerminator = 0x9
+[15:01:46.1091949] FOutputDevice::bSuppressEventTag = 0x8
+[15:01:46.1092198] FOutputDevice::UEP_TotalSize = 0x10
+[15:01:46.1092437] FArchiveState::ArIsTextFormat = 0x28
+[15:01:46.1092673] FArchiveState::ArIsLoading = 0x28
+[15:01:46.1092844] FArchiveState::ArIsLoadingFromCookedPackage = 0x28
+[15:01:46.1093008] FArchiveState::ArPortFlags = 0x30
+[15:01:46.1093171] FArchiveState::ArIsTransacting = 0x28
+[15:01:46.1093332] FArchiveState::ArIsSaving = 0x28
+[15:01:46.1093539] FArchiveState::ArForceUnicode = 0x28
+[15:01:46.1093785] FArchiveState::ArIsModifyingWeakAndStrongReferences = 0x2B
+[15:01:46.1094042] FArchiveState::ArUseUnversionedPropertySerialization = 0x28
+[15:01:46.1094287] FArchiveState::ArWantBinaryPropertySerialization = 0x28
+[15:01:46.1094533] FArchiveState::ArIsObjectReferenceCollector = 0x2A
+[15:01:46.1094743] FArchiveState::ArIsPersistent = 0x29
+[15:01:46.1094953] FArchiveState::ArForceByteSwapping = 0x29
+[15:01:46.1095208] FArchiveState::ArIsError = 0x29
+[15:01:46.1095461] FArchiveState::ArUEVer = 0x40
+[15:01:46.1095691] FArchiveState::ArIsCriticalError = 0x29
+[15:01:46.1095919] FArchiveState::ArMaxSerializeSize = 0x38
+[15:01:46.1096138] FArchiveState::ArShouldSkipCompilingAssets = 0x29
+[15:01:46.1096305] FArchiveState::ArCustomPropertyList = 0x68
+[15:01:46.1096482] FArchiveState::ArContainsCode = 0x29
+[15:01:46.1096715] FArchiveState::ArIsNetArchive = 0x2B
+[15:01:46.1096957] FArchiveState::ArContainsMap = 0x29
+[15:01:46.1097194] FArchiveState::ArRequiresLocalizationGather = 0x29
+[15:01:46.1097429] FArchiveState::ArIgnoreArchetypeRef = 0x2A
+[15:01:46.1097675] FArchiveState::ArNoDelta = 0x2A
+[15:01:46.1097903] FArchiveState::ArNoIntraPropertyDelta = 0x2A
+[15:01:46.1098149] FArchiveState::ArIgnoreOuterRef = 0x2A
+[15:01:46.1098381] FArchiveState::ArIgnoreClassGeneratedByRef = 0x2A
+[15:01:46.1098613] FArchiveState::ArLicenseeUEVer = 0x48
+[15:01:46.1098850] FArchiveState::ArIgnoreClassRef = 0x2A
+[15:01:46.1099074] FArchiveState::ArAllowLazyLoading = 0x2A
+[15:01:46.1099306] FArchiveState::NextProxy = 0x90
+[15:01:46.1099536] FArchiveState::ArIsCountingMemory = 0x2B
+[15:01:46.1099769] FArchiveState::bCustomVersionsAreReset = 0x88
+[15:01:46.1100005] FArchiveState::ArEngineNetVer = 0x58
+[15:01:46.1100240] FArchiveState::ArShouldSkipBulkData = 0x2B
+[15:01:46.1100458] FArchiveState::ArIsFilterEditorOnly = 0x2B
+[15:01:46.1100696] FArchiveState::ArIsSaveGame = 0x2B
+[15:01:46.1100926] FArchiveState::ArUseCustomPropertyList = 0x2B
+[15:01:46.1101156] FArchiveState::UEP_TotalSize = 0x98
+[15:01:46.1101387] FArchiveState::ArSerializingDefaults = 0x2C
+[15:01:46.1101624] FArchiveState::ArEngineVer = 0x4C
+[15:01:46.1101853] FArchiveState::ArGameNetVer = 0x5C
+[15:01:46.1102073] FArchiveState::CustomVersionContainer = 0x60
+[15:01:46.1102345] FArchiveState::SerializedProperty = 0x78
+[15:01:46.1102580] AActor::bUseSoftwareCursorWidgets = 0x250
+[15:01:46.1102812] AActor::ClassPrivate = 0x10
+[15:01:46.1103047] AActor::ViewportFrame = 0xF0
+[15:01:46.1103277] AActor::MouseLockMode = 0x39C
+[15:01:46.1103513] AActor::bFindCameraComponentWhenViewTarget = 0x5A
+[15:01:46.1103747] AActor::InternalIndex = 0xC
+[15:01:46.1103976] AActor::ObjectFlags = 0x8
+[15:01:46.1104208] AActor::World = 0x78
+[15:01:46.1104434] AActor::ActiveSplitscreenType = 0x70
+[15:01:46.1104668] AActor::OnEndCursorOver = 0x1D6
+[15:01:46.1104899] AActor::CustomTimeDilation = 0x64
+[15:01:46.1105130] AActor::NamePrivate = 0x18
+[15:01:46.1105349] AActor::InitialLifeSpan = 0x60
+[15:01:46.1105579] AActor::AudioDeviceHandle = 0xF8
+[15:01:46.1105812] AActor::bForceNetAddressable = 0x59
+[15:01:46.1106056] AActor::InputPriority = 0x154
+[15:01:46.1106288] AActor::bDisableSplitScreenOverride = 0x398
+[15:01:46.1106519] AActor::Window = 0x100
+[15:01:46.1106748] AActor::OuterPrivate = 0x20
+[15:01:46.1106979] AActor::CurrentBufferVisualizationMode = 0x130
+[15:01:46.1107215] AActor::bSuppressTransitionMessage = 0x88
+[15:01:46.1107435] AActor::CurrentLumenVisualizationMode = 0x140
+[15:01:46.1107668] AActor::CurrentNaniteVisualizationMode = 0x138
+[15:01:46.1107898] AActor::CurrentVirtualShadowMapVisualizationMode = 0x148
+[15:01:46.1108133] AActor::DebugProperties = 0x48
+[15:01:46.1108369] AActor::EngineShowFlags = 0xB8
+[15:01:46.1108600] AActor::AutoReceiveInput = 0x153
+[15:01:46.1108838] AActor::GameLayerManagerPtr = 0x120
+[15:01:46.1109086] AActor::OnClicked = 0x1D7
+[15:01:46.1109325] AActor::OnActorBeginOverlap = 0x1D3
+[15:01:46.1109562] AActor::HighResScreenshotDialog = 0x150
+[15:01:46.1109794] AActor::OnInputTouchEnter = 0x1DB
+[15:01:46.1110024] AActor::bHasAudioFocus = 0xFC
+[15:01:46.1110249] AActor::OnEndPlay = 0x1DF
+[15:01:46.1110481] AActor::ViewportOverlayWidget = 0x110
+[15:01:46.1110712] AActor::MaxSplitscreenPlayers = 0x68
+[15:01:46.1110943] AActor::MouseCaptureMode = 0x39A
+[15:01:46.1111171] AActor::Layers = 0x1A8
+[15:01:46.1111412] AActor::SplitscreenInfo = 0x58
+[15:01:46.1111643] AActor::StatHitchesData = 0x390
+[15:01:46.1111876] AActor::OnBeginCursorOver = 0x1D5
+[15:01:46.1112109] AActor::StatUnitData = 0x388
+[15:01:46.1112345] AActor::ViewModeIndex = 0xB0
+[15:01:46.1112574] AActor::Viewport = 0xE8
+[15:01:46.1112800] AActor::ViewportConsole = 0x40
+[15:01:46.1113022] AActor::bHideCursorDuringCapture = 0x39B
+[15:01:46.1113257] AActor::DetachFence = 0x280
+[15:01:46.1113507] AActor::CreationTime = 0x158
+[15:01:46.1113741] AActor::bIgnoreInput = 0x399
+[15:01:46.1113969] AActor::bActorEnableCollision = 0x5C
+[15:01:46.1114204] AActor::bIsMouseOverClient = 0x39D
+[15:01:46.1114435] AActor::OnInputTouchEnd = 0x1DA
+[15:01:46.1114666] AActor::bHasDeferredComponentRegistration = 0x5C
+[15:01:46.1114889] AActor::AttachmentReplication = 0x70
+[15:01:46.1115120] AActor::DefaultUpdateOverlapsMethodDuringLevelStreaming = 0x5F
+[15:01:46.1115359] AActor::InputComponent = 0x160
+[15:01:46.1115572] AActor::LastRenderTime = 0x17C
+[15:01:46.1115800] AActor::MinNetUpdateFrequency = 0x174
+[15:01:46.1116027] AActor::NetCullDistanceSquared = 0x168
+[15:01:46.1116259] AActor::OnActorEndOverlap = 0x1D4
+[15:01:46.1116494] AActor::NetDormancy = 0x151
+[15:01:46.1116705] AActor::NetDriverName = 0x148
+[15:01:46.1116933] AActor::NetTag = 0x16C
+[15:01:46.1117179] AActor::NetPriority = 0x178
+[15:01:46.1117409] AActor::NetUpdateFrequency = 0x170
+[15:01:46.1117643] AActor::OnActorHit = 0x1DD
+[15:01:46.1117879] AActor::OnDestroyed = 0x1DE
+[15:01:46.1118111] AActor::OnInputTouchBegin = 0x1D9
+[15:01:46.1118341] AActor::OnInputTouchLeave = 0x1DC
+[15:01:46.1118571] AActor::OnReleased = 0x1D8
+[15:01:46.1118799] AActor::OnTakeAnyDamage = 0x1D0
+[15:01:46.1119031] AActor::OnTakePointDamage = 0x1D1
+[15:01:46.1119264] AActor::OnTakeRadialDamage = 0x1D2
+[15:01:46.1119496] AActor::ParentComponent = 0x1B8
+[15:01:46.1119755] AActor::PrimaryActorTick = 0x28
+[15:01:46.1119988] AActor::RayTracingGroupId = 0x6C
+[15:01:46.1120216] AActor::RemoteRole = 0x68
+[15:01:46.1120445] AActor::ReplicatedComponentsInfo = 0x1F0
+[15:01:46.1120654] AActor::ReplicatedMovement = 0xD0
+[15:01:46.1120856] AActor::ReplicatedSubObjects = 0x1E0
+[15:01:46.1121088] AActor::Role = 0x150
+[15:01:46.1121305] AActor::RootComponent = 0x198
+[15:01:46.1121531] AActor::SpawnCollisionHandlingMethod = 0x152
+[15:01:46.1121763] AActor::Tags = 0x1C0
+[15:01:46.1121995] AActor::TimerHandle_LifeSpanExpired = 0x1A0
+[15:01:46.1122219] AActor::UpdateOverlapsMethodDuringLevelStreaming = 0x5E
+[15:01:46.1122473] AActor::InternalIndex_Private = 0xC
+[15:01:46.1122704] AActor::UEP_TotalSize = 0x28
+[15:01:46.1122938] AActor::bShowTitleSafeZone = 0x6C
+[15:01:46.1123171] AActor::bIsPlayInEditorViewport = 0x6C
+[15:01:46.1123409] AActor::bDisableWorldRendering = 0x6C
+[15:01:46.1123641] AActor::HardwareCursorCache = 0x160
+[15:01:46.1123872] AActor::HardwareCursors = 0x1B0
+[15:01:46.1124560] AActor::CursorWidgets = 0x200
+[15:01:46.1124772] AActor::ActorHasBegunPlay = 0x5D
+[15:01:46.1124955] AActor::bNetTemporary = 0x58
+[15:01:46.1125188] AActor::bActorIsBeingConstructed = 0x5D
+[15:01:46.1125421] AActor::bNetStartup = 0x58
+[15:01:46.1125655] AActor::bOnlyRelevantToOwner = 0x58
+[15:01:46.1125891] AActor::bAlwaysRelevant = 0x58
+[15:01:46.1126138] AActor::bReplicateMovement = 0x58
+[15:01:46.1126368] AActor::bCallPreReplication = 0x58
+[15:01:46.1126603] AActor::bCallPreReplicationForReplay = 0x58
+[15:01:46.1126846] AActor::bHidden = 0x58
+[15:01:46.1127079] AActor::bTearOff = 0x59
+[15:01:46.1127307] AActor::bExchangedRoles = 0x59
+[15:01:46.1127557] AActor::bNetLoadOnClient = 0x59
+[15:01:46.1127792] AActor::bNetUseOwnerRelevancy = 0x59
+[15:01:46.1128029] AActor::bRelevantForNetworkReplays = 0x59
+[15:01:46.1128265] AActor::bRelevantForLevelBounds = 0x59
+[15:01:46.1128486] AActor::bReplayRewindable = 0x59
+[15:01:46.1128654] AActor::bAllowTickBeforeBeginPlay = 0x5A
+[15:01:46.1128821] AActor::bAutoDestroyWhenFinished = 0x5A
+[15:01:46.1128983] AActor::bCanBeDamaged = 0x5A
+[15:01:46.1129212] AActor::bBlockInput = 0x5A
+[15:01:46.1129456] AActor::bCollideWhenPlacing = 0x5A
+[15:01:46.1129702] AActor::bGenerateOverlapEventsDuringLevelStreaming = 0x5A
+[15:01:46.1129959] AActor::bIgnoresOriginShifting = 0x5A
+[15:01:46.1130212] AActor::bHasRegisteredAllComponents = 0x5C
+[15:01:46.1130446] AActor::bEnableAutoLODGeneration = 0x5B
+[15:01:46.1130697] AActor::bIsEditorOnlyActor = 0x5B
+[15:01:46.1130938] AActor::bActorSeamlessTraveled = 0x5B
+[15:01:46.1131185] AActor::bReplicates = 0x5B
+[15:01:46.1131419] AActor::bCanBeInCluster = 0x5B
+[15:01:46.1131677] AActor::bAllowReceiveTickEventOnDedicatedServer = 0x5B
+[15:01:46.1131929] AActor::bNetCheckedInitialPhysicsState = 0x5B
+[15:01:46.1132164] AActor::bReplicateUsingRegisteredSubObjectList = 0x5B
+[15:01:46.1132414] AActor::bHasFinishedSpawning = 0x5C
+[15:01:46.1132627] AActor::bActorInitialized = 0x5C
+[15:01:46.1132862] AActor::bActorBeginningPlayFromLevelStreaming = 0x5C
+[15:01:46.1133096] AActor::bTickFunctionsRegistered = 0x5C
+[15:01:46.1133331] AActor::bRunningUserConstructionScript = 0x5C
+[15:01:46.1133569] AActor::bActorIsBeingDestroyed = 0x5D
+[15:01:46.1133804] AActor::bActorWantsDestroyDuringBeginPlay = 0x5D
+[15:01:46.1134034] AActor::bAsyncPhysicsTickEnabled = 0x5D
+[15:01:46.1134276] AActor::Owner = 0x140
+[15:01:46.1134506] AActor::Children = 0x188
+[15:01:46.1134734] AGameModeBase::SpectatorClass = 0x2D0
+[15:01:46.1134983] AGameModeBase::HUDClass = 0x2C0
+[15:01:46.1135170] AGameModeBase::DefaultPlayerName = 0x300
+[15:01:46.1135352] AGameModeBase::ServerStatReplicatorClass = 0x2E0
+[15:01:46.1135590] AGameModeBase::GameSession = 0x2E8
+[15:01:46.1135824] AGameModeBase::ServerStatReplicator = 0x2F8
+[15:01:46.1136057] AGameModeBase::GameSessionClass = 0x2A0
+[15:01:46.1136292] AGameModeBase::OptionsString = 0x290
+[15:01:46.1136524] AGameModeBase::PlayerStateClass = 0x2B8
+[15:01:46.1136759] AGameModeBase::bUseSeamlessTravel = 0x318
+[15:01:46.1136977] AGameModeBase::bStartPlayersAsSpectators = 0x318
+[15:01:46.1137209] AGameModeBase::bPauseable = 0x318
+[15:01:46.1137445] AGameModeBase::UEP_TotalSize = 0x330
+[15:01:46.1137681] AGameMode::EngineMessageClass = 0x350
+[15:01:46.1137899] AGameMode::MinRespawnDelay = 0x348
+[15:01:46.1138135] AGameMode::InactivePlayerArray = 0x358
+[15:01:46.1138385] AGameMode::InactivePlayerStateLifeSpan = 0x368
+[15:01:46.1138630] AGameMode::NumBots = 0x344
+[15:01:46.1138857] AGameMode::NumSpectators = 0x33C
+[15:01:46.1139025] AGameMode::MatchState = 0x330
+[15:01:46.1139208] AGameMode::MaxInactivePlayers = 0x36C
+[15:01:46.1139412] AGameMode::NumPlayers = 0x340
+[15:01:46.1139672] AGameMode::NumTravellingPlayers = 0x34C
+[15:01:46.1139916] AGameMode::bHandleDedicatedServerReplays = 0x370
+[15:01:46.1140161] AGameMode::bDelayedStart = 0x338
+[15:01:46.1140391] AGameMode::UEP_TotalSize = 0x378
+[15:01:46.1140627] UEngine::bUseSoftwareCursorWidgets = 0x250
+[15:01:46.1140860] UEngine::ClassPrivate = 0x10
+[15:01:46.1141096] UEngine::ViewportFrame = 0xF0
+[15:01:46.1141327] UEngine::MouseLockMode = 0x39C
+[15:01:46.1141559] UEngine::bFindCameraComponentWhenViewTarget = 0x5A
+[15:01:46.1141795] UEngine::InternalIndex = 0xC
+[15:01:46.1142026] UEngine::ObjectFlags = 0x8
+[15:01:46.1142256] UEngine::World = 0x78
+[15:01:46.1142469] UEngine::ActiveSplitscreenType = 0x70
+[15:01:46.1142706] UEngine::OnEndCursorOver = 0x1D6
+[15:01:46.1142943] UEngine::CustomTimeDilation = 0x64
+[15:01:46.1143176] UEngine::NamePrivate = 0x18
+[15:01:46.1143409] UEngine::InitialLifeSpan = 0x60
+[15:01:46.1143635] UEngine::AudioDeviceHandle = 0xF8
+[15:01:46.1143838] UEngine::bForceNetAddressable = 0x59
+[15:01:46.1144010] UEngine::InputPriority = 0x154
+[15:01:46.1144246] UEngine::bDisableSplitScreenOverride = 0x398
+[15:01:46.1144450] UEngine::Window = 0x100
+[15:01:46.1144641] UEngine::OuterPrivate = 0x20
+[15:01:46.1144825] UEngine::CurrentBufferVisualizationMode = 0x130
+[15:01:46.1145063] UEngine::bSuppressTransitionMessage = 0x88
+[15:01:46.1145298] UEngine::CurrentLumenVisualizationMode = 0x140
+[15:01:46.1145536] UEngine::CurrentNaniteVisualizationMode = 0x138
+[15:01:46.1145773] UEngine::CurrentVirtualShadowMapVisualizationMode = 0x148
+[15:01:46.1146013] UEngine::DebugProperties = 0x48
+[15:01:46.1146192] UEngine::EngineShowFlags = 0xB8
+[15:01:46.1146429] UEngine::AutoReceiveInput = 0x153
+[15:01:46.1146654] UEngine::GameLayerManagerPtr = 0x120
+[15:01:46.1146886] UEngine::OnClicked = 0x1D7
+[15:01:46.1147122] UEngine::OnActorBeginOverlap = 0x1D3
+[15:01:46.1147356] UEngine::HighResScreenshotDialog = 0x150
+[15:01:46.1147593] UEngine::OnInputTouchEnter = 0x1DB
+[15:01:46.1147830] UEngine::bHasAudioFocus = 0xFC
+[15:01:46.1148077] UEngine::OnEndPlay = 0x1DF
+[15:01:46.1148313] UEngine::ViewportOverlayWidget = 0x110
+[15:01:46.1148547] UEngine::MaxSplitscreenPlayers = 0x68
+[15:01:46.1148771] UEngine::MouseCaptureMode = 0x39A
+[15:01:46.1149007] UEngine::Layers = 0x1A8
+[15:01:46.1149298] UEngine::SplitscreenInfo = 0x58
+[15:01:46.1149543] UEngine::StatHitchesData = 0x390
+[15:01:46.1149827] UEngine::OnBeginCursorOver = 0x1D5
+[15:01:46.1150050] UEngine::StatUnitData = 0x388
+[15:01:46.1150282] UEngine::ViewModeIndex = 0xB0
+[15:01:46.1150513] UEngine::Viewport = 0xE8
+[15:01:46.1150743] UEngine::ViewportConsole = 0x40
+[15:01:46.1150955] UEngine::bHideCursorDuringCapture = 0x39B
+[15:01:46.1151185] UEngine::DetachFence = 0x280
+[15:01:46.1151417] UEngine::CreationTime = 0x158
+[15:01:46.1151650] UEngine::bIgnoreInput = 0x399
+[15:01:46.1151883] UEngine::bActorEnableCollision = 0x5C
+[15:01:46.1152115] UEngine::bIsMouseOverClient = 0x39D
+[15:01:46.1152346] UEngine::OnInputTouchEnd = 0x1DA
+[15:01:46.1152579] UEngine::bHasDeferredComponentRegistration = 0x5C
+[15:01:46.1152825] UEngine::AttachmentReplication = 0x70
+[15:01:46.1153067] UEngine::DefaultUpdateOverlapsMethodDuringLevelStreaming = 0x5F
+[15:01:46.1153300] UEngine::InputComponent = 0x160
+[15:01:46.1153521] UEngine::LastRenderTime = 0x17C
+[15:01:46.1153751] UEngine::MinNetUpdateFrequency = 0x174
+[15:01:46.1153970] UEngine::NetCullDistanceSquared = 0x168
+[15:01:46.1154205] UEngine::OnActorEndOverlap = 0x1D4
+[15:01:46.1154438] UEngine::NetDormancy = 0x151
+[15:01:46.1154671] UEngine::NetDriverName = 0x148
+[15:01:46.1154907] UEngine::NetTag = 0x16C
+[15:01:46.1155145] UEngine::NetPriority = 0x178
+[15:01:46.1155382] UEngine::NetUpdateFrequency = 0x170
+[15:01:46.1155614] UEngine::OnActorHit = 0x1DD
+[15:01:46.1155835] UEngine::OnDestroyed = 0x1DE
+[15:01:46.1156053] UEngine::OnInputTouchBegin = 0x1D9
+[15:01:46.1156286] UEngine::OnInputTouchLeave = 0x1DC
+[15:01:46.1156513] UEngine::OnReleased = 0x1D8
+[15:01:46.1156682] UEngine::OnTakeAnyDamage = 0x1D0
+[15:01:46.1156856] UEngine::OnTakePointDamage = 0x1D1
+[15:01:46.1157015] UEngine::OnTakeRadialDamage = 0x1D2
+[15:01:46.1157173] UEngine::ParentComponent = 0x1B8
+[15:01:46.1157352] UEngine::PrimaryActorTick = 0x28
+[15:01:46.1157583] UEngine::RayTracingGroupId = 0x6C
+[15:01:46.1157816] UEngine::RemoteRole = 0x68
+[15:01:46.1158028] UEngine::ReplicatedComponentsInfo = 0x1F0
+[15:01:46.1158245] UEngine::ReplicatedMovement = 0xD0
+[15:01:46.1158425] UEngine::ReplicatedSubObjects = 0x1E0
+[15:01:46.1158656] UEngine::Role = 0x150
+[15:01:46.1158886] UEngine::RootComponent = 0x198
+[15:01:46.1159100] UEngine::SpawnCollisionHandlingMethod = 0x152
+[15:01:46.1159342] UEngine::Tags = 0x1C0
+[15:01:46.1159611] UEngine::TimerHandle_LifeSpanExpired = 0x1A0
+[15:01:46.1159848] UEngine::UpdateOverlapsMethodDuringLevelStreaming = 0x5E
+[15:01:46.1160075] UEngine::InternalIndex_Private = 0xC
+[15:01:46.1160278] UEngine::UEP_TotalSize = 0x28
+[15:01:46.1160439] UEngine::bShowTitleSafeZone = 0x6C
+[15:01:46.1160644] UEngine::bIsPlayInEditorViewport = 0x6C
+[15:01:46.1160878] UEngine::bDisableWorldRendering = 0x6C
+[15:01:46.1161113] UEngine::HardwareCursorCache = 0x160
+[15:01:46.1161349] UEngine::HardwareCursors = 0x1B0
+[15:01:46.1161520] UEngine::CursorWidgets = 0x200
+[15:01:46.1161678] UEngine::ActorHasBegunPlay = 0x5D
+[15:01:46.1161882] UEngine::bNetTemporary = 0x58
+[15:01:46.1162052] UEngine::bActorIsBeingConstructed = 0x5D
+[15:01:46.1162257] UEngine::bNetStartup = 0x58
+[15:01:46.1162471] UEngine::bOnlyRelevantToOwner = 0x58
+[15:01:46.1162702] UEngine::bAlwaysRelevant = 0x58
+[15:01:46.1162915] UEngine::bReplicateMovement = 0x58
+[15:01:46.1163078] UEngine::bCallPreReplication = 0x58
+[15:01:46.1163236] UEngine::bCallPreReplicationForReplay = 0x58
+[15:01:46.1163396] UEngine::bHidden = 0x58
+[15:01:46.1163554] UEngine::bTearOff = 0x59
+[15:01:46.1163757] UEngine::bExchangedRoles = 0x59
+[15:01:46.1163989] UEngine::bNetLoadOnClient = 0x59
+[15:01:46.1164218] UEngine::bNetUseOwnerRelevancy = 0x59
+[15:01:46.1164450] UEngine::bRelevantForNetworkReplays = 0x59
+[15:01:46.1164682] UEngine::bRelevantForLevelBounds = 0x59
+[15:01:46.1164913] UEngine::bReplayRewindable = 0x59
+[15:01:46.1165108] UEngine::bAllowTickBeforeBeginPlay = 0x5A
+[15:01:46.1165321] UEngine::bAutoDestroyWhenFinished = 0x5A
+[15:01:46.1165553] UEngine::bCanBeDamaged = 0x5A
+[15:01:46.1165774] UEngine::bBlockInput = 0x5A
+[15:01:46.1165993] UEngine::bCollideWhenPlacing = 0x5A
+[15:01:46.1166235] UEngine::bGenerateOverlapEventsDuringLevelStreaming = 0x5A
+[15:01:46.1166469] UEngine::bIgnoresOriginShifting = 0x5A
+[15:01:46.1166634] UEngine::bHasRegisteredAllComponents = 0x5C
+[15:01:46.1166810] UEngine::bEnableAutoLODGeneration = 0x5B
+[15:01:46.1167038] UEngine::bIsEditorOnlyActor = 0x5B
+[15:01:46.1167264] UEngine::bActorSeamlessTraveled = 0x5B
+[15:01:46.1167497] UEngine::bReplicates = 0x5B
+[15:01:46.1167724] UEngine::bCanBeInCluster = 0x5B
+[15:01:46.1167956] UEngine::bAllowReceiveTickEventOnDedicatedServer = 0x5B
+[15:01:46.1168192] UEngine::bNetCheckedInitialPhysicsState = 0x5B
+[15:01:46.1168426] UEngine::bReplicateUsingRegisteredSubObjectList = 0x5B
+[15:01:46.1168662] UEngine::bHasFinishedSpawning = 0x5C
+[15:01:46.1168893] UEngine::bActorInitialized = 0x5C
+[15:01:46.1169114] UEngine::bActorBeginningPlayFromLevelStreaming = 0x5C
+[15:01:46.1169348] UEngine::bTickFunctionsRegistered = 0x5C
+[15:01:46.1169580] UEngine::bRunningUserConstructionScript = 0x5C
+[15:01:46.1169812] UEngine::bActorIsBeingDestroyed = 0x5D
+[15:01:46.1170043] UEngine::bActorWantsDestroyDuringBeginPlay = 0x5D
+[15:01:46.1170276] UEngine::bAsyncPhysicsTickEnabled = 0x5D
+[15:01:46.1170519] UEngine::Owner = 0x140
+[15:01:46.1170746] UEngine::Children = 0x188
+[15:01:46.1170979] UGameViewportClient::bUseSoftwareCursorWidgets = 0x250
+[15:01:46.1171215] UGameViewportClient::ClassPrivate = 0x10
+[15:01:46.1171448] UGameViewportClient::ViewportFrame = 0xF0
+[15:01:46.1171679] UGameViewportClient::MouseLockMode = 0x39C
+[15:01:46.1171932] UGameViewportClient::bFindCameraComponentWhenViewTarget = 0x5A
+[15:01:46.1172170] UGameViewportClient::InternalIndex = 0xC
+[15:01:46.1172395] UGameViewportClient::ObjectFlags = 0x8
+[15:01:46.1172620] UGameViewportClient::World = 0x78
+[15:01:46.1172852] UGameViewportClient::ActiveSplitscreenType = 0x70
+[15:01:46.1173091] UGameViewportClient::OnEndCursorOver = 0x1D6
+[15:01:46.1173326] UGameViewportClient::CustomTimeDilation = 0x64
+[15:01:46.1173561] UGameViewportClient::NamePrivate = 0x18
+[15:01:46.1173774] UGameViewportClient::InitialLifeSpan = 0x60
+[15:01:46.1174006] UGameViewportClient::AudioDeviceHandle = 0xF8
+[15:01:46.1174238] UGameViewportClient::bForceNetAddressable = 0x59
+[15:01:46.1174470] UGameViewportClient::InputPriority = 0x154
+[15:01:46.1174699] UGameViewportClient::bDisableSplitScreenOverride = 0x398
+[15:01:46.1174937] UGameViewportClient::Window = 0x100
+[15:01:46.1175172] UGameViewportClient::OuterPrivate = 0x20
+[15:01:46.1175418] UGameViewportClient::CurrentBufferVisualizationMode = 0x130
+[15:01:46.1175633] UGameViewportClient::bSuppressTransitionMessage = 0x88
+[15:01:46.1175827] UGameViewportClient::CurrentLumenVisualizationMode = 0x140
+[15:01:46.1176065] UGameViewportClient::CurrentNaniteVisualizationMode = 0x138
+[15:01:46.1176318] UGameViewportClient::CurrentVirtualShadowMapVisualizationMode = 0x148
+[15:01:46.1176556] UGameViewportClient::DebugProperties = 0x48
+[15:01:46.1176786] UGameViewportClient::EngineShowFlags = 0xB8
+[15:01:46.1177012] UGameViewportClient::AutoReceiveInput = 0x153
+[15:01:46.1177238] UGameViewportClient::GameLayerManagerPtr = 0x120
+[15:01:46.1177475] UGameViewportClient::OnClicked = 0x1D7
+[15:01:46.1177708] UGameViewportClient::OnActorBeginOverlap = 0x1D3
+[15:01:46.1177990] UGameViewportClient::HighResScreenshotDialog = 0x150
+[15:01:46.1178225] UGameViewportClient::OnInputTouchEnter = 0x1DB
+[15:01:46.1178453] UGameViewportClient::bHasAudioFocus = 0xFC
+[15:01:46.1178676] UGameViewportClient::OnEndPlay = 0x1DF
+[15:01:46.1178919] UGameViewportClient::ViewportOverlayWidget = 0x110
+[15:01:46.1179157] UGameViewportClient::MaxSplitscreenPlayers = 0x68
+[15:01:46.1179393] UGameViewportClient::MouseCaptureMode = 0x39A
+[15:01:46.1179652] UGameViewportClient::Layers = 0x1A8
+[15:01:46.1179886] UGameViewportClient::SplitscreenInfo = 0x58
+[15:01:46.1180120] UGameViewportClient::StatHitchesData = 0x390
+[15:01:46.1180350] UGameViewportClient::OnBeginCursorOver = 0x1D5
+[15:01:46.1180586] UGameViewportClient::StatUnitData = 0x388
+[15:01:46.1180818] UGameViewportClient::ViewModeIndex = 0xB0
+[15:01:46.1181049] UGameViewportClient::Viewport = 0xE8
+[15:01:46.1181285] UGameViewportClient::ViewportConsole = 0x40
+[15:01:46.1181518] UGameViewportClient::bHideCursorDuringCapture = 0x39B
+[15:01:46.1181752] UGameViewportClient::DetachFence = 0x280
+[15:01:46.1181983] UGameViewportClient::CreationTime = 0x158
+[15:01:46.1182215] UGameViewportClient::bIgnoreInput = 0x399
+[15:01:46.1182444] UGameViewportClient::bActorEnableCollision = 0x5C
+[15:01:46.1182679] UGameViewportClient::bIsMouseOverClient = 0x39D
+[15:01:46.1182912] UGameViewportClient::OnInputTouchEnd = 0x1DA
+[15:01:46.1183146] UGameViewportClient::bHasDeferredComponentRegistration = 0x5C
+[15:01:46.1183381] UGameViewportClient::AttachmentReplication = 0x70
+[15:01:46.1183617] UGameViewportClient::DefaultUpdateOverlapsMethodDuringLevelStreaming = 0x5F
+[15:01:46.1183852] UGameViewportClient::InputComponent = 0x160
+[15:01:46.1184082] UGameViewportClient::LastRenderTime = 0x17C
+[15:01:46.1184317] UGameViewportClient::MinNetUpdateFrequency = 0x174
+[15:01:46.1184549] UGameViewportClient::NetCullDistanceSquared = 0x168
+[15:01:46.1184784] UGameViewportClient::OnActorEndOverlap = 0x1D4
+[15:01:46.1185017] UGameViewportClient::NetDormancy = 0x151
+[15:01:46.1185250] UGameViewportClient::NetDriverName = 0x148
+[15:01:46.1185483] UGameViewportClient::NetTag = 0x16C
+[15:01:46.1185715] UGameViewportClient::NetPriority = 0x178
+[15:01:46.1185949] UGameViewportClient::NetUpdateFrequency = 0x170
+[15:01:46.1186182] UGameViewportClient::OnActorHit = 0x1DD
+[15:01:46.1186414] UGameViewportClient::OnDestroyed = 0x1DE
+[15:01:46.1186649] UGameViewportClient::OnInputTouchBegin = 0x1D9
+[15:01:46.1186882] UGameViewportClient::OnInputTouchLeave = 0x1DC
+[15:01:46.1187100] UGameViewportClient::OnReleased = 0x1D8
+[15:01:46.1187331] UGameViewportClient::OnTakeAnyDamage = 0x1D0
+[15:01:46.1187562] UGameViewportClient::OnTakePointDamage = 0x1D1
+[15:01:46.1187793] UGameViewportClient::OnTakeRadialDamage = 0x1D2
+[15:01:46.1188028] UGameViewportClient::ParentComponent = 0x1B8
+[15:01:46.1188252] UGameViewportClient::PrimaryActorTick = 0x28
+[15:01:46.1188477] UGameViewportClient::RayTracingGroupId = 0x6C
+[15:01:46.1188707] UGameViewportClient::RemoteRole = 0x68
+[15:01:46.1188942] UGameViewportClient::ReplicatedComponentsInfo = 0x1F0
+[15:01:46.1189176] UGameViewportClient::ReplicatedMovement = 0xD0
+[15:01:46.1189417] UGameViewportClient::ReplicatedSubObjects = 0x1E0
+[15:01:46.1189660] UGameViewportClient::Role = 0x150
+[15:01:46.1189897] UGameViewportClient::RootComponent = 0x198
+[15:01:46.1190123] UGameViewportClient::SpawnCollisionHandlingMethod = 0x152
+[15:01:46.1190360] UGameViewportClient::Tags = 0x1C0
+[15:01:46.1190583] UGameViewportClient::TimerHandle_LifeSpanExpired = 0x1A0
+[15:01:46.1190817] UGameViewportClient::UpdateOverlapsMethodDuringLevelStreaming = 0x5E
+[15:01:46.1191056] UGameViewportClient::InternalIndex_Private = 0xC
+[15:01:46.1191303] UGameViewportClient::UEP_TotalSize = 0x28
+[15:01:46.1191544] UGameViewportClient::bShowTitleSafeZone = 0x6C
+[15:01:46.1191778] UGameViewportClient::bIsPlayInEditorViewport = 0x6C
+[15:01:46.1192012] UGameViewportClient::bDisableWorldRendering = 0x6C
+[15:01:46.1192247] UGameViewportClient::HardwareCursorCache = 0x160
+[15:01:46.1192482] UGameViewportClient::HardwareCursors = 0x1B0
+[15:01:46.1192697] UGameViewportClient::CursorWidgets = 0x200
+[15:01:46.1192928] UGameViewportClient::ActorHasBegunPlay = 0x5D
+[15:01:46.1193160] UGameViewportClient::bNetTemporary = 0x58
+[15:01:46.1193394] UGameViewportClient::bActorIsBeingConstructed = 0x5D
+[15:01:46.1193622] UGameViewportClient::bNetStartup = 0x58
+[15:01:46.1193853] UGameViewportClient::bOnlyRelevantToOwner = 0x58
+[15:01:46.1194077] UGameViewportClient::bAlwaysRelevant = 0x58
+[15:01:46.1194247] UGameViewportClient::bReplicateMovement = 0x58
+[15:01:46.1194427] UGameViewportClient::bCallPreReplication = 0x58
+[15:01:46.1194660] UGameViewportClient::bCallPreReplicationForReplay = 0x58
+[15:01:46.1194896] UGameViewportClient::bHidden = 0x58
+[15:01:46.1195136] UGameViewportClient::bTearOff = 0x59
+[15:01:46.1195366] UGameViewportClient::bExchangedRoles = 0x59
+[15:01:46.1195595] UGameViewportClient::bNetLoadOnClient = 0x59
+[15:01:46.1195816] UGameViewportClient::bNetUseOwnerRelevancy = 0x59
+[15:01:46.1196046] UGameViewportClient::bRelevantForNetworkReplays = 0x59
+[15:01:46.1196282] UGameViewportClient::bRelevantForLevelBounds = 0x59
+[15:01:46.1196515] UGameViewportClient::bReplayRewindable = 0x59
+[15:01:46.1196744] UGameViewportClient::bAllowTickBeforeBeginPlay = 0x5A
+[15:01:46.1196972] UGameViewportClient::bAutoDestroyWhenFinished = 0x5A
+[15:01:46.1197203] UGameViewportClient::bCanBeDamaged = 0x5A
+[15:01:46.1197438] UGameViewportClient::bBlockInput = 0x5A
+[15:01:46.1197666] UGameViewportClient::bCollideWhenPlacing = 0x5A
+[15:01:46.1197897] UGameViewportClient::bGenerateOverlapEventsDuringLevelStreaming = 0x5A
+[15:01:46.1198072] UGameViewportClient::bIgnoresOriginShifting = 0x5A
+[15:01:46.1198267] UGameViewportClient::bHasRegisteredAllComponents = 0x5C
+[15:01:46.1198432] UGameViewportClient::bEnableAutoLODGeneration = 0x5B
+[15:01:46.1198638] UGameViewportClient::bIsEditorOnlyActor = 0x5B
+[15:01:46.1198886] UGameViewportClient::bActorSeamlessTraveled = 0x5B
+[15:01:46.1199123] UGameViewportClient::bReplicates = 0x5B
+[15:01:46.1199351] UGameViewportClient::bCanBeInCluster = 0x5B
+[15:01:46.1199575] UGameViewportClient::bAllowReceiveTickEventOnDedicatedServer = 0x5B
+[15:01:46.1199857] UGameViewportClient::bNetCheckedInitialPhysicsState = 0x5B
+[15:01:46.1200097] UGameViewportClient::bReplicateUsingRegisteredSubObjectList = 0x5B
+[15:01:46.1200336] UGameViewportClient::bHasFinishedSpawning = 0x5C
+[15:01:46.1200571] UGameViewportClient::bActorInitialized = 0x5C
+[15:01:46.1200799] UGameViewportClient::bActorBeginningPlayFromLevelStreaming = 0x5C
+[15:01:46.1201037] UGameViewportClient::bTickFunctionsRegistered = 0x5C
+[15:01:46.1201263] UGameViewportClient::bRunningUserConstructionScript = 0x5C
+[15:01:46.1201495] UGameViewportClient::bActorIsBeingDestroyed = 0x5D
+[15:01:46.1201731] UGameViewportClient::bActorWantsDestroyDuringBeginPlay = 0x5D
+[15:01:46.1201969] UGameViewportClient::bAsyncPhysicsTickEnabled = 0x5D
+[15:01:46.1202204] UGameViewportClient::Owner = 0x140
+[15:01:46.1202438] UGameViewportClient::Children = 0x188
+[15:01:46.1202677] UPlayer::UEP_TotalSize = 0x48
+[15:01:46.1202903] UPlayer::ConfiguredLanSpeed = 0x40
+[15:01:46.1203146] UPlayer::ConfiguredInternetSpeed = 0x3C
+[15:01:46.1203387] UPlayer::CurrentNetSpeed = 0x38
+[15:01:46.1203608] ULocalPlayer::AspectRatioAxisConstraint = 0xB8
+[15:01:46.1203843] ULocalPlayer::SlateOperations = 0x1E0
+[15:01:46.1204073] ULocalPlayer::CachedUniqueNetId = 0x48
+[15:01:46.1204307] ULocalPlayer::ControllerId = 0xE0
+[15:01:46.1204535] ULocalPlayer::ViewportClient = 0x78
+[15:01:46.1204694] ULocalPlayer::bSentSplitJoin = 0xC8
+[15:01:46.1204912] ULocalPlayer::PlatformUserId = 0x100
+[15:01:46.1205143] ULocalPlayer::UEP_TotalSize = 0x298
+[15:01:46.1205376] UWorld::BlockTillLevelStreamingCompletedEpoch = 0x144
+[15:01:46.1205613] UWorld::bAllowAudioPlayback = 0x13E
+[15:01:46.1205845] UWorld::ActiveLevelCollectionIndex = 0x190
+[15:01:46.1206079] UWorld::AudioTimeSeconds = 0x678
+[15:01:46.1206312] UWorld::CommittedPersistentLevelName = 0x700
+[15:01:46.1206549] UWorld::bInTick = 0x13B
+[15:01:46.1206782] UWorld::CleanupWorldTag = 0x70C
+[15:01:46.1207013] UWorld::LWILastAssignedUID = 0x258
+[15:01:46.1207234] UWorld::BuildStreamingDataTimer = 0x448
+[15:01:46.1207459] UWorld::bTickNewlySpawned = 0x13B
+[15:01:46.1207692] UWorld::AuthorityGameMode = 0x150
+[15:01:46.1207922] UWorld::DeltaRealTimeSeconds = 0x680
+[15:01:46.1208155] UWorld::DeltaTimeSeconds = 0x684
+[15:01:46.1208349] UWorld::bSupportsMakingInvisibleTransactionRequests = 0xDA
+[15:01:46.1208512] UWorld::bPlayersOnly = 0x13D
+[15:01:46.1208682] UWorld::ExtraReferencedObjects = 0x68
+[15:01:46.1208917] UWorld::PreparingLevelNames = 0x6F0
+[15:01:46.1209143] UWorld::IsInBlockTillLevelStreamingCompleted = 0x140
+[15:01:46.1209381] UWorld::bIsRunningConstructionScript = 0x13C
+[15:01:46.1209616] UWorld::bAllowDeferredPhysicsStateCreation = 0x108
+[15:01:46.1209847] UWorld::LastRenderTime = 0x130
+[15:01:46.1210079] UWorld::LastTimeUnbuiltLightingWasEncountered = 0x658
+[15:01:46.1210335] UWorld::bHasEverBeenInitialized = 0x13F
+[15:01:46.1210573] UWorld::NextSwitchCountdown = 0x6C0
+[15:01:46.1210809] UWorld::bMaterialParameterCollectionInstanceNeedsDeferredUpdate = 0x13F
+[15:01:46.1211047] UWorld::RealTimeSeconds = 0x670
+[15:01:46.1211281] UWorld::NextURL = 0x6E0
+[15:01:46.1211492] UWorld::NumStreamingLevelsBeingLoaded = 0x6DA
+[15:01:46.1211725] UWorld::PauseDelay = 0x688
+[15:01:46.1211961] UWorld::PerModuleDataObjects = 0x78
+[15:01:46.1212191] UWorld::bIsDefaultLevel = 0x13C
+[15:01:46.1212412] UWorld::PlayerNum = 0x618
+[15:01:46.1212646] UWorld::bAggressiveLOD = 0x13C
+[15:01:46.1212880] UWorld::StreamingLevelsPrefix = 0xC8
+[15:01:46.1213114] UWorld::bIsLevelStreamingFrozen = 0x13B
+[15:01:46.1213352] UWorld::bTriggerPostLoadMap = 0x13B
+[15:01:46.1213585] UWorld::StreamingVolumeUpdateDelay = 0x61C
+[15:01:46.1213801] UWorld::bIsBuilt = 0x13B
+[15:01:46.1214029] UWorld::TimeSeconds = 0x660
+[15:01:46.1214264] UWorld::UnpausedTimeSeconds = 0x668
+[15:01:46.1214501] UWorld::bShouldForceVisibleStreamingLevels = 0x13E
+[15:01:46.1214738] UWorld::bSupportsMakingVisibleTransactionRequests = 0xD8
+[15:01:46.1214957] UWorld::bPlayersOnlyPending = 0x13D
+[15:01:46.1215187] UWorld::bWorldWasLoadedThisTick = 0x13B
+[15:01:46.1215413] UWorld::bPostTickComponentUpdate = 0x13B
+[15:01:46.1215634] UWorld::bShouldSimulatePhysics = 0x13C
+[15:01:46.1215866] UWorld::bIsWorldInitialized = 0x13B
+[15:01:46.1216112] UWorld::bDoDelayedUpdateCullDistanceVolumes = 0x13C
+[15:01:46.1216345] UWorld::bRequestedBlockOnAsyncLoading = 0x13C
+[15:01:46.1216580] UWorld::bDropDetail = 0x13C
+[15:01:46.1216822] UWorld::bActorsInitialized = 0x13C
+[15:01:46.1217079] UWorld::bBegunPlay = 0x13D
+[15:01:46.1217286] UWorld::bIsCameraMoveableWhenPaused = 0x13E
+[15:01:46.1217448] UWorld::bMatchStarted = 0x13D
+[15:01:46.1217678] UWorld::bStartup = 0x13D
+[15:01:46.1217913] UWorld::bAreConstraintsDirty = 0x13E
+[15:01:46.1218148] UWorld::bIsTearingDown = 0x13D
+[15:01:46.1218371] UWorld::bKismetScriptError = 0x13D
+[15:01:46.1218596] UWorld::bDebugPauseExecution = 0x13D
+[15:01:46.1218784] UWorld::bRequiresHitProxies = 0x13E
+[15:01:46.1218988] UWorld::bShouldTick = 0x13E
+[15:01:46.1219224] UWorld::bStreamingDataDirty = 0x13E
+[15:01:46.1219456] UWorld::bShouldForceUnloadStreamingLevels = 0x13E
+[15:01:46.1219697] UWorld::URL = 0x540
+[15:01:46.1219909] UWorld::bMarkedObjectsPendingKill = 0x708
+[15:01:46.1220144] UWorld::UEP_TotalSize = 0x898
+[15:01:46.1220316] UDataTable::RowStruct = 0x28
+[15:01:46.1220505] UDataTable::RowMap = 0x30
+[15:01:46.1220710] UDataTable::UEP_TotalSize = 0xB0
+[15:01:46.1220945] UDataTable::ImportKeyField = 0x88
+[15:01:46.1221176] UDataTable::bStripFromClientBuilds = 0x80
+[15:01:46.1221411] UDataTable::bIgnoreExtraFields = 0x80
+[15:01:46.1221610] UDataTable::bIgnoreMissingFields = 0x80
+[15:01:46.1221813] FUObjectItem::Object = 0x0
+[15:01:46.1222016] FUObjectItem::Flags = 0x8
+[15:01:46.1222259] FUObjectItem::ClusterRootIndex = 0xC
+[15:01:46.1222499] FUObjectItem::SerialNumber = 0x10
+[15:01:46.1222723] FUObjectItem::UEP_TotalSize = 0x18
+[15:01:46.1222956] FUObjectArray::ObjFirstGCIndex = 0x0
+[15:01:46.1223181] FUObjectArray::ObjLastNonGCIndex = 0x4
+[15:01:46.1223428] FUObjectArray::MaxObjectsNotConsideredByGC = 0x8
+[15:01:46.1223663] FUObjectArray::ObjObjects = 0x10
+[15:01:46.1223902] FUObjectArray::UObjectCreateListeners = 0x68
+[15:01:46.1224147] FUObjectArray::OpenForDisregardForGC = 0xC
+[15:01:46.1224383] FUObjectArray::UObjectDeleteListeners = 0x78
+[15:01:46.1224580] FUObjectArray::ObjAvailableList = 0x58
+[15:01:46.1224746] FUObjectArray::PrimarySerialNumber = 0xB0
+[15:01:46.1224913] FUObjectArray::UEP_TotalSize = 0xB8
+[15:01:46.1225072] TUObjectArray::NumChunks = 0x1C
+[15:01:46.1225313] TUObjectArray::Objects = 0x0
+[15:01:46.1225548] TUObjectArray::UEP_TotalSize = 0x20
+[15:01:46.1225774] TUObjectArray::PreAllocatedObjects = 0x8
+[15:01:46.1225956] TUObjectArray::MaxElements = 0x10
+[15:01:46.1226162] TUObjectArray::NumElements = 0x14
+[15:01:46.1226398] TUObjectArray::MaxChunks = 0x18
+[15:01:46.1226635] 
+##### MEMBER OFFSETS END (MemberVariableLayout) #####
+[15:01:46.1228070] DebugGame Setting Enabled? false
+[15:01:46.1258912] PS Scan attempt 1 (Phase 2)
+[15:01:46.1259269] [PS] Reading image
+[15:01:46.1260108] [PS] Starting scan
+[15:01:46.2764227] [PS] Scan finished in 150.2792ms
+[15:01:46.2764980] [PS] Found EngineVersion: 5.1
+[15:01:46.2765529] [PS] Found GUObjectArray: 0x7ff679d3d280
+[15:01:46.2766060] [PS] Found GMalloc: 0x7ff679c64c18
+[15:01:46.2766705] [PS] Found FName::ToString: 0x7ff673d22b90
+[15:01:46.2767254] [PS] Found FName::FName(wchar_t*): 0x7ff673d119c0
+[15:01:46.2767772] [PS] Found StaticConstructObject_Internal: 0x7ff673eb74f0
+[15:01:46.2768660] [PS] Found FUObjectHashTables::Get(): 0x7ff673ec1200
+[15:01:46.2768997] [PS] Found GNatives: 0x7ff679d3bd30
+[15:01:46.2769304] [PS] Failed to find ConsoleManagerSingleton: ConsoleManagerSingleton: found 2 unique values [7FF673C0E8D0, 7FF674E00F10]
+[15:01:46.2770136] [PS] You can supply your own AOB in 'UE4SS_Signatures/ConsoleManager.lua'
+[15:01:46.2770416] [PS] Found GameEngineTick: 0x7ff675aa2030
+[15:01:46.2770703] PS scan successful
+[15:01:46.2772923] Running second pass of Lua override scans
+[15:01:46.2773123] Lua Scan attempt 1 (Phase 2)
+[15:01:46.2773409] Verifying FName constructor...
+[15:01:46.2783030] [UE4SS.FNameConstructor.FNameConstructorVerificationHook] Added posthook with Id '0X8000200000000001'!
+[15:01:46.2791171] [UE4SS.EngineTick.FNameConstructorUnhooker] Added prehook with Id '0X6020000000000001'!
+[15:01:46.2791766] FName constructor verified at 0x00007FF673D119C0
+[15:01:46.2792041] Using engine version: 5.1
+[15:01:46.2792220] Waiting for object construction...
+[15:01:46.4810145] Locating KismetSystemLibrary...
+[15:01:46.4967587] Locating KismetSystemLibrary:Conv_NameToString...
+[15:01:48.4382992] Locating KismetSystemLibrary CDO...
+[15:01:48.4642773] Already constructed: ["/Script/CoreUObject", "Class"]
+[15:01:48.4643056] Already constructed: ["/Script/CoreUObject"]
+[15:01:48.4643343] Already constructed: ["/Script/CoreUObject", "Struct"]
+[15:01:48.4643550] Already constructed: ["/Script/Engine", "Pawn"]
+[15:01:48.4643752] Already constructed: ["/Script/Engine", "Character"]
+[15:01:48.4643936] Already constructed: ["/Script/Engine", "Actor"]
+[15:01:48.4644600] Already constructed: ["/Script/CoreUObject", "Vector"]
+[15:01:48.4647655] Already constructed: ["/Script/Engine", "Default__DefaultPawn"]
+[15:01:48.4648363] Already constructed: ["/Script/Engine", "HitResult"]
+[15:01:48.4651239] Already constructed: ["/Script/Engine", "Default__MaterialExpression"]
+[15:01:48.4651436] Already constructed: ["/Script/Engine", "ActorComponent"]
+[15:01:48.4652078] Already constructed: ["/Script/CoreUObject", "OrientedBox"]
+[15:01:48.4652383] Already constructed: ["/Script/Engine", "MovementComponent"]
+[15:01:48.4652752] Already constructed: ["/Script/Engine", "HUD"]
+[15:01:48.4652951] Already constructed: ["/Script/Engine", "PlayerController"]
+[15:01:48.4653364] Already constructed: ["/Script/Engine", "PlayerCameraManager"]
+[15:01:48.4653976] Already constructed: ["/Script/CoreUObject", "EInterpCurveMode"]
+[15:01:48.4654731] Already constructed: ["/Script/Engine", "ENetRole"]
+[15:01:48.4656272] Already constructed: ["/Script/MovieScene", "MovieSceneEditorData"]
+[15:01:48.4656489] Already constructed: ["/Script/UMG", "Widget"]
+[15:01:48.4656936] Already constructed: ["/Script/UMG", "ComboBoxString"]
+[15:01:48.4657130] Already constructed: ["/Script/CoreUObject", "Interface"]
+[15:01:48.4657585] Already constructed: ["/Script/CoreUObject", "DynamicClass"]
+[15:01:48.5466923] GameEngine::LoadMap address 0x7ff67605c870
+[15:01:48.5467246] GameEngine::Tick address (vtable: 0x7ff5f5b30000; scan: 0x7ff675aa2030)
+[15:01:48.5467426] WARNING: VTable and scan addresses differ for UGameEngine::Tick. Potentially customized vtables.
+[15:01:48.5467683] GameEngine: 0x22ba7ee2df0 GameEngine /Script/Engine.Default__GameEngine
+[15:01:48.5467847] VTable entries:
+[15:01:48.5468025] -8: 0x7ff6760708c0
+[15:01:48.5468182] -7: 0x7ff6760708d0
+[15:01:48.5468344] -6: 0x7ff673bbfb90
+[15:01:48.5468501] -5: 0x7ff67604fad0
+[15:01:48.5468660] -4: 0x7ff675a9ad90
+[15:01:48.5468817] -3: 0x7ff675aa1440
+[15:01:48.5468976] -2: 0x7ff675a9d150
+[15:01:48.5469135] -1: 0x7ff676062290
+[15:01:48.5469295] S0: 0x7ff5f5b30000
+[15:01:48.5469454] +1: 0x7ff67606fcd0
+[15:01:48.5469613] +2: 0x7ff676043b20
+[15:01:48.5469772] +3: 0x7ff675a968e0
+[15:01:48.5469927] +4: 0x7ff676050e00
+[15:01:48.5470122] +5: 0x7ff676069390
+[15:01:48.5470293] +6: 0x7ff67606fb70
+[15:01:48.5470449] +7: 0x7ff67605b880
+[15:01:48.5470604] +8: 0x7ff67605f780
+[15:01:48.5470759] Using scan address for GameEngine::Tick
+[15:01:48.5471029] [UE4SS.EngineTick.GameThreadInitializer] Added prehook with Id '0X6020000000000002'!
+[15:01:48.5471233] GameModeBase::InitGameState address 0x7ff675abcc80
+[15:01:48.5471412] AActor::BeginPlay address 0x7ff67572dff0
+[15:01:48.5471578] AActor::EndPlay address 0x7ff675733fe0
+[15:01:48.5471741] AActor::Tick address 0x7ff675746a40
+[15:01:48.5471906] GameViewportClient::Tick address 0x7ff675b0b490
+[15:01:48.5472071] ProcessEvent address 0x7ff673e95a20
+[15:01:48.5472264] ProcessConsoleExec address 0x7ff6714462b0
+[15:01:48.5472443] UStruct::Link address 0x7ff673dc5380
+[15:01:48.5472658] Constructed 0 of 0 objects
+[15:01:48.6749303] FText size detected as 0x18 bytes.
+[15:01:48.6751523] ProcessInternal address: 0x7ff673e95e60
+[15:01:48.6751875] ProcessLocalScriptFunction address: 0x7ff673e95f10
+[15:01:48.6752138] UnrealConfig.FExecVTableOffsetInLocalPlayer: 28
+[15:01:48.6752409] Post-initialization: GMalloc: 0x7ff679c64c18 -> 0x22bb224d940
+[15:01:48.6769566] Adding GUObjectArray listeners
+[15:01:48.6769881] Starting callback garbage collector!
+[15:01:48.6815119] [UE4SS.StaticConstructObject.ObjectSearcherPoolHook] Added posthook with Id '0X9000000000000001'!
+[15:01:48.6815415] 
+##### MEMBER OFFSETS START (Coalesced) #####
+[15:01:48.6815602] UObjectBase::bUseSoftwareCursorWidgets = 0x250
+[15:01:48.6815774] UObjectBase::ClassPrivate = 0x10
+[15:01:48.6815937] UObjectBase::ViewportFrame = 0xF0
+[15:01:48.6816098] UObjectBase::MouseLockMode = 0x39C
+[15:01:48.6816266] UObjectBase::bFindCameraComponentWhenViewTarget = 0x5A
+[15:01:48.6816489] UObjectBase::InternalIndex = 0xC
+[15:01:48.6816649] UObjectBase::ObjectFlags = 0x8
+[15:01:48.6816810] UObjectBase::World = 0x78
+[15:01:48.6816973] UObjectBase::ActiveSplitscreenType = 0x70
+[15:01:48.6817137] UObjectBase::OnEndCursorOver = 0x1D6
+[15:01:48.6817298] UObjectBase::CustomTimeDilation = 0x64
+[15:01:48.6817459] UObjectBase::NamePrivate = 0x18
+[15:01:48.6817617] UObjectBase::InitialLifeSpan = 0x60
+[15:01:48.6817777] UObjectBase::AudioDeviceHandle = 0xF8
+[15:01:48.6817943] UObjectBase::bForceNetAddressable = 0x59
+[15:01:48.6818105] UObjectBase::InputPriority = 0x154
+[15:01:48.6818265] UObjectBase::bDisableSplitScreenOverride = 0x398
+[15:01:48.6818432] UObjectBase::Window = 0x100
+[15:01:48.6818593] UObjectBase::OuterPrivate = 0x20
+[15:01:48.6818778] UObjectBase::CurrentBufferVisualizationMode = 0x130
+[15:01:48.6818960] UObjectBase::bSuppressTransitionMessage = 0x88
+[15:01:48.6819141] UObjectBase::CurrentLumenVisualizationMode = 0x140
+[15:01:48.6819307] UObjectBase::CurrentNaniteVisualizationMode = 0x138
+[15:01:48.6819472] UObjectBase::CurrentVirtualShadowMapVisualizationMode = 0x148
+[15:01:48.6819635] UObjectBase::DebugProperties = 0x48
+[15:01:48.6819793] UObjectBase::EngineShowFlags = 0xB8
+[15:01:48.6819951] UObjectBase::AutoReceiveInput = 0x153
+[15:01:48.6820116] UObjectBase::GameLayerManagerPtr = 0x120
+[15:01:48.6820277] UObjectBase::OnClicked = 0x1D7
+[15:01:48.6820436] UObjectBase::OnActorBeginOverlap = 0x1D3
+[15:01:48.6820595] UObjectBase::HighResScreenshotDialog = 0x150
+[15:01:48.6820759] UObjectBase::OnInputTouchEnter = 0x1DB
+[15:01:48.6820918] UObjectBase::bHasAudioFocus = 0xFC
+[15:01:48.6821097] UObjectBase::OnEndPlay = 0x1DF
+[15:01:48.6821284] UObjectBase::ViewportOverlayWidget = 0x110
+[15:01:48.6821459] UObjectBase::MaxSplitscreenPlayers = 0x68
+[15:01:48.6821620] UObjectBase::MouseCaptureMode = 0x39A
+[15:01:48.6821779] UObjectBase::Layers = 0x1A8
+[15:01:48.6821960] UObjectBase::SplitscreenInfo = 0x58
+[15:01:48.6822158] UObjectBase::StatHitchesData = 0x390
+[15:01:48.6822357] UObjectBase::OnBeginCursorOver = 0x1D5
+[15:01:48.6822522] UObjectBase::StatUnitData = 0x388
+[15:01:48.6822686] UObjectBase::ViewModeIndex = 0xB0
+[15:01:48.6822846] UObjectBase::Viewport = 0xE8
+[15:01:48.6823010] UObjectBase::ViewportConsole = 0x40
+[15:01:48.6823627] UObjectBase::bHideCursorDuringCapture = 0x39B
+[15:01:48.6823983] UObjectBase::DetachFence = 0x280
+[15:01:48.6824188] UObjectBase::CreationTime = 0x158
+[15:01:48.6824372] UObjectBase::bIgnoreInput = 0x399
+[15:01:48.6824562] UObjectBase::bActorEnableCollision = 0x5C
+[15:01:48.6824742] UObjectBase::bIsMouseOverClient = 0x39D
+[15:01:48.6824907] UObjectBase::OnInputTouchEnd = 0x1DA
+[15:01:48.6825076] UObjectBase::bHasDeferredComponentRegistration = 0x5C
+[15:01:48.6825248] UObjectBase::AttachmentReplication = 0x70
+[15:01:48.6825417] UObjectBase::DefaultUpdateOverlapsMethodDuringLevelStreaming = 0x5F
+[15:01:48.6825629] UObjectBase::InputComponent = 0x160
+[15:01:48.6825833] UObjectBase::LastRenderTime = 0x17C
+[15:01:48.6826025] UObjectBase::MinNetUpdateFrequency = 0x174
+[15:01:48.6826203] UObjectBase::NetCullDistanceSquared = 0x168
+[15:01:48.6826368] UObjectBase::OnActorEndOverlap = 0x1D4
+[15:01:48.6826530] UObjectBase::NetDormancy = 0x151
+[15:01:48.6826696] UObjectBase::NetDriverName = 0x148
+[15:01:48.6826880] UObjectBase::NetTag = 0x16C
+[15:01:48.6827046] UObjectBase::NetPriority = 0x178
+[15:01:48.6827262] UObjectBase::NetUpdateFrequency = 0x170
+[15:01:48.6827495] UObjectBase::OnActorHit = 0x1DD
+[15:01:48.6827695] UObjectBase::OnDestroyed = 0x1DE
+[15:01:48.6827868] UObjectBase::OnInputTouchBegin = 0x1D9
+[15:01:48.6828037] UObjectBase::OnInputTouchLeave = 0x1DC
+[15:01:48.6828201] UObjectBase::OnReleased = 0x1D8
+[15:01:48.6828362] UObjectBase::OnTakeAnyDamage = 0x1D0
+[15:01:48.6828525] UObjectBase::OnTakePointDamage = 0x1D1
+[15:01:48.6828697] UObjectBase::OnTakeRadialDamage = 0x1D2
+[15:01:48.6828857] UObjectBase::ParentComponent = 0x1B8
+[15:01:48.6829022] UObjectBase::PrimaryActorTick = 0x28
+[15:01:48.6829187] UObjectBase::RayTracingGroupId = 0x6C
+[15:01:48.6829352] UObjectBase::RemoteRole = 0x68
+[15:01:48.6829517] UObjectBase::ReplicatedComponentsInfo = 0x1F0
+[15:01:48.6829683] UObjectBase::ReplicatedMovement = 0xD0
+[15:01:48.6829847] UObjectBase::ReplicatedSubObjects = 0x1E0
+[15:01:48.6830010] UObjectBase::Role = 0x150
+[15:01:48.6830170] UObjectBase::RootComponent = 0x198
+[15:01:48.6830331] UObjectBase::SpawnCollisionHandlingMethod = 0x152
+[15:01:48.6830506] UObjectBase::Tags = 0x1C0
+[15:01:48.6830679] UObjectBase::TimerHandle_LifeSpanExpired = 0x1A0
+[15:01:48.6830892] UObjectBase::UpdateOverlapsMethodDuringLevelStreaming = 0x5E
+[15:01:48.6831107] UObjectBase::InternalIndex_Private = 0xC
+[15:01:48.6831315] UObjectBase::UEP_TotalSize = 0x28
+[15:01:48.6831494] UObjectBase::bShowTitleSafeZone = 0x6C
+[15:01:48.6831744] UObjectBase::bIsPlayInEditorViewport = 0x6C
+[15:01:48.6832160] UObjectBase::bDisableWorldRendering = 0x6C
+[15:01:48.6832331] UObjectBase::HardwareCursorCache = 0x160
+[15:01:48.6832497] UObjectBase::HardwareCursors = 0x1B0
+[15:01:48.6832668] UObjectBase::CursorWidgets = 0x200
+[15:01:48.6832863] UObjectBase::ActorHasBegunPlay = 0x5D
+[15:01:48.6833051] UObjectBase::bNetTemporary = 0x58
+[15:01:48.6833221] UObjectBase::bActorIsBeingConstructed = 0x5D
+[15:01:48.6833390] UObjectBase::bNetStartup = 0x58
+[15:01:48.6833560] UObjectBase::bOnlyRelevantToOwner = 0x58
+[15:01:48.6833759] UObjectBase::bAlwaysRelevant = 0x58
+[15:01:48.6833931] UObjectBase::bReplicateMovement = 0x58
+[15:01:48.6834118] UObjectBase::bCallPreReplication = 0x58
+[15:01:48.6834329] UObjectBase::bCallPreReplicationForReplay = 0x58
+[15:01:48.6834516] UObjectBase::bHidden = 0x58
+[15:01:48.6834677] UObjectBase::bTearOff = 0x59
+[15:01:48.6834843] UObjectBase::bExchangedRoles = 0x59
+[15:01:48.6835022] UObjectBase::bNetLoadOnClient = 0x59
+[15:01:48.6835231] UObjectBase::bNetUseOwnerRelevancy = 0x59
+[15:01:48.6835420] UObjectBase::bRelevantForNetworkReplays = 0x59
+[15:01:48.6835603] UObjectBase::bRelevantForLevelBounds = 0x59
+[15:01:48.6835778] UObjectBase::bReplayRewindable = 0x59
+[15:01:48.6835971] UObjectBase::bAllowTickBeforeBeginPlay = 0x5A
+[15:01:48.6836137] UObjectBase::bAutoDestroyWhenFinished = 0x5A
+[15:01:48.6836310] UObjectBase::bCanBeDamaged = 0x5A
+[15:01:48.6836473] UObjectBase::bBlockInput = 0x5A
+[15:01:48.6836638] UObjectBase::bCollideWhenPlacing = 0x5A
+[15:01:48.6836799] UObjectBase::bGenerateOverlapEventsDuringLevelStreaming = 0x5A
+[15:01:48.6836974] UObjectBase::bIgnoresOriginShifting = 0x5A
+[15:01:48.6837159] UObjectBase::bHasRegisteredAllComponents = 0x5C
+[15:01:48.6837349] UObjectBase::bEnableAutoLODGeneration = 0x5B
+[15:01:48.6837546] UObjectBase::bIsEditorOnlyActor = 0x5B
+[15:01:48.6837738] UObjectBase::bActorSeamlessTraveled = 0x5B
+[15:01:48.6837912] UObjectBase::bReplicates = 0x5B
+[15:01:48.6838078] UObjectBase::bCanBeInCluster = 0x5B
+[15:01:48.6838289] UObjectBase::bAllowReceiveTickEventOnDedicatedServer = 0x5B
+[15:01:48.6838490] UObjectBase::bNetCheckedInitialPhysicsState = 0x5B
+[15:01:48.6838663] UObjectBase::bReplicateUsingRegisteredSubObjectList = 0x5B
+[15:01:48.6838833] UObjectBase::bHasFinishedSpawning = 0x5C
+[15:01:48.6839016] UObjectBase::bActorInitialized = 0x5C
+[15:01:48.6839185] UObjectBase::bActorBeginningPlayFromLevelStreaming = 0x5C
+[15:01:48.6839366] UObjectBase::bTickFunctionsRegistered = 0x5C
+[15:01:48.6839536] UObjectBase::bRunningUserConstructionScript = 0x5C
+[15:01:48.6839718] UObjectBase::bActorIsBeingDestroyed = 0x5D
+[15:01:48.6839881] UObjectBase::bActorWantsDestroyDuringBeginPlay = 0x5D
+[15:01:48.6840049] UObjectBase::bAsyncPhysicsTickEnabled = 0x5D
+[15:01:48.6840216] UObjectBase::Owner = 0x140
+[15:01:48.6840379] UObjectBase::Children = 0x188
+[15:01:48.6840548] UScriptStruct::ICppStructOps::Alignment = 0xC
+[15:01:48.6840749] UScriptStruct::ICppStructOps::Size = 0x8
+[15:01:48.6840916] UScriptStruct::ICppStructOps::UEP_TotalSize = 0x10
+[15:01:48.6841091] UStruct::DestructorLink = 0x80
+[15:01:48.6841271] UStruct::Children = 0x48
+[15:01:48.6841436] UStruct::ChildProperties = 0x50
+[15:01:48.6841602] UStruct::PostConstructLink = 0x88
+[15:01:48.6841778] UStruct::UnresolvedScriptProperties = 0xA0
+[15:01:48.6841986] UStruct::MinAlignment = 0x5C
+[15:01:48.6842201] UStruct::PropertiesSize = 0x58
+[15:01:48.6842368] UStruct::PropertyLink = 0x70
+[15:01:48.6842526] UStruct::RefLink = 0x78
+[15:01:48.6842688] UStruct::Script = 0x60
+[15:01:48.6842851] UStruct::ScriptAndPropertyObjectReferences = 0x90
+[15:01:48.6843019] UStruct::SuperStruct = 0x40
+[15:01:48.6843194] UStruct::UEP_TotalSize = 0xB0
+[15:01:48.6843363] UScriptStruct::UEP_TotalSize = 0xC0
+[15:01:48.6843546] UScriptStruct::StructFlags = 0xB0
+[15:01:48.6843722] UScriptStruct::CppStructOps = 0xB8
+[15:01:48.6843910] UScriptStruct::bPrepareCppStructOpsCompleted = 0xB4
+[15:01:48.6844083] UClass::ClassCastFlags = 0xD8
+[15:01:48.6844253] UClass::bLayoutChanging = 0xD1
+[15:01:48.6844459] UClass::ClassWithin = 0xE0
+[15:01:48.6844650] UClass::bCooked = 0xD0
+[15:01:48.6844880] UClass::ClassConfigName = 0xE8
+[15:01:48.6845079] UClass::ClassConstructor = 0xB0
+[15:01:48.6845246] UClass::ClassDefaultObject = 0x110
+[15:01:48.6845432] UClass::ClassFlags = 0xD4
+[15:01:48.6845607] UClass::ClassUnique = 0xC8
+[15:01:48.6845829] UClass::ClassVTableHelperCtorCaller = 0xB8
+[15:01:48.6846011] UClass::ReferenceTokenStream = 0x1E0
+[15:01:48.6846184] UClass::FirstOwnedClassRep = 0xCC
+[15:01:48.6846389] UClass::Interfaces = 0x1D0
+[15:01:48.6846593] UClass::NetFields = 0x100
+[15:01:48.6846768] UClass::SparseClassData = 0x118
+[15:01:48.6846933] UClass::SparseClassDataStruct = 0x120
+[15:01:48.6847100] UClass::FuncMap = 0x128
+[15:01:48.6847264] UClass::SuperFuncMap = 0x178
+[15:01:48.6847427] UClass::NativeFunctionLookupTable = 0x220
+[15:01:48.6847591] UClass::UEP_TotalSize = 0x230
+[15:01:48.6847755] UEnum::CppForm = 0x58
+[15:01:48.6847915] UEnum::CppType = 0x30
+[15:01:48.6848076] UEnum::EnumDisplayNameFn = 0x60
+[15:01:48.6848240] UEnum::Names = 0x48
+[15:01:48.6848400] UEnum::EnumFlags_Internal = 0x5C
+[15:01:48.6848568] UEnum::EnumPackage = 0x68
+[15:01:48.6848733] UEnum::UEP_TotalSize = 0x68
+[15:01:48.6848904] UFunction::EventGraphCallOffset = 0xD0
+[15:01:48.6849069] UFunction::EventGraphFunction = 0xC8
+[15:01:48.6849237] UFunction::RPCId = 0xBA
+[15:01:48.6849412] UFunction::FirstPropertyToInit = 0xC0
+[15:01:48.6849584] UFunction::Func = 0xD8
+[15:01:48.6849751] UFunction::FunctionFlags = 0xB0
+[15:01:48.6849921] UFunction::NumParms = 0xB4
+[15:01:48.6850101] UFunction::ParmsSize = 0xB6
+[15:01:48.6850269] UFunction::RPCResponseId = 0xBC
+[15:01:48.6850439] UFunction::ReturnValueOffset = 0xB8
+[15:01:48.6850606] UFunction::UEP_TotalSize = 0xE0
+[15:01:48.6850830] UField::Next = 0x28
+[15:01:48.6851027] UField::UEP_TotalSize = 0x30
+[15:01:48.6851219] FField::ClassPrivate = 0x8
+[15:01:48.6851538] FField::NamePrivate = 0x28
+[15:01:48.6851700] FField::FlagsPrivate = 0x30
+[15:01:48.6851904] FField::Next = 0x20
+[15:01:48.6852075] FField::Owner = 0x10
+[15:01:48.6852239] FField::UEP_TotalSize = 0x38
+[15:01:48.6852403] FProperty::ArrayDim = 0x38
+[15:01:48.6852564] FProperty::DestructorLinkNext = 0x68
+[15:01:48.6852726] FProperty::ElementSize = 0x3C
+[15:01:48.6852887] FProperty::NextRef = 0x60
+[15:01:48.6853049] FProperty::Offset_Internal = 0x4C
+[15:01:48.6853213] FProperty::PostConstructLinkNext = 0x70
+[15:01:48.6853374] FProperty::PropertyLinkNext = 0x58
+[15:01:48.6853535] FProperty::PropertyFlags = 0x40
+[15:01:48.6853697] FProperty::RepIndex = 0x48
+[15:01:48.6853875] FProperty::RepNotifyFunc = 0x50
+[15:01:48.6854039] FProperty::UEP_TotalSize = 0x78
+[15:01:48.6854202] FNumericProperty::ArrayDim = 0x38
+[15:01:48.6854375] FNumericProperty::DestructorLinkNext = 0x68
+[15:01:48.6854547] FNumericProperty::ElementSize = 0x3C
+[15:01:48.6854720] FNumericProperty::NextRef = 0x60
+[15:01:48.6854922] FNumericProperty::Offset_Internal = 0x4C
+[15:01:48.6855168] FNumericProperty::PostConstructLinkNext = 0x70
+[15:01:48.6855470] FNumericProperty::PropertyLinkNext = 0x58
+[15:01:48.6855844] FNumericProperty::PropertyFlags = 0x40
+[15:01:48.6856149] FNumericProperty::RepIndex = 0x48
+[15:01:48.6856395] FNumericProperty::RepNotifyFunc = 0x50
+[15:01:48.6856644] FNumericProperty::UEP_TotalSize = 0x78
+[15:01:48.6856836] FObjectPropertyBase::PropertyClass = 0x78
+[15:01:48.6857002] FObjectPropertyBase::UEP_TotalSize = 0x80
+[15:01:48.6857172] FStructProperty::Struct = 0x78
+[15:01:48.6857336] FStructProperty::UEP_TotalSize = 0x80
+[15:01:48.6857499] FArrayProperty::ArrayFlags = 0x80
+[15:01:48.6857663] FArrayProperty::Inner = 0x78
+[15:01:48.6857828] FArrayProperty::UEP_TotalSize = 0x88
+[15:01:48.6857993] FMapProperty::KeyProp = 0x78
+[15:01:48.6858158] FMapProperty::MapLayout = 0x88
+[15:01:48.6858320] FMapProperty::ValueProp = 0x80
+[15:01:48.6858481] FMapProperty::MapFlags = 0xA0
+[15:01:48.6858643] FMapProperty::UEP_TotalSize = 0xA8
+[15:01:48.6858807] FSetProperty::ElementProp = 0x78
+[15:01:48.6858973] FSetProperty::UEP_TotalSize = 0x98
+[15:01:48.6859136] FSetProperty::SetLayout = 0x80
+[15:01:48.6859309] FBoolProperty::FieldMask = 0x7B
+[15:01:48.6859477] FBoolProperty::ByteMask = 0x7A
+[15:01:48.6859644] FBoolProperty::FieldSize = 0x78
+[15:01:48.6859806] FBoolProperty::ByteOffset = 0x79
+[15:01:48.6859969] FBoolProperty::UEP_TotalSize = 0x80
+[15:01:48.6860150] FByteProperty::Enum = 0x78
+[15:01:48.6860318] FByteProperty::UEP_TotalSize = 0x80
+[15:01:48.6860482] FEnumProperty::Enum = 0x80
+[15:01:48.6860644] FEnumProperty::UEP_TotalSize = 0x88
+[15:01:48.6860808] FEnumProperty::UnderlyingProp = 0x78
+[15:01:48.6860974] FClassProperty::MetaClass = 0x80
+[15:01:48.6861136] FClassProperty::UEP_TotalSize = 0x88
+[15:01:48.6861304] FSoftClassProperty::MetaClass = 0x80
+[15:01:48.6861468] FSoftClassProperty::UEP_TotalSize = 0x88
+[15:01:48.6861634] FDelegateProperty::SignatureFunction = 0x78
+[15:01:48.6861803] FDelegateProperty::UEP_TotalSize = 0x80
+[15:01:48.6861972] FMulticastDelegateProperty::SignatureFunction = 0x78
+[15:01:48.6862142] FMulticastDelegateProperty::UEP_TotalSize = 0x80
+[15:01:48.6862313] FInterfaceProperty::InterfaceClass = 0x78
+[15:01:48.6862473] FInterfaceProperty::UEP_TotalSize = 0x80
+[15:01:48.6862636] FFieldPathProperty::PropertyClass = 0x78
+[15:01:48.6862797] FFieldPathProperty::UEP_TotalSize = 0x80
+[15:01:48.6863289] FWorldContext::ThisCurrentWorld = 0x2C0
+[15:01:48.6863549] FWorldContext::ExternalReferences = 0x2B0
+[15:01:48.6863723] FWorldContext::LastRemoteURL = 0x128
+[15:01:48.6863890] FWorldContext::ContextHandle = 0xA0
+[15:01:48.6869481] FWorldContext::PendingMapChangeFailureDescription = 0x1C8
+[15:01:48.6869684] FWorldContext::TravelURL = 0xA8
+[15:01:48.6869855] FWorldContext::TravelType = 0xB8
+[15:01:48.6870019] FWorldContext::LastURL = 0xC0
+[15:01:48.6870190] FWorldContext::LevelsToLoadForPendingMapChange = 0x1A8
+[15:01:48.6870364] FWorldContext::GarbageObjectsToVerify = 0x260
+[15:01:48.6870526] FWorldContext::bShouldCommitPendingMapChange = 0x1D8
+[15:01:48.6870688] FWorldContext::GameViewport = 0x200
+[15:01:48.6870846] FWorldContext::PIEInstance = 0x220
+[15:01:48.6871004] FWorldContext::PIEFixedTickSeconds = 0x258
+[15:01:48.6871165] FWorldContext::PIEPrefix = 0x228
+[15:01:48.6871323] FWorldContext::RunAsDedicated = 0x23C
+[15:01:48.6871490] FWorldContext::bWaitingOnOnlineSubsystem = 0x23D
+[15:01:48.6871649] FWorldContext::bIsPrimaryPIEInstance = 0x23E
+[15:01:48.6871828] FWorldContext::AudioDeviceID = 0x240
+[15:01:48.6871997] FWorldContext::CustomDescription = 0x248
+[15:01:48.6872156] FWorldContext::PIEAccumulatedTickSeconds = 0x25C
+[15:01:48.6872314] FWorldContext::UEP_TotalSize = 0x2C8
+[15:01:48.6872488] FOutputDevice::bAutoEmitLineTerminator = 0x9
+[15:01:48.6872645] FOutputDevice::bSuppressEventTag = 0x8
+[15:01:48.6872801] FOutputDevice::UEP_TotalSize = 0x10
+[15:01:48.6872960] FArchiveState::ArIsTextFormat = 0x28
+[15:01:48.6873116] FArchiveState::ArIsLoading = 0x28
+[15:01:48.6873274] FArchiveState::ArIsLoadingFromCookedPackage = 0x28
+[15:01:48.6873432] FArchiveState::ArPortFlags = 0x30
+[15:01:48.6873598] FArchiveState::ArIsTransacting = 0x28
+[15:01:48.6873757] FArchiveState::ArIsSaving = 0x28
+[15:01:48.6873913] FArchiveState::ArForceUnicode = 0x28
+[15:01:48.6874071] FArchiveState::ArIsModifyingWeakAndStrongReferences = 0x2B
+[15:01:48.6874232] FArchiveState::ArUseUnversionedPropertySerialization = 0x28
+[15:01:48.6874394] FArchiveState::ArWantBinaryPropertySerialization = 0x28
+[15:01:48.6874563] FArchiveState::ArIsObjectReferenceCollector = 0x2A
+[15:01:48.6874721] FArchiveState::ArIsPersistent = 0x29
+[15:01:48.6874880] FArchiveState::ArForceByteSwapping = 0x29
+[15:01:48.6875035] FArchiveState::ArIsError = 0x29
+[15:01:48.6875190] FArchiveState::ArUEVer = 0x40
+[15:01:48.6875345] FArchiveState::ArIsCriticalError = 0x29
+[15:01:48.6875501] FArchiveState::ArMaxSerializeSize = 0x38
+[15:01:48.6875659] FArchiveState::ArShouldSkipCompilingAssets = 0x29
+[15:01:48.6875817] FArchiveState::ArCustomPropertyList = 0x68
+[15:01:48.6875973] FArchiveState::ArContainsCode = 0x29
+[15:01:48.6876130] FArchiveState::ArIsNetArchive = 0x2B
+[15:01:48.6876286] FArchiveState::ArContainsMap = 0x29
+[15:01:48.6876443] FArchiveState::ArRequiresLocalizationGather = 0x29
+[15:01:48.6876604] FArchiveState::ArIgnoreArchetypeRef = 0x2A
+[15:01:48.6876761] FArchiveState::ArNoDelta = 0x2A
+[15:01:48.6876920] FArchiveState::ArNoIntraPropertyDelta = 0x2A
+[15:01:48.6877076] FArchiveState::ArIgnoreOuterRef = 0x2A
+[15:01:48.6877232] FArchiveState::ArIgnoreClassGeneratedByRef = 0x2A
+[15:01:48.6877391] FArchiveState::ArLicenseeUEVer = 0x48
+[15:01:48.6877548] FArchiveState::ArIgnoreClassRef = 0x2A
+[15:01:48.6877704] FArchiveState::ArAllowLazyLoading = 0x2A
+[15:01:48.6877863] FArchiveState::NextProxy = 0x90
+[15:01:48.6878018] FArchiveState::ArIsCountingMemory = 0x2B
+[15:01:48.6878176] FArchiveState::bCustomVersionsAreReset = 0x88
+[15:01:48.6878337] FArchiveState::ArEngineNetVer = 0x58
+[15:01:48.6878498] FArchiveState::ArShouldSkipBulkData = 0x2B
+[15:01:48.6878659] FArchiveState::ArIsFilterEditorOnly = 0x2B
+[15:01:48.6878821] FArchiveState::ArIsSaveGame = 0x2B
+[15:01:48.6878980] FArchiveState::ArUseCustomPropertyList = 0x2B
+[15:01:48.6879142] FArchiveState::UEP_TotalSize = 0x98
+[15:01:48.6879305] FArchiveState::ArSerializingDefaults = 0x2C
+[15:01:48.6879468] FArchiveState::ArEngineVer = 0x4C
+[15:01:48.6879630] FArchiveState::ArGameNetVer = 0x5C
+[15:01:48.6879791] FArchiveState::CustomVersionContainer = 0x60
+[15:01:48.6879962] FArchiveState::SerializedProperty = 0x78
+[15:01:48.6880124] AActor::bUseSoftwareCursorWidgets = 0x250
+[15:01:48.6880289] AActor::ClassPrivate = 0x10
+[15:01:48.6880448] AActor::ViewportFrame = 0xF0
+[15:01:48.6880610] AActor::MouseLockMode = 0x39C
+[15:01:48.6880779] AActor::bFindCameraComponentWhenViewTarget = 0x5A
+[15:01:48.6880941] AActor::InternalIndex = 0xC
+[15:01:48.6881123] AActor::ObjectFlags = 0x8
+[15:01:48.6881290] AActor::World = 0x78
+[15:01:48.6881450] AActor::ActiveSplitscreenType = 0x70
+[15:01:48.6881613] AActor::OnEndCursorOver = 0x1D6
+[15:01:48.6881779] AActor::CustomTimeDilation = 0x64
+[15:01:48.6881946] AActor::NamePrivate = 0x18
+[15:01:48.6882105] AActor::InitialLifeSpan = 0x60
+[15:01:48.6882266] AActor::AudioDeviceHandle = 0xF8
+[15:01:48.6882425] AActor::bForceNetAddressable = 0x59
+[15:01:48.6882590] AActor::InputPriority = 0x154
+[15:01:48.6882751] AActor::bDisableSplitScreenOverride = 0x398
+[15:01:48.6882914] AActor::Window = 0x100
+[15:01:48.6883073] AActor::OuterPrivate = 0x20
+[15:01:48.6883234] AActor::CurrentBufferVisualizationMode = 0x130
+[15:01:48.6883399] AActor::bSuppressTransitionMessage = 0x88
+[15:01:48.6883561] AActor::CurrentLumenVisualizationMode = 0x140
+[15:01:48.6883723] AActor::CurrentNaniteVisualizationMode = 0x138
+[15:01:48.6883888] AActor::CurrentVirtualShadowMapVisualizationMode = 0x148
+[15:01:48.6884052] AActor::DebugProperties = 0x48
+[15:01:48.6884212] AActor::EngineShowFlags = 0xB8
+[15:01:48.6884373] AActor::AutoReceiveInput = 0x153
+[15:01:48.6884532] AActor::GameLayerManagerPtr = 0x120
+[15:01:48.6884693] AActor::OnClicked = 0x1D7
+[15:01:48.6884855] AActor::OnActorBeginOverlap = 0x1D3
+[15:01:48.6885065] AActor::HighResScreenshotDialog = 0x150
+[15:01:48.6885237] AActor::OnInputTouchEnter = 0x1DB
+[15:01:48.6885400] AActor::bHasAudioFocus = 0xFC
+[15:01:48.6885562] AActor::OnEndPlay = 0x1DF
+[15:01:48.6885723] AActor::ViewportOverlayWidget = 0x110
+[15:01:48.6885887] AActor::MaxSplitscreenPlayers = 0x68
+[15:01:48.6886049] AActor::MouseCaptureMode = 0x39A
+[15:01:48.6886212] AActor::Layers = 0x1A8
+[15:01:48.6886370] AActor::SplitscreenInfo = 0x58
+[15:01:48.6886531] AActor::StatHitchesData = 0x390
+[15:01:48.6886748] AActor::OnBeginCursorOver = 0x1D5
+[15:01:48.6886912] AActor::StatUnitData = 0x388
+[15:01:48.6887074] AActor::ViewModeIndex = 0xB0
+[15:01:48.6887233] AActor::Viewport = 0xE8
+[15:01:48.6887394] AActor::ViewportConsole = 0x40
+[15:01:48.6887558] AActor::bHideCursorDuringCapture = 0x39B
+[15:01:48.6887719] AActor::DetachFence = 0x280
+[15:01:48.6887882] AActor::CreationTime = 0x158
+[15:01:48.6888043] AActor::bIgnoreInput = 0x399
+[15:01:48.6888203] AActor::bActorEnableCollision = 0x5C
+[15:01:48.6888363] AActor::bIsMouseOverClient = 0x39D
+[15:01:48.6888535] AActor::OnInputTouchEnd = 0x1DA
+[15:01:48.6888693] AActor::bHasDeferredComponentRegistration = 0x5C
+[15:01:48.6888855] AActor::AttachmentReplication = 0x70
+[15:01:48.6889013] AActor::DefaultUpdateOverlapsMethodDuringLevelStreaming = 0x5F
+[15:01:48.6889175] AActor::InputComponent = 0x160
+[15:01:48.6889330] AActor::LastRenderTime = 0x17C
+[15:01:48.6889487] AActor::MinNetUpdateFrequency = 0x174
+[15:01:48.6889650] AActor::NetCullDistanceSquared = 0x168
+[15:01:48.6889808] AActor::OnActorEndOverlap = 0x1D4
+[15:01:48.6889965] AActor::NetDormancy = 0x151
+[15:01:48.6890121] AActor::NetDriverName = 0x148
+[15:01:48.6890290] AActor::NetTag = 0x16C
+[15:01:48.6890445] AActor::NetPriority = 0x178
+[15:01:48.6890600] AActor::NetUpdateFrequency = 0x170
+[15:01:48.6890754] AActor::OnActorHit = 0x1DD
+[15:01:48.6890907] AActor::OnDestroyed = 0x1DE
+[15:01:48.6891061] AActor::OnInputTouchBegin = 0x1D9
+[15:01:48.6891216] AActor::OnInputTouchLeave = 0x1DC
+[15:01:48.6891382] AActor::OnReleased = 0x1D8
+[15:01:48.6891549] AActor::OnTakeAnyDamage = 0x1D0
+[15:01:48.6891709] AActor::OnTakePointDamage = 0x1D1
+[15:01:48.6891865] AActor::OnTakeRadialDamage = 0x1D2
+[15:01:48.6892024] AActor::ParentComponent = 0x1B8
+[15:01:48.6892184] AActor::PrimaryActorTick = 0x28
+[15:01:48.6892342] AActor::RayTracingGroupId = 0x6C
+[15:01:48.6892499] AActor::RemoteRole = 0x68
+[15:01:48.6892658] AActor::ReplicatedComponentsInfo = 0x1F0
+[15:01:48.6892816] AActor::ReplicatedMovement = 0xD0
+[15:01:48.6892975] AActor::ReplicatedSubObjects = 0x1E0
+[15:01:48.6893150] AActor::Role = 0x150
+[15:01:48.6893306] AActor::RootComponent = 0x198
+[15:01:48.6893464] AActor::SpawnCollisionHandlingMethod = 0x152
+[15:01:48.6893623] AActor::Tags = 0x1C0
+[15:01:48.6893779] AActor::TimerHandle_LifeSpanExpired = 0x1A0
+[15:01:48.6893942] AActor::UpdateOverlapsMethodDuringLevelStreaming = 0x5E
+[15:01:48.6894116] AActor::InternalIndex_Private = 0xC
+[15:01:48.6894274] AActor::UEP_TotalSize = 0x28
+[15:01:48.6894442] AActor::bShowTitleSafeZone = 0x6C
+[15:01:48.6894602] AActor::bIsPlayInEditorViewport = 0x6C
+[15:01:48.6894762] AActor::bDisableWorldRendering = 0x6C
+[15:01:48.6894918] AActor::HardwareCursorCache = 0x160
+[15:01:48.6895073] AActor::HardwareCursors = 0x1B0
+[15:01:48.6895227] AActor::CursorWidgets = 0x200
+[15:01:48.6895381] AActor::ActorHasBegunPlay = 0x5D
+[15:01:48.6895536] AActor::bNetTemporary = 0x58
+[15:01:48.6895690] AActor::bActorIsBeingConstructed = 0x5D
+[15:01:48.6895846] AActor::bNetStartup = 0x58
+[15:01:48.6896001] AActor::bOnlyRelevantToOwner = 0x58
+[15:01:48.6896157] AActor::bAlwaysRelevant = 0x58
+[15:01:48.6896311] AActor::bReplicateMovement = 0x58
+[15:01:48.6896465] AActor::bCallPreReplication = 0x58
+[15:01:48.6896621] AActor::bCallPreReplicationForReplay = 0x58
+[15:01:48.6896776] AActor::bHidden = 0x58
+[15:01:48.6896931] AActor::bTearOff = 0x59
+[15:01:48.6897085] AActor::bExchangedRoles = 0x59
+[15:01:48.6897240] AActor::bNetLoadOnClient = 0x59
+[15:01:48.6897396] AActor::bNetUseOwnerRelevancy = 0x59
+[15:01:48.6897552] AActor::bRelevantForNetworkReplays = 0x59
+[15:01:48.6897710] AActor::bRelevantForLevelBounds = 0x59
+[15:01:48.6897868] AActor::bReplayRewindable = 0x59
+[15:01:48.6898027] AActor::bAllowTickBeforeBeginPlay = 0x5A
+[15:01:48.6898189] AActor::bAutoDestroyWhenFinished = 0x5A
+[15:01:48.6898348] AActor::bCanBeDamaged = 0x5A
+[15:01:48.6898506] AActor::bBlockInput = 0x5A
+[15:01:48.6898671] AActor::bCollideWhenPlacing = 0x5A
+[15:01:48.6898839] AActor::bGenerateOverlapEventsDuringLevelStreaming = 0x5A
+[15:01:48.6899001] AActor::bIgnoresOriginShifting = 0x5A
+[15:01:48.6899172] AActor::bHasRegisteredAllComponents = 0x5C
+[15:01:48.6899340] AActor::bEnableAutoLODGeneration = 0x5B
+[15:01:48.6899501] AActor::bIsEditorOnlyActor = 0x5B
+[15:01:48.6899676] AActor::bActorSeamlessTraveled = 0x5B
+[15:01:48.6899848] AActor::bReplicates = 0x5B
+[15:01:48.6900013] AActor::bCanBeInCluster = 0x5B
+[15:01:48.6900180] AActor::bAllowReceiveTickEventOnDedicatedServer = 0x5B
+[15:01:48.6900349] AActor::bNetCheckedInitialPhysicsState = 0x5B
+[15:01:48.6900521] AActor::bReplicateUsingRegisteredSubObjectList = 0x5B
+[15:01:48.6900687] AActor::bHasFinishedSpawning = 0x5C
+[15:01:48.6900849] AActor::bActorInitialized = 0x5C
+[15:01:48.6901013] AActor::bActorBeginningPlayFromLevelStreaming = 0x5C
+[15:01:48.6901177] AActor::bTickFunctionsRegistered = 0x5C
+[15:01:48.6901341] AActor::bRunningUserConstructionScript = 0x5C
+[15:01:48.6901521] AActor::bActorIsBeingDestroyed = 0x5D
+[15:01:48.6901692] AActor::bActorWantsDestroyDuringBeginPlay = 0x5D
+[15:01:48.6901860] AActor::bAsyncPhysicsTickEnabled = 0x5D
+[15:01:48.6902022] AActor::Owner = 0x140
+[15:01:48.6902181] AActor::Children = 0x188
+[15:01:48.6902347] AGameModeBase::SpectatorClass = 0x2D0
+[15:01:48.6902512] AGameModeBase::HUDClass = 0x2C0
+[15:01:48.6902682] AGameModeBase::DefaultPlayerName = 0x300
+[15:01:48.6902848] AGameModeBase::ServerStatReplicatorClass = 0x2E0
+[15:01:48.6903014] AGameModeBase::GameSession = 0x2E8
+[15:01:48.6903182] AGameModeBase::ServerStatReplicator = 0x2F8
+[15:01:48.6903345] AGameModeBase::GameSessionClass = 0x2A0
+[15:01:48.6903513] AGameModeBase::OptionsString = 0x290
+[15:01:48.6903678] AGameModeBase::PlayerStateClass = 0x2B8
+[15:01:48.6903845] AGameModeBase::bUseSeamlessTravel = 0x318
+[15:01:48.6904010] AGameModeBase::bStartPlayersAsSpectators = 0x318
+[15:01:48.6904178] AGameModeBase::bPauseable = 0x318
+[15:01:48.6904344] AGameModeBase::UEP_TotalSize = 0x330
+[15:01:48.6904508] AGameMode::EngineMessageClass = 0x350
+[15:01:48.6904675] AGameMode::MinRespawnDelay = 0x348
+[15:01:48.6904847] AGameMode::InactivePlayerArray = 0x358
+[15:01:48.6905014] AGameMode::InactivePlayerStateLifeSpan = 0x368
+[15:01:48.6905184] AGameMode::NumBots = 0x344
+[15:01:48.6905352] AGameMode::NumSpectators = 0x33C
+[15:01:48.6905519] AGameMode::MatchState = 0x330
+[15:01:48.6905690] AGameMode::MaxInactivePlayers = 0x36C
+[15:01:48.6905857] AGameMode::NumPlayers = 0x340
+[15:01:48.6906030] AGameMode::NumTravellingPlayers = 0x34C
+[15:01:48.6906210] AGameMode::bHandleDedicatedServerReplays = 0x370
+[15:01:48.6906399] AGameMode::bDelayedStart = 0x338
+[15:01:48.6906664] AGameMode::UEP_TotalSize = 0x378
+[15:01:48.6906949] UEngine::bUseSoftwareCursorWidgets = 0x250
+[15:01:48.6907199] UEngine::ClassPrivate = 0x10
+[15:01:48.6907417] UEngine::ViewportFrame = 0xF0
+[15:01:48.6907642] UEngine::MouseLockMode = 0x39C
+[15:01:48.6907897] UEngine::bFindCameraComponentWhenViewTarget = 0x5A
+[15:01:48.6908142] UEngine::InternalIndex = 0xC
+[15:01:48.6908322] UEngine::ObjectFlags = 0x8
+[15:01:48.6908498] UEngine::World = 0x78
+[15:01:48.6908683] UEngine::ActiveSplitscreenType = 0x70
+[15:01:48.6909099] UEngine::OnEndCursorOver = 0x1D6
+[15:01:48.6909266] UEngine::CustomTimeDilation = 0x64
+[15:01:48.6909465] UEngine::NamePrivate = 0x18
+[15:01:48.6909670] UEngine::InitialLifeSpan = 0x60
+[15:01:48.6909853] UEngine::AudioDeviceHandle = 0xF8
+[15:01:48.6910025] UEngine::bForceNetAddressable = 0x59
+[15:01:48.6910202] UEngine::InputPriority = 0x154
+[15:01:48.6910400] UEngine::bDisableSplitScreenOverride = 0x398
+[15:01:48.6910586] UEngine::Window = 0x100
+[15:01:48.6910750] UEngine::OuterPrivate = 0x20
+[15:01:48.6910922] UEngine::CurrentBufferVisualizationMode = 0x130
+[15:01:48.6911094] UEngine::bSuppressTransitionMessage = 0x88
+[15:01:48.6911263] UEngine::CurrentLumenVisualizationMode = 0x140
+[15:01:48.6911444] UEngine::CurrentNaniteVisualizationMode = 0x138
+[15:01:48.6911692] UEngine::CurrentVirtualShadowMapVisualizationMode = 0x148
+[15:01:48.6911931] UEngine::DebugProperties = 0x48
+[15:01:48.6912139] UEngine::EngineShowFlags = 0xB8
+[15:01:48.6912310] UEngine::AutoReceiveInput = 0x153
+[15:01:48.6912479] UEngine::GameLayerManagerPtr = 0x120
+[15:01:48.6912645] UEngine::OnClicked = 0x1D7
+[15:01:48.6912809] UEngine::OnActorBeginOverlap = 0x1D3
+[15:01:48.6912989] UEngine::HighResScreenshotDialog = 0x150
+[15:01:48.6913161] UEngine::OnInputTouchEnter = 0x1DB
+[15:01:48.6913326] UEngine::bHasAudioFocus = 0xFC
+[15:01:48.6913492] UEngine::OnEndPlay = 0x1DF
+[15:01:48.6913653] UEngine::ViewportOverlayWidget = 0x110
+[15:01:48.6913822] UEngine::MaxSplitscreenPlayers = 0x68
+[15:01:48.6913990] UEngine::MouseCaptureMode = 0x39A
+[15:01:48.6914155] UEngine::Layers = 0x1A8
+[15:01:48.6914320] UEngine::SplitscreenInfo = 0x58
+[15:01:48.6914484] UEngine::StatHitchesData = 0x390
+[15:01:48.6914648] UEngine::OnBeginCursorOver = 0x1D5
+[15:01:48.6914815] UEngine::StatUnitData = 0x388
+[15:01:48.6914985] UEngine::ViewModeIndex = 0xB0
+[15:01:48.6915149] UEngine::Viewport = 0xE8
+[15:01:48.6915312] UEngine::ViewportConsole = 0x40
+[15:01:48.6915482] UEngine::bHideCursorDuringCapture = 0x39B
+[15:01:48.6915651] UEngine::DetachFence = 0x280
+[15:01:48.6915817] UEngine::CreationTime = 0x158
+[15:01:48.6915988] UEngine::bIgnoreInput = 0x399
+[15:01:48.6916155] UEngine::bActorEnableCollision = 0x5C
+[15:01:48.6916320] UEngine::bIsMouseOverClient = 0x39D
+[15:01:48.6916494] UEngine::OnInputTouchEnd = 0x1DA
+[15:01:48.6916667] UEngine::bHasDeferredComponentRegistration = 0x5C
+[15:01:48.6916840] UEngine::AttachmentReplication = 0x70
+[15:01:48.6917010] UEngine::DefaultUpdateOverlapsMethodDuringLevelStreaming = 0x5F
+[15:01:48.6917179] UEngine::InputComponent = 0x160
+[15:01:48.6917343] UEngine::LastRenderTime = 0x17C
+[15:01:48.6917504] UEngine::MinNetUpdateFrequency = 0x174
+[15:01:48.6917669] UEngine::NetCullDistanceSquared = 0x168
+[15:01:48.6917834] UEngine::OnActorEndOverlap = 0x1D4
+[15:01:48.6918000] UEngine::NetDormancy = 0x151
+[15:01:48.6918163] UEngine::NetDriverName = 0x148
+[15:01:48.6918350] UEngine::NetTag = 0x16C
+[15:01:48.6918517] UEngine::NetPriority = 0x178
+[15:01:48.6918677] UEngine::NetUpdateFrequency = 0x170
+[15:01:48.6918841] UEngine::OnActorHit = 0x1DD
+[15:01:48.6919006] UEngine::OnDestroyed = 0x1DE
+[15:01:48.6919170] UEngine::OnInputTouchBegin = 0x1D9
+[15:01:48.6919335] UEngine::OnInputTouchLeave = 0x1DC
+[15:01:48.6919501] UEngine::OnReleased = 0x1D8
+[15:01:48.6919662] UEngine::OnTakeAnyDamage = 0x1D0
+[15:01:48.6919832] UEngine::OnTakePointDamage = 0x1D1
+[15:01:48.6920004] UEngine::OnTakeRadialDamage = 0x1D2
+[15:01:48.6920168] UEngine::ParentComponent = 0x1B8
+[15:01:48.6920330] UEngine::PrimaryActorTick = 0x28
+[15:01:48.6920495] UEngine::RayTracingGroupId = 0x6C
+[15:01:48.6920659] UEngine::RemoteRole = 0x68
+[15:01:48.6920823] UEngine::ReplicatedComponentsInfo = 0x1F0
+[15:01:48.6920985] UEngine::ReplicatedMovement = 0xD0
+[15:01:48.6921149] UEngine::ReplicatedSubObjects = 0x1E0
+[15:01:48.6921314] UEngine::Role = 0x150
+[15:01:48.6921480] UEngine::RootComponent = 0x198
+[15:01:48.6921646] UEngine::SpawnCollisionHandlingMethod = 0x152
+[15:01:48.6922115] UEngine::Tags = 0x1C0
+[15:01:48.6922276] UEngine::TimerHandle_LifeSpanExpired = 0x1A0
+[15:01:48.6922442] UEngine::UpdateOverlapsMethodDuringLevelStreaming = 0x5E
+[15:01:48.6922609] UEngine::InternalIndex_Private = 0xC
+[15:01:48.6922771] UEngine::UEP_TotalSize = 0x28
+[15:01:48.6922931] UEngine::bShowTitleSafeZone = 0x6C
+[15:01:48.6923092] UEngine::bIsPlayInEditorViewport = 0x6C
+[15:01:48.6923258] UEngine::bDisableWorldRendering = 0x6C
+[15:01:48.6923421] UEngine::HardwareCursorCache = 0x160
+[15:01:48.6923589] UEngine::HardwareCursors = 0x1B0
+[15:01:48.6923749] UEngine::CursorWidgets = 0x200
+[15:01:48.6923921] UEngine::ActorHasBegunPlay = 0x5D
+[15:01:48.6924133] UEngine::bNetTemporary = 0x58
+[15:01:48.6924310] UEngine::bActorIsBeingConstructed = 0x5D
+[15:01:48.6924474] UEngine::bNetStartup = 0x58
+[15:01:48.6924638] UEngine::bOnlyRelevantToOwner = 0x58
+[15:01:48.6924803] UEngine::bAlwaysRelevant = 0x58
+[15:01:48.6924975] UEngine::bReplicateMovement = 0x58
+[15:01:48.6925133] UEngine::bCallPreReplication = 0x58
+[15:01:48.6925295] UEngine::bCallPreReplicationForReplay = 0x58
+[15:01:48.6925459] UEngine::bHidden = 0x58
+[15:01:48.6925615] UEngine::bTearOff = 0x59
+[15:01:48.6925775] UEngine::bExchangedRoles = 0x59
+[15:01:48.6925934] UEngine::bNetLoadOnClient = 0x59
+[15:01:48.6926093] UEngine::bNetUseOwnerRelevancy = 0x59
+[15:01:48.6926305] UEngine::bRelevantForNetworkReplays = 0x59
+[15:01:48.6926482] UEngine::bRelevantForLevelBounds = 0x59
+[15:01:48.6926646] UEngine::bReplayRewindable = 0x59
+[15:01:48.6926805] UEngine::bAllowTickBeforeBeginPlay = 0x5A
+[15:01:48.6926972] UEngine::bAutoDestroyWhenFinished = 0x5A
+[15:01:48.6927136] UEngine::bCanBeDamaged = 0x5A
+[15:01:48.6927307] UEngine::bBlockInput = 0x5A
+[15:01:48.6927476] UEngine::bCollideWhenPlacing = 0x5A
+[15:01:48.6927646] UEngine::bGenerateOverlapEventsDuringLevelStreaming = 0x5A
+[15:01:48.6927850] UEngine::bIgnoresOriginShifting = 0x5A
+[15:01:48.6928018] UEngine::bHasRegisteredAllComponents = 0x5C
+[15:01:48.6928184] UEngine::bEnableAutoLODGeneration = 0x5B
+[15:01:48.6928356] UEngine::bIsEditorOnlyActor = 0x5B
+[15:01:48.6928523] UEngine::bActorSeamlessTraveled = 0x5B
+[15:01:48.6928690] UEngine::bReplicates = 0x5B
+[15:01:48.6928859] UEngine::bCanBeInCluster = 0x5B
+[15:01:48.6929048] UEngine::bAllowReceiveTickEventOnDedicatedServer = 0x5B
+[15:01:48.6929234] UEngine::bNetCheckedInitialPhysicsState = 0x5B
+[15:01:48.6929414] UEngine::bReplicateUsingRegisteredSubObjectList = 0x5B
+[15:01:48.6929605] UEngine::bHasFinishedSpawning = 0x5C
+[15:01:48.6929826] UEngine::bActorInitialized = 0x5C
+[15:01:48.6930017] UEngine::bActorBeginningPlayFromLevelStreaming = 0x5C
+[15:01:48.6930190] UEngine::bTickFunctionsRegistered = 0x5C
+[15:01:48.6930361] UEngine::bRunningUserConstructionScript = 0x5C
+[15:01:48.6930537] UEngine::bActorIsBeingDestroyed = 0x5D
+[15:01:48.6937911] UEngine::bActorWantsDestroyDuringBeginPlay = 0x5D
+[15:01:48.6938132] UEngine::bAsyncPhysicsTickEnabled = 0x5D
+[15:01:48.6938307] UEngine::Owner = 0x140
+[15:01:48.6938471] UEngine::Children = 0x188
+[15:01:48.6938637] UGameViewportClient::bUseSoftwareCursorWidgets = 0x250
+[15:01:48.6938814] UGameViewportClient::ClassPrivate = 0x10
+[15:01:48.6938979] UGameViewportClient::ViewportFrame = 0xF0
+[15:01:48.6939145] UGameViewportClient::MouseLockMode = 0x39C
+[15:01:48.6939314] UGameViewportClient::bFindCameraComponentWhenViewTarget = 0x5A
+[15:01:48.6939483] UGameViewportClient::InternalIndex = 0xC
+[15:01:48.6939658] UGameViewportClient::ObjectFlags = 0x8
+[15:01:48.6939826] UGameViewportClient::World = 0x78
+[15:01:48.6939991] UGameViewportClient::ActiveSplitscreenType = 0x70
+[15:01:48.6940158] UGameViewportClient::OnEndCursorOver = 0x1D6
+[15:01:48.6940322] UGameViewportClient::CustomTimeDilation = 0x64
+[15:01:48.6940485] UGameViewportClient::NamePrivate = 0x18
+[15:01:48.6940648] UGameViewportClient::InitialLifeSpan = 0x60
+[15:01:48.6940813] UGameViewportClient::AudioDeviceHandle = 0xF8
+[15:01:48.6940978] UGameViewportClient::bForceNetAddressable = 0x59
+[15:01:48.6941144] UGameViewportClient::InputPriority = 0x154
+[15:01:48.6941338] UGameViewportClient::bDisableSplitScreenOverride = 0x398
+[15:01:48.6941518] UGameViewportClient::Window = 0x100
+[15:01:48.6941681] UGameViewportClient::OuterPrivate = 0x20
+[15:01:48.6941846] UGameViewportClient::CurrentBufferVisualizationMode = 0x130
+[15:01:48.6942012] UGameViewportClient::bSuppressTransitionMessage = 0x88
+[15:01:48.6942177] UGameViewportClient::CurrentLumenVisualizationMode = 0x140
+[15:01:48.6942353] UGameViewportClient::CurrentNaniteVisualizationMode = 0x138
+[15:01:48.6942526] UGameViewportClient::CurrentVirtualShadowMapVisualizationMode = 0x148
+[15:01:48.6942691] UGameViewportClient::DebugProperties = 0x48
+[15:01:48.6942849] UGameViewportClient::EngineShowFlags = 0xB8
+[15:01:48.6943012] UGameViewportClient::AutoReceiveInput = 0x153
+[15:01:48.6943172] UGameViewportClient::GameLayerManagerPtr = 0x120
+[15:01:48.6943336] UGameViewportClient::OnClicked = 0x1D7
+[15:01:48.6943494] UGameViewportClient::OnActorBeginOverlap = 0x1D3
+[15:01:48.6943654] UGameViewportClient::HighResScreenshotDialog = 0x150
+[15:01:48.6943816] UGameViewportClient::OnInputTouchEnter = 0x1DB
+[15:01:48.6943977] UGameViewportClient::bHasAudioFocus = 0xFC
+[15:01:48.6944136] UGameViewportClient::OnEndPlay = 0x1DF
+[15:01:48.6944296] UGameViewportClient::ViewportOverlayWidget = 0x110
+[15:01:48.6944456] UGameViewportClient::MaxSplitscreenPlayers = 0x68
+[15:01:48.6944616] UGameViewportClient::MouseCaptureMode = 0x39A
+[15:01:48.6944777] UGameViewportClient::Layers = 0x1A8
+[15:01:48.6944934] UGameViewportClient::SplitscreenInfo = 0x58
+[15:01:48.6945094] UGameViewportClient::StatHitchesData = 0x390
+[15:01:48.6945254] UGameViewportClient::OnBeginCursorOver = 0x1D5
+[15:01:48.6945414] UGameViewportClient::StatUnitData = 0x388
+[15:01:48.6945573] UGameViewportClient::ViewModeIndex = 0xB0
+[15:01:48.6945731] UGameViewportClient::Viewport = 0xE8
+[15:01:48.6945890] UGameViewportClient::ViewportConsole = 0x40
+[15:01:48.6946052] UGameViewportClient::bHideCursorDuringCapture = 0x39B
+[15:01:48.6946214] UGameViewportClient::DetachFence = 0x280
+[15:01:48.6946373] UGameViewportClient::CreationTime = 0x158
+[15:01:48.6946532] UGameViewportClient::bIgnoreInput = 0x399
+[15:01:48.6946692] UGameViewportClient::bActorEnableCollision = 0x5C
+[15:01:48.6946860] UGameViewportClient::bIsMouseOverClient = 0x39D
+[15:01:48.6947022] UGameViewportClient::OnInputTouchEnd = 0x1DA
+[15:01:48.6947184] UGameViewportClient::bHasDeferredComponentRegistration = 0x5C
+[15:01:48.6947346] UGameViewportClient::AttachmentReplication = 0x70
+[15:01:48.6947508] UGameViewportClient::DefaultUpdateOverlapsMethodDuringLevelStreaming = 0x5F
+[15:01:48.6947677] UGameViewportClient::InputComponent = 0x160
+[15:01:48.6947862] UGameViewportClient::LastRenderTime = 0x17C
+[15:01:48.6948022] UGameViewportClient::MinNetUpdateFrequency = 0x174
+[15:01:48.6948182] UGameViewportClient::NetCullDistanceSquared = 0x168
+[15:01:48.6948351] UGameViewportClient::OnActorEndOverlap = 0x1D4
+[15:01:48.6948507] UGameViewportClient::NetDormancy = 0x151
+[15:01:48.6948663] UGameViewportClient::NetDriverName = 0x148
+[15:01:48.6948819] UGameViewportClient::NetTag = 0x16C
+[15:01:48.6948973] UGameViewportClient::NetPriority = 0x178
+[15:01:48.6949131] UGameViewportClient::NetUpdateFrequency = 0x170
+[15:01:48.6949289] UGameViewportClient::OnActorHit = 0x1DD
+[15:01:48.6949444] UGameViewportClient::OnDestroyed = 0x1DE
+[15:01:48.6949599] UGameViewportClient::OnInputTouchBegin = 0x1D9
+[15:01:48.6949756] UGameViewportClient::OnInputTouchLeave = 0x1DC
+[15:01:48.6949928] UGameViewportClient::OnReleased = 0x1D8
+[15:01:48.6950091] UGameViewportClient::OnTakeAnyDamage = 0x1D0
+[15:01:48.6950246] UGameViewportClient::OnTakePointDamage = 0x1D1
+[15:01:48.6950405] UGameViewportClient::OnTakeRadialDamage = 0x1D2
+[15:01:48.6950562] UGameViewportClient::ParentComponent = 0x1B8
+[15:01:48.6950720] UGameViewportClient::PrimaryActorTick = 0x28
+[15:01:48.6950876] UGameViewportClient::RayTracingGroupId = 0x6C
+[15:01:48.6951032] UGameViewportClient::RemoteRole = 0x68
+[15:01:48.6951192] UGameViewportClient::ReplicatedComponentsInfo = 0x1F0
+[15:01:48.6951352] UGameViewportClient::ReplicatedMovement = 0xD0
+[15:01:48.6951512] UGameViewportClient::ReplicatedSubObjects = 0x1E0
+[15:01:48.6951672] UGameViewportClient::Role = 0x150
+[15:01:48.6951829] UGameViewportClient::RootComponent = 0x198
+[15:01:48.6951990] UGameViewportClient::SpawnCollisionHandlingMethod = 0x152
+[15:01:48.6952149] UGameViewportClient::Tags = 0x1C0
+[15:01:48.6952312] UGameViewportClient::TimerHandle_LifeSpanExpired = 0x1A0
+[15:01:48.6952474] UGameViewportClient::UpdateOverlapsMethodDuringLevelStreaming = 0x5E
+[15:01:48.6952638] UGameViewportClient::InternalIndex_Private = 0xC
+[15:01:48.6952800] UGameViewportClient::UEP_TotalSize = 0x28
+[15:01:48.6952960] UGameViewportClient::bShowTitleSafeZone = 0x6C
+[15:01:48.6953120] UGameViewportClient::bIsPlayInEditorViewport = 0x6C
+[15:01:48.6953281] UGameViewportClient::bDisableWorldRendering = 0x6C
+[15:01:48.6953444] UGameViewportClient::HardwareCursorCache = 0x160
+[15:01:48.6953606] UGameViewportClient::HardwareCursors = 0x1B0
+[15:01:48.6953765] UGameViewportClient::CursorWidgets = 0x200
+[15:01:48.6953923] UGameViewportClient::ActorHasBegunPlay = 0x5D
+[15:01:48.6954085] UGameViewportClient::bNetTemporary = 0x58
+[15:01:48.6954246] UGameViewportClient::bActorIsBeingConstructed = 0x5D
+[15:01:48.6954408] UGameViewportClient::bNetStartup = 0x58
+[15:01:48.6954566] UGameViewportClient::bOnlyRelevantToOwner = 0x58
+[15:01:48.6954726] UGameViewportClient::bAlwaysRelevant = 0x58
+[15:01:48.6955018] UGameViewportClient::bReplicateMovement = 0x58
+[15:01:48.6955193] UGameViewportClient::bCallPreReplication = 0x58
+[15:01:48.6955355] UGameViewportClient::bCallPreReplicationForReplay = 0x58
+[15:01:48.6955515] UGameViewportClient::bHidden = 0x58
+[15:01:48.6955674] UGameViewportClient::bTearOff = 0x59
+[15:01:48.6955832] UGameViewportClient::bExchangedRoles = 0x59
+[15:01:48.6955993] UGameViewportClient::bNetLoadOnClient = 0x59
+[15:01:48.6956158] UGameViewportClient::bNetUseOwnerRelevancy = 0x59
+[15:01:48.6956325] UGameViewportClient::bRelevantForNetworkReplays = 0x59
+[15:01:48.6956490] UGameViewportClient::bRelevantForLevelBounds = 0x59
+[15:01:48.6956653] UGameViewportClient::bReplayRewindable = 0x59
+[15:01:48.6956813] UGameViewportClient::bAllowTickBeforeBeginPlay = 0x5A
+[15:01:48.6956977] UGameViewportClient::bAutoDestroyWhenFinished = 0x5A
+[15:01:48.6957138] UGameViewportClient::bCanBeDamaged = 0x5A
+[15:01:48.6957297] UGameViewportClient::bBlockInput = 0x5A
+[15:01:48.6957455] UGameViewportClient::bCollideWhenPlacing = 0x5A
+[15:01:48.6957618] UGameViewportClient::bGenerateOverlapEventsDuringLevelStreaming = 0x5A
+[15:01:48.6957783] UGameViewportClient::bIgnoresOriginShifting = 0x5A
+[15:01:48.6957944] UGameViewportClient::bHasRegisteredAllComponents = 0x5C
+[15:01:48.6958104] UGameViewportClient::bEnableAutoLODGeneration = 0x5B
+[15:01:48.6958264] UGameViewportClient::bIsEditorOnlyActor = 0x5B
+[15:01:48.6958435] UGameViewportClient::bActorSeamlessTraveled = 0x5B
+[15:01:48.6958601] UGameViewportClient::bReplicates = 0x5B
+[15:01:48.6958759] UGameViewportClient::bCanBeInCluster = 0x5B
+[15:01:48.6958919] UGameViewportClient::bAllowReceiveTickEventOnDedicatedServer = 0x5B
+[15:01:48.6959081] UGameViewportClient::bNetCheckedInitialPhysicsState = 0x5B
+[15:01:48.6959251] UGameViewportClient::bReplicateUsingRegisteredSubObjectList = 0x5B
+[15:01:48.6959415] UGameViewportClient::bHasFinishedSpawning = 0x5C
+[15:01:48.6959578] UGameViewportClient::bActorInitialized = 0x5C
+[15:01:48.6959739] UGameViewportClient::bActorBeginningPlayFromLevelStreaming = 0x5C
+[15:01:48.6959901] UGameViewportClient::bTickFunctionsRegistered = 0x5C
+[15:01:48.6960061] UGameViewportClient::bRunningUserConstructionScript = 0x5C
+[15:01:48.6960233] UGameViewportClient::bActorIsBeingDestroyed = 0x5D
+[15:01:48.6960390] UGameViewportClient::bActorWantsDestroyDuringBeginPlay = 0x5D
+[15:01:48.6960549] UGameViewportClient::bAsyncPhysicsTickEnabled = 0x5D
+[15:01:48.6960708] UGameViewportClient::Owner = 0x140
+[15:01:48.6960863] UGameViewportClient::Children = 0x188
+[15:01:48.6961022] UPlayer::UEP_TotalSize = 0x48
+[15:01:48.6961184] UPlayer::ConfiguredLanSpeed = 0x40
+[15:01:48.6961342] UPlayer::ConfiguredInternetSpeed = 0x3C
+[15:01:48.6961507] UPlayer::CurrentNetSpeed = 0x38
+[15:01:48.6961908] ULocalPlayer::AspectRatioAxisConstraint = 0xB8
+[15:01:48.6962068] ULocalPlayer::SlateOperations = 0x1E0
+[15:01:48.6962222] ULocalPlayer::CachedUniqueNetId = 0x48
+[15:01:48.6962377] ULocalPlayer::ControllerId = 0xE0
+[15:01:48.6962534] ULocalPlayer::ViewportClient = 0x78
+[15:01:48.6962691] ULocalPlayer::bSentSplitJoin = 0xC8
+[15:01:48.6962847] ULocalPlayer::PlatformUserId = 0x100
+[15:01:48.6963001] ULocalPlayer::UEP_TotalSize = 0x298
+[15:01:48.6963161] UWorld::BlockTillLevelStreamingCompletedEpoch = 0x144
+[15:01:48.6963319] UWorld::bAllowAudioPlayback = 0x13E
+[15:01:48.6963476] UWorld::ActiveLevelCollectionIndex = 0x190
+[15:01:48.6963633] UWorld::AudioTimeSeconds = 0x678
+[15:01:48.6963791] UWorld::CommittedPersistentLevelName = 0x700
+[15:01:48.6963950] UWorld::bInTick = 0x13B
+[15:01:48.6964105] UWorld::CleanupWorldTag = 0x70C
+[15:01:48.6964263] UWorld::LWILastAssignedUID = 0x258
+[15:01:48.6964430] UWorld::BuildStreamingDataTimer = 0x448
+[15:01:48.6964584] UWorld::bTickNewlySpawned = 0x13B
+[15:01:48.6964742] UWorld::AuthorityGameMode = 0x150
+[15:01:48.6964898] UWorld::DeltaRealTimeSeconds = 0x680
+[15:01:48.6965052] UWorld::DeltaTimeSeconds = 0x684
+[15:01:48.6965214] UWorld::bSupportsMakingInvisibleTransactionRequests = 0xDA
+[15:01:48.6965377] UWorld::bPlayersOnly = 0x13D
+[15:01:48.6965534] UWorld::ExtraReferencedObjects = 0x68
+[15:01:48.6965688] UWorld::PreparingLevelNames = 0x6F0
+[15:01:48.6965846] UWorld::IsInBlockTillLevelStreamingCompleted = 0x140
+[15:01:48.6966011] UWorld::bIsRunningConstructionScript = 0x13C
+[15:01:48.6966171] UWorld::bAllowDeferredPhysicsStateCreation = 0x108
+[15:01:48.6966328] UWorld::LastRenderTime = 0x130
+[15:01:48.6966487] UWorld::LastTimeUnbuiltLightingWasEncountered = 0x658
+[15:01:48.6966648] UWorld::bHasEverBeenInitialized = 0x13F
+[15:01:48.6966804] UWorld::NextSwitchCountdown = 0x6C0
+[15:01:48.6966966] UWorld::bMaterialParameterCollectionInstanceNeedsDeferredUpdate = 0x13F
+[15:01:48.6967129] UWorld::RealTimeSeconds = 0x670
+[15:01:48.6967290] UWorld::NextURL = 0x6E0
+[15:01:48.6967452] UWorld::NumStreamingLevelsBeingLoaded = 0x6DA
+[15:01:48.6967617] UWorld::PauseDelay = 0x688
+[15:01:48.6967789] UWorld::PerModuleDataObjects = 0x78
+[15:01:48.6967957] UWorld::bIsDefaultLevel = 0x13C
+[15:01:48.6968127] UWorld::PlayerNum = 0x618
+[15:01:48.6968282] UWorld::bAggressiveLOD = 0x13C
+[15:01:48.6968441] UWorld::StreamingLevelsPrefix = 0xC8
+[15:01:48.6968601] UWorld::bIsLevelStreamingFrozen = 0x13B
+[15:01:48.6968769] UWorld::bTriggerPostLoadMap = 0x13B
+[15:01:48.6968933] UWorld::StreamingVolumeUpdateDelay = 0x61C
+[15:01:48.6969094] UWorld::bIsBuilt = 0x13B
+[15:01:48.6969251] UWorld::TimeSeconds = 0x660
+[15:01:48.6969413] UWorld::UnpausedTimeSeconds = 0x668
+[15:01:48.6969581] UWorld::bShouldForceVisibleStreamingLevels = 0x13E
+[15:01:48.6969750] UWorld::bSupportsMakingVisibleTransactionRequests = 0xD8
+[15:01:48.6969915] UWorld::bPlayersOnlyPending = 0x13D
+[15:01:48.6970079] UWorld::bWorldWasLoadedThisTick = 0x13B
+[15:01:48.6970255] UWorld::bPostTickComponentUpdate = 0x13B
+[15:01:48.6970415] UWorld::bShouldSimulatePhysics = 0x13C
+[15:01:48.6970576] UWorld::bIsWorldInitialized = 0x13B
+[15:01:48.6970737] UWorld::bDoDelayedUpdateCullDistanceVolumes = 0x13C
+[15:01:48.6970903] UWorld::bRequestedBlockOnAsyncLoading = 0x13C
+[15:01:48.6971065] UWorld::bDropDetail = 0x13C
+[15:01:48.6971234] UWorld::bActorsInitialized = 0x13C
+[15:01:48.6971393] UWorld::bBegunPlay = 0x13D
+[15:01:48.6971553] UWorld::bIsCameraMoveableWhenPaused = 0x13E
+[15:01:48.6971720] UWorld::bMatchStarted = 0x13D
+[15:01:48.6971887] UWorld::bStartup = 0x13D
+[15:01:48.6972047] UWorld::bAreConstraintsDirty = 0x13E
+[15:01:48.6972208] UWorld::bIsTearingDown = 0x13D
+[15:01:48.6972368] UWorld::bKismetScriptError = 0x13D
+[15:01:48.6972527] UWorld::bDebugPauseExecution = 0x13D
+[15:01:48.6972688] UWorld::bRequiresHitProxies = 0x13E
+[15:01:48.6972848] UWorld::bShouldTick = 0x13E
+[15:01:48.6973005] UWorld::bStreamingDataDirty = 0x13E
+[15:01:48.6973172] UWorld::bShouldForceUnloadStreamingLevels = 0x13E
+[15:01:48.6973338] UWorld::URL = 0x540
+[15:01:48.6973499] UWorld::bMarkedObjectsPendingKill = 0x708
+[15:01:48.6973660] UWorld::UEP_TotalSize = 0x898
+[15:01:48.6973822] UDataTable::RowStruct = 0x28
+[15:01:48.6973982] UDataTable::RowMap = 0x30
+[15:01:48.6974144] UDataTable::UEP_TotalSize = 0xB0
+[15:01:48.6974309] UDataTable::ImportKeyField = 0x88
+[15:01:48.6974472] UDataTable::bStripFromClientBuilds = 0x80
+[15:01:48.6974634] UDataTable::bIgnoreExtraFields = 0x80
+[15:01:48.6974796] UDataTable::bIgnoreMissingFields = 0x80
+[15:01:48.6975010] FUObjectItem::Object = 0x0
+[15:01:48.6975181] FUObjectItem::Flags = 0x8
+[15:01:48.6975338] FUObjectItem::ClusterRootIndex = 0xC
+[15:01:48.6975497] FUObjectItem::SerialNumber = 0x10
+[15:01:48.6975657] FUObjectItem::UEP_TotalSize = 0x18
+[15:01:48.6975816] FUObjectArray::ObjFirstGCIndex = 0x0
+[15:01:48.6975972] FUObjectArray::ObjLastNonGCIndex = 0x4
+[15:01:48.6976133] FUObjectArray::MaxObjectsNotConsideredByGC = 0x8
+[15:01:48.6976299] FUObjectArray::ObjObjects = 0x10
+[15:01:48.6976460] FUObjectArray::UObjectCreateListeners = 0x68
+[15:01:48.6976621] FUObjectArray::OpenForDisregardForGC = 0xC
+[15:01:48.6976779] FUObjectArray::UObjectDeleteListeners = 0x78
+[15:01:48.6976941] FUObjectArray::ObjAvailableList = 0x58
+[15:01:48.6977103] FUObjectArray::PrimarySerialNumber = 0xB0
+[15:01:48.6977267] FUObjectArray::UEP_TotalSize = 0xB8
+[15:01:48.6977430] TUObjectArray::NumChunks = 0x1C
+[15:01:48.6977590] TUObjectArray::Objects = 0x0
+[15:01:48.6977753] TUObjectArray::UEP_TotalSize = 0x20
+[15:01:48.6978226] TUObjectArray::PreAllocatedObjects = 0x8
+[15:01:48.6978414] TUObjectArray::MaxElements = 0x10
+[15:01:48.6978585] TUObjectArray::NumElements = 0x14
+[15:01:48.6978749] TUObjectArray::MaxChunks = 0x18
+[15:01:48.6978918] 
+##### MEMBER OFFSETS END (Coalesced) #####
+[15:01:48.6979137] Unreal Engine modules (non-modular):
+[15:01:48.6979662] MainExe @ 0x7ff670850000 size=0x9fa2000
+[15:01:48.7010362] [StutterFixPack.ProcessEvent.PlayerBuffBatchProcessEventPre] Added prehook with Id '0X2800000000000001'!
+[15:01:48.7020589] m_shared_functions: 0x22bb7ac5f58
+[15:01:48.7023567] Input source set to: Win32Async
+[15:01:48.7036741] [UE4SS.LoadMap.LuaModImpl] Added prehook with Id '0X2040000000000001'!
+[15:01:48.7038176] [UE4SS.LoadMap.LuaModImpl] Added posthook with Id '0X40000000000002'!
+[15:01:48.7053185] [UE4SS.InitGameState.LuaModImpl] Added prehook with Id '0X2010000000000001'!
+[15:01:48.7053542] [UE4SS.InitGameState.LuaModImpl] Added posthook with Id '0X10000000000002'!
+[15:01:48.7066176] [UE4SS.BeginPlay.LuaModImpl] Added prehook with Id '0X2008000000000001'!
+[15:01:48.7066586] [UE4SS.BeginPlay.LuaModImpl] Added posthook with Id '0X8000000000002'!
+[15:01:48.7080850] [UE4SS.EndPlay.LuaModImpl] Added prehook with Id '0X2004000000000001'!
+[15:01:48.7081269] [UE4SS.EndPlay.LuaModImpl] Added posthook with Id '0X4000000000002'!
+[15:01:48.7081540] [UnknownMod.StaticConstructObject.PostHook] Added posthook with Id '0X1000000000000002'!
+[15:01:48.7277423] [UnknownMod.ULocalPlayerExec.PreHook] Added prehook with Id '0X2000400000000001'!
+[15:01:48.7278559] [UnknownMod.ULocalPlayerExec.PostHook] Added posthook with Id '0X400000000002'!
+[15:01:48.7288218] [UnknownMod.CallFunctionByNameWithArguments.PreHook] Added prehook with Id '0X2000800000000001'!
+[15:01:48.7288471] [UnknownMod.CallFunctionByNameWithArguments.PostHook] Added posthook with Id '0X800000000002'!
+[15:01:48.7296417] [UnknownMod.ProcessConsoleExec.PostHook] Added posthook with Id '0X400000000000001'!
+[15:01:48.7296669] [UnknownMod.ProcessConsoleExec.PreHook] Added prehook with Id '0X2400000000000002'!
+[15:01:48.7296882] [UnknownMod.ProcessConsoleExec.PostHook] Added posthook with Id '0X400000000000003'!
+[15:01:48.7297093] [UnknownMod.ProcessConsoleExec.PostHook] Added posthook with Id '0X400000000000004'!
+[15:01:48.7297294] [UnknownMod.ProcessConsoleExec.PostHook] Added posthook with Id '0X400000000000005'!
+[15:01:48.7297469] Enabling custom events
+[15:01:48.7310531] [UE4SS.ProcessLocalScriptFunction.LuaModImplScriptHook] Added posthook with Id '0X80000000000001'!
+[15:01:48.7311510] Starting mods (from mods.txt (F:\SteamLibrary\steamapps\common\Palworld\Mods\NativeMods\UE4SS\Mods\mods.txt) load order)...
+[15:01:48.7313496] Mod 'CheatManagerEnablerMod' disabled in mods.txt.
+[15:01:48.7313713] Mod 'ConsoleCommandsMod' disabled in mods.txt.
+[15:01:48.7313899] Mod 'ConsoleEnablerMod' disabled in mods.txt.
+[15:01:48.7314082] Mod 'SplitScreenMod' disabled in mods.txt.
+[15:01:48.7314256] Mod 'LineTraceMod' disabled in mods.txt.
+[15:01:48.7314433] Starting Lua mod 'BPML_GenericFunctions'
+[15:01:48.7319583] Starting Lua mod 'BPModLoaderMod'
+[15:01:48.7406396] [Lua] [BPModLoaderMod] Mods/BPModLoaderMod/load_order.txt not present or no matching mods, loading all BP mods in random order.
+[15:01:48.7406767] [Lua] [BPModLoaderMod] MapCollectablesMod == table: 0000022C69413580
+[15:01:48.7406981] [Lua] [BPModLoaderMod]     AssetNameAsFName == FNameUserdata: 0000022C60248AE8
+[15:01:48.7407181] [Lua] [BPModLoaderMod]     AssetName == ModActor_C
+[15:01:48.7407625] [Lua] [BPModLoaderMod]     Name == MapCollectablesMod
+[15:01:48.7407896] [Lua] [BPModLoaderMod]     AssetPath == /Game/Mods/MapCollectablesMod/ModActor
+[15:01:48.7408302] [UE4SS.EngineTick.LuaModImpl] Added prehook with Id '0X2020000000000003'!
+[15:01:48.7408607] Starting Lua mod 'ExpandedWorldOptions'
+[15:01:48.7414671] [NotifyOnNewObject] Registered notification for /Script/Pal.PalOptionSubsystem
+[15:01:48.7416638] Starting Lua mod 'PalInfoCustomHUD'
+[15:01:48.7463240] [Lua] [PalInfoCustomHUD v0.8.2.4-direct-aim-compatibility-hotfix] Mod loaded successfully.
+[15:01:48.7463559] Starting Lua mod 'PalStuckDiagnostic'
+[15:01:48.7484749] [Lua] [PalStuckDiagnostic] v1.9.0 loaded
+[15:01:48.7485156] Starting Lua mod 'QualityOfLife'
+[15:01:48.7513857] [Lua] [QualityOfLife] Loaded config: F:\SteamLibrary\steamapps\common\Palworld\Mods\NativeMods\UE4SS\Mods\QualityOfLife\QualityOfLifeConfig.json
+[15:01:48.7523401] [RegisterHook] Registered native hook (5, 6) for Function /Script/Pal.PalHUDService:ShowCommonUI
+[15:01:48.7523742] [Lua] [QualityOfLifeFastTravel] [FastTravel] Registered PalHUDService world map hook.
+[15:01:48.7523942] [Lua] [QualityOfLifeFastTravel] [FastTravel] Initialized.
+[15:01:48.7528391] [NotifyOnNewObject] Registered notification for /Game/Pal/Blueprint/System/BP_PalGameSetting.BP_PalGameSetting_C
+[15:01:48.7528660] [NotifyOnNewObject] Registered notification for /Script/Pal.PalBaseCampModel
+[15:01:48.7528874] [NotifyOnNewObject] Registered notification for /Script/Pal.PalBuildObjectPalStorage
+[15:01:48.7529073] [NotifyOnNewObject] Registered notification for /Script/Pal.PalBuildObjectBaseCampPoint
+[15:01:48.7529282] [NotifyOnNewObject] Registered notification for /Game/Pal/Blueprint/MapObject/BuildObject/BP_BuildObject_PalBoxV2.BP_BuildObject_PalBoxV2_C
+[15:01:48.7531950] [RegisterHook] Registered native hook (7, 8) for Function /Script/Engine.PlayerController:ClientRestart
+[15:01:48.7534421] [RegisterHook] Registered native hook (9, 10) for Function /Script/Engine.PlayerController:ServerAcknowledgePossession
+[15:01:48.7534825] [Lua] [QualityOfLifeBaseRange] [BaseRange] Initialized at 3.00x (size 210, area range 10500 cm).
+[15:01:48.7540428] [NotifyOnNewObject] Registered notification for /Game/Pal/Blueprint/System/BP_PalGameSetting.BP_PalGameSetting_C
+[15:01:48.7551636] [Lua] [QualityOfLifeWorkEfficiency] [WorkEfficiency] Initialized at 4.00x.
+[15:01:48.7558718] [Lua] [QualityOfLife] [PalSchema] Prepared 85 passive-skill weight(s).
+[15:01:48.7559099] [Lua] [QualityOfLife] [PalSchema] Prepared 15 Capture Power statue costs.
+[15:01:48.7559400] [Lua] [QualityOfLife] [PalSchema] Prepared 18 expedition time(s) at 0.50x.
+[15:01:48.9656675] [PalSchema] Loader 'enums' initialized.
+[15:01:48.9657041] [PalSchema] Loader 'raw' initialized.
+[15:01:48.9662128] [PalSchema] Loader 'blueprints' initialized.
+[15:01:48.9663381] [PalSchema] Loading mod: 4xStorageInvBags
+[15:01:48.9665589] [PalSchema] Loaded changes to BP_BuildObject_Box01_Iron_C
+[15:01:48.9665852] [PalSchema] Loaded changes to BP_BuildObject_Box02_Iron_C
+[15:01:48.9666075] [PalSchema] Loaded changes to BP_BuildObject_Container01_Iron_C
+[15:01:48.9666277] [PalSchema] Loaded changes to BP_BuildObject_CoolerBox_C
+[15:01:48.9666475] [PalSchema] Loaded changes to BP_BuildObject_ItemChest_02_C
+[15:01:48.9666671] [PalSchema] Loaded changes to BP_BuildObject_ItemChest_03_C
+[15:01:48.9666865] [PalSchema] Loaded changes to BP_BuildObject_ItemChest_04_C
+[15:01:48.9667062] [PalSchema] Loaded changes to BP_BuildObject_ItemChest_C
+[15:01:48.9667265] [PalSchema] Loaded changes to BP_BuildObject_Refrigerator_C
+[15:01:48.9667459] [PalSchema] Loaded changes to BP_PalGameSetting_C
+[15:01:48.9668242] [PalSchema] Loading mod: 8xStorageInvBags
+[15:01:48.9668583] [PalSchema] Loading mod: QualityOfLife
+[15:01:49.5104350] [Lua] [QualityOfLife] [PalSchema] Generated patch is unchanged.
+[15:01:49.5104739] Starting Lua mod 'SmartPalFeeding'
+[15:01:49.5119756] [Lua] [SmartPalFeeding][INFO] Loading Smart Pal Feeding 1.0.0 by Raysør
+[15:01:49.5120027] [Lua] [SmartPalFeeding][INFO] Tested Palworld Steam build id: 24088745
+[15:01:49.5121806] [Lua] [SmartPalFeeding][INFO] Configuration loaded from F:\SteamLibrary\steamapps\common\Palworld\Mods\NativeMods\UE4SS\Mods\SmartPalFeeding\Scripts\SmartPalFeeding.ini
+[15:01:49.5123954] [Lua] [SmartPalFeeding][INFO] Runtime hunger debuff threshold: 30.000%
+[15:01:49.5124203] [Lua] [SmartPalFeeding][INFO] Thresholds resolved: hungerDebuff=30.000% start=35.000% stop=95.000% absoluteMode=false
+[15:01:49.5124652] [RegisterHook] Registered native hook (11, 12) for Function /Script/Engine.PlayerController:ClientRestart
+[15:01:49.5124901] [RegisterHook] Registered native hook (13, 14) for Function /Script/Engine.PlayerController:ServerAcknowledgePossession
+[15:01:49.5125139] [NotifyOnNewObject] Registered notification for /Game/Pal/Blueprint/Controller/AIAction/BaseCamp/RecoverHungry/BP_AIAction_BaseCampRecoverHungry.BP_AIAction_BaseCampRecoverHungry_C
+[15:01:49.5142039] [RegisterHook] Registered script hook (15, 15) for Function /Game/Pal/Blueprint/Controller/AIAction/BaseCamp/RecoverHungry/BP_AIAction_BaseCampRecoverHungry.BP_AIAction_BaseCampRecoverHungry_C:ChangeActionEat
+[15:01:49.5142452] [Lua] [SmartPalFeeding][INFO] Registered base RecoverHungry ChangeActionEat hook
+[15:01:49.5142703] Starting Lua mod 'AutomaticallySkipModCaution'
+[15:01:49.5147248] [NotifyOnNewObject] Registered notification for /Script/Pal.PalUserWidgetOverlayUI
+[15:01:49.5152574] Starting Lua mod 'PalTimeTweaks'
+[15:01:49.5158220] [RegisterHook] Registered native hook (16, 17) for Function /Script/Engine.PlayerController:ServerAcknowledgePossession
+[15:01:49.5158512] [NotifyOnNewObject] Registered notification for /Script/Pal.PalDungeonFixedEntrance
+[15:01:49.5158725] [NotifyOnNewObject] Registered notification for /Script/Pal.PalMapObjectBreedFarmModel
+[15:01:49.5158940] Starting Lua mod 'DeepSalvage'
+[15:01:49.5175450] [RegisterHook] Registered native hook (18, 19) for Function /Script/Pal.PalMapObjectTreasureBoxModel:RequestOpen_ServerInternal
+[15:01:49.5175893] [RegisterHook] Registered native hook (20, 21) for Function /Script/Pal.PalMapObjectTreasureBoxModel:RequestOpen_ServerInternal
+[15:01:49.5183258] [RegisterHook] Registered native hook (22, 23) for Function /Script/Pal.PalMapObjectTreasureBoxModel:OnReceiveSalvageResult
+[15:01:49.5183644] [RegisterHook] Registered native hook (24, 25) for Function /Script/Pal.PalMapObjectTreasureBoxModel:OnReceiveSalvageResult
+[15:01:49.5190203] [RegisterHook] Registered native hook (26, 27) for Function /Script/Pal.PalMapObjectTreasureBoxModel:CreateItemInfo
+[15:01:49.5193563] [RegisterHook] Registered native hook (28, 29) for Function /Script/Pal.PalPlayerInventoryData:AddItem_ServerInternal
+[15:01:49.5215321] Starting Lua mod 'ExpeditionXP'
+[15:01:49.5231659] [RegisterHook] Registered native hook (30, 31) for Function /Script/Pal.PalBuildObjectCharacterTeamMission:OnChangedState_ServerInternal
+[15:01:49.5232091] [Lua] [ExpXP] v1.1.3 armed -- pay from crews.txt via container match | mode=LIVE (writing XP) | pending crews=0
+[15:01:49.5232359] Starting Lua mod 'Keybinds'
+[15:01:49.5236893] Starting mods (from enabled.txt (F:\SteamLibrary\steamapps\common\Palworld\Mods\NativeMods\UE4SS\Mods), no defined load order)...
+[15:01:49.5237849] Mod 'AutoExpedition' has enabled.txt, starting mod.
+[15:01:49.5248792] [RegisterHook] Registered native hook (32, 33) for Function /Script/Engine.PlayerController:ServerAcknowledgePossession
+[15:01:49.5249719] Mod 'LootMagnet' has enabled.txt, starting mod.
+[15:01:49.5257228] Event loop start
+[15:01:49.7407036] [PalSchema] DT_PlayerStatusRankMasterDataTable: 15 rows updated, 0 rows added, 0 rows deleted, 0 errors.
+[15:01:49.7438140] [PalSchema] DT_CharacterTeamMissionDataTable: 18 rows updated, 0 rows added, 0 rows deleted, 0 errors.
+[15:01:49.7484134] [PalSchema] DT_PassiveSkill_Main_Common: 85 rows updated, 0 rows added, 0 rows deleted, 0 errors.
+[15:01:49.7694668] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after initial load: 2 update(s).
+[15:01:49.8640781] [PalSchema] Loader 'resources' initialized.
+[15:01:49.9017548] [PalSchema] Loader 'pals' initialized.
+[15:01:49.9022679] [PalSchema] Loader 'npcs' initialized.
+[15:01:49.9038886] [PalSchema] Loader 'items' initialized.
+[15:01:49.9039200] [PalSchema] Loader 'skins' initialized.
+[15:01:49.9039464] [PalSchema] Loader 'appearance' initialized.
+[15:01:49.9039706] [PalSchema] Loader 'buildings' initialized.
+[15:01:49.9062539] [PalSchema] Loader 'helpguide' initialized.
+[15:01:49.9065215] [PalSchema] Loader 'spawns' initialized.
+[15:01:49.9065755] [PalSchema] Language override not set, using system language (en).
+[15:01:49.9066066] [PalSchema] Loader 'translations' initialized.
+[15:01:49.9068043] [PalSchema] Loading mod: 4xStorageInvBags
+[15:01:49.9071580] [PalSchema] Modified Item 'AdditionalInventory_001'
+[15:01:49.9072040] [PalSchema] Modified Item 'AdditionalInventory_002'
+[15:01:49.9072414] [PalSchema] Modified Item 'AdditionalInventory_003'
+[15:01:49.9072761] [PalSchema] Modified Item 'AdditionalInventory_004'
+[15:01:49.9076585] [PalSchema] Loading mod: 8xStorageInvBags
+[15:01:49.9077648] [PalSchema] Loading mod: QualityOfLife
+[15:01:49.9220289] [Lua] [QualityOfLifeWorkEfficiency] [WorkEfficiency] Applied 4.00x to 164 verified runtime value(s) during early polling.
+[15:01:49.9220621] [Lua] [QualityOfLifeWorkEfficiency] [WorkEfficiency] Early PalGameSetting apply completed after 12 attempt(s).
+[15:01:49.9772498] [Lua] [BPModLoaderMod] Loading mod: MapCollectablesMod
+[15:01:50.1345103] [Lua] [BPModLoaderMod] Executing 'PostBeginPlay' for mod 'ModActor_C /Game/Pal/Maps/Splash/PL_PPSplash.PL_PPSplash:PersistentLevel.ModActor_C_2147482026'
+[15:01:50.1345960] [Lua] [BPModLoaderMod] Actor: ModActor_C /Game/Pal/Maps/Splash/PL_PPSplash.PL_PPSplash:PersistentLevel.ModActor_C_2147482026
+[15:01:50.1514525] [Lua] [BPModLoaderMod] Loading mod: MapCollectablesMod
+[15:01:50.1516695] [Lua] [BPModLoaderMod] Executing 'PostBeginPlay' for mod 'ModActor_C /Game/Pal/Maps/Splash/PL_PPSplash.PL_PPSplash:PersistentLevel.ModActor_C_2147482024'
+[15:01:50.1517692] [Lua] [BPModLoaderMod] Actor: ModActor_C /Game/Pal/Maps/Splash/PL_PPSplash.PL_PPSplash:PersistentLevel.ModActor_C_2147482024
+[15:01:50.1547231] Asset was found but not loaded, could be a package
+[15:01:50.1547694] [NotifyOnNewObject] Registered notification for /Script/Pal.PalCharacter
+[15:01:50.1547912] [NotifyOnNewObject] Registered notification for /Script/Pal.PalBaseCampModel
+[15:01:50.1548144] [Lua] [PalStuckDiagnostic] event-driven cache updates active (NotifyOnNewObject bound)
+[15:01:50.1621753] [Lua] [PalStuckDiagnostic] direct worker iteration unavailable: handle->pal map is empty (FindAllOf returned no pals) (falling back to FindAllOf every tick -- expected on multiplayer client)
+[15:01:50.1646952] [Lua] [ExpandedWorldOptions] PalOptionSubsystem detected, configuring world options...
+[15:01:50.1647335] [Lua] [ExpandedWorldOptions] Applying world settings...
+[15:01:50.1647919] [Lua] [ExpandedWorldOptions] Global range: Min=0, Max=100
+[15:01:50.1648136] [Lua] [ExpandedWorldOptions] Applying category:		PlayerSurvival
+[15:01:50.1648386] [Lua] [ExpandedWorldOptions] PlayerStomachDecreaceRate -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1648610] [Lua] [ExpandedWorldOptions] PlayerStaminaDecreaceRate -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1648816] [Lua] [ExpandedWorldOptions] PlayerAutoHPRegeneRate -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1649021] [Lua] [ExpandedWorldOptions] PlayerAutoHpRegeneRateInSleep -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1649243] [Lua] [ExpandedWorldOptions] ItemWeightRate -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1649445] [Lua] [ExpandedWorldOptions] Applying category:		Experience
+[15:01:50.1649657] [Lua] [ExpandedWorldOptions] ExpRate -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1649834] [Lua] [ExpandedWorldOptions] Applying category:		PlayerCombat
+[15:01:50.1650031] [Lua] [ExpandedWorldOptions] PlayerDamageRateAttack -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1650235] [Lua] [ExpandedWorldOptions] PlayerDamageRateDefense -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1650413] [Lua] [ExpandedWorldOptions] Applying category:		EnemyDrops
+[15:01:50.1650608] [Lua] [ExpandedWorldOptions] EnemyDropItemRate -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1650786] [Lua] [ExpandedWorldOptions] Applying category:		PalSurvival
+[15:01:50.1650980] [Lua] [ExpandedWorldOptions] PalStomachDecreaceRate -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1651260] [Lua] [ExpandedWorldOptions] PalStaminaDecreaceRate -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1651467] [Lua] [ExpandedWorldOptions] PalAutoHPRegeneRate -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1651669] [Lua] [ExpandedWorldOptions] PalAutoHpRegeneRateInSleep -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1651849] [Lua] [ExpandedWorldOptions] Applying category:		CaptureAndSpawn
+[15:01:50.1652043] [Lua] [ExpandedWorldOptions] PalCaptureRate -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1652240] [Lua] [ExpandedWorldOptions] PalSpawnNumRate -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1652416] [Lua] [ExpandedWorldOptions] Applying category:		Work
+[15:01:50.1652607] [Lua] [ExpandedWorldOptions] WorkSpeedRate -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1652782] [Lua] [ExpandedWorldOptions] Applying category:		Time
+[15:01:50.1652975] [Lua] [ExpandedWorldOptions] DayTimeSpeedRate -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1653173] [Lua] [ExpandedWorldOptions] NightTimeSpeedRate -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1653348] [Lua] [ExpandedWorldOptions] Applying category:		Eggs
+[15:01:50.1653538] [Lua] [ExpandedWorldOptions] PalEggDefaultHatchingTime -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1653715] [Lua] [ExpandedWorldOptions] Applying category:		Equipment
+[15:01:50.1653908] [Lua] [ExpandedWorldOptions] EquipmentDurabilityDamageRate -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1654106] [Lua] [ExpandedWorldOptions] ItemCorruptionMultiplier -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1654281] [Lua] [ExpandedWorldOptions] Applying category:		Base
+[15:01:50.1654473] [Lua] [ExpandedWorldOptions] BaseCampWorkerMaxNum -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1654673] [Lua] [ExpandedWorldOptions] BaseCampMaxNumInGuild -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1654879] [Lua] [ExpandedWorldOptions] BaseCampMaxNum -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1655173] [Lua] [ExpandedWorldOptions] Applying category:		Building
+[15:01:50.1655389] [Lua] [ExpandedWorldOptions] BuildObjectDamageRate -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1655602] [Lua] [ExpandedWorldOptions] BuildObjectDeteriorationDamageRate -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1655810] [Lua] [ExpandedWorldOptions] BuildObjectHpRate -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1656012] [Lua] [ExpandedWorldOptions] MaxBuildingLimitNum -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1656190] [Lua] [ExpandedWorldOptions] Applying category:		Guild
+[15:01:50.1656384] [Lua] [ExpandedWorldOptions] AutoResetGuildTimeNoOnlinePlayers -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1656620] [Lua] [ExpandedWorldOptions] GuildPlayerMaxNum -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1656817] [Lua] [ExpandedWorldOptions] GuildRejoinCooldownMinutes -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1656998] [Lua] [ExpandedWorldOptions] Applying category:		Ranching
+[15:01:50.1657193] [Lua] [ExpandedWorldOptions] MonsterFarmActionSpeedRate -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1657369] [Lua] [ExpandedWorldOptions] Applying category:		PalCombat
+[15:01:50.1657564] [Lua] [ExpandedWorldOptions] PalDamageRateAttack -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1657765] [Lua] [ExpandedWorldOptions] PalDamageRateDefense -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1657942] [Lua] [ExpandedWorldOptions] Applying category:		DropLimits
+[15:01:50.1658141] [Lua] [ExpandedWorldOptions] DropItemMaxNum -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1658344] [Lua] [ExpandedWorldOptions] DropItemMaxNum_UNKO -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1664568] [Lua] [ExpandedWorldOptions] DropItemAliveMaxHours -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1664785] [Lua] [ExpandedWorldOptions] SupplyDropSpan -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1664972] [Lua] [ExpandedWorldOptions] Applying category:		Gathering
+[15:01:50.1665184] [Lua] [ExpandedWorldOptions] CollectionDropRate -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1665383] [Lua] [ExpandedWorldOptions] CollectionObjectHpRate -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1665584] [Lua] [ExpandedWorldOptions] CollectionObjectRespawnSpeedRate -> Min=0, Max=TrivialObject: 0000022C5A778BF8
+[15:01:50.1665759] [Lua] [ExpandedWorldOptions] Done applying world settings.
+[15:01:50.1670398] [Lua] [ExpandedWorldOptions] PalOptionSubsystem detected, configuring world options...
+[15:01:50.1670697] [Lua] [ExpandedWorldOptions] Applying world settings...
+[15:01:50.1670877] [Lua] [ExpandedWorldOptions] Global range: Min=0, Max=100
+[15:01:50.1671053] [Lua] [ExpandedWorldOptions] Applying category:		PlayerSurvival
+[15:01:50.1671329] [Lua] [ExpandedWorldOptions] PlayerStomachDecreaceRate -> Min=0, Max=100.0
+[15:01:50.1671560] [Lua] [ExpandedWorldOptions] PlayerStaminaDecreaceRate -> Min=0, Max=100.0
+[15:01:50.1671792] [Lua] [ExpandedWorldOptions] PlayerAutoHPRegeneRate -> Min=0, Max=100.0
+[15:01:50.1672021] [Lua] [ExpandedWorldOptions] PlayerAutoHpRegeneRateInSleep -> Min=0, Max=100.0
+[15:01:50.1672252] [Lua] [ExpandedWorldOptions] ItemWeightRate -> Min=0, Max=100.0
+[15:01:50.1672429] [Lua] [ExpandedWorldOptions] Applying category:		Experience
+[15:01:50.1672649] [Lua] [ExpandedWorldOptions] ExpRate -> Min=0, Max=100.0
+[15:01:50.1672824] [Lua] [ExpandedWorldOptions] Applying category:		PlayerCombat
+[15:01:50.1673048] [Lua] [ExpandedWorldOptions] PlayerDamageRateAttack -> Min=0, Max=100.0
+[15:01:50.1673271] [Lua] [ExpandedWorldOptions] PlayerDamageRateDefense -> Min=0, Max=100.0
+[15:01:50.1673648] [Lua] [ExpandedWorldOptions] Applying category:		EnemyDrops
+[15:01:50.1673927] [Lua] [ExpandedWorldOptions] EnemyDropItemRate -> Min=0, Max=100.0
+[15:01:50.1674133] [Lua] [ExpandedWorldOptions] Applying category:		PalSurvival
+[15:01:50.1674380] [Lua] [ExpandedWorldOptions] PalStomachDecreaceRate -> Min=0, Max=100.0
+[15:01:50.1674604] [Lua] [ExpandedWorldOptions] PalStaminaDecreaceRate -> Min=0, Max=100.0
+[15:01:50.1674830] [Lua] [ExpandedWorldOptions] PalAutoHPRegeneRate -> Min=0, Max=100.0
+[15:01:50.1675053] [Lua] [ExpandedWorldOptions] PalAutoHpRegeneRateInSleep -> Min=0, Max=100.0
+[15:01:50.1675227] [Lua] [ExpandedWorldOptions] Applying category:		CaptureAndSpawn
+[15:01:50.1675449] [Lua] [ExpandedWorldOptions] PalCaptureRate -> Min=0, Max=100.0
+[15:01:50.1675675] [Lua] [ExpandedWorldOptions] PalSpawnNumRate -> Min=0, Max=100.0
+[15:01:50.1675849] [Lua] [ExpandedWorldOptions] Applying category:		Work
+[15:01:50.1676077] [Lua] [ExpandedWorldOptions] WorkSpeedRate -> Min=0, Max=100.0
+[15:01:50.1676250] [Lua] [ExpandedWorldOptions] Applying category:		Time
+[15:01:50.1676472] [Lua] [ExpandedWorldOptions] DayTimeSpeedRate -> Min=0, Max=100.0
+[15:01:50.1676694] [Lua] [ExpandedWorldOptions] NightTimeSpeedRate -> Min=0, Max=100.0
+[15:01:50.1676867] [Lua] [ExpandedWorldOptions] Applying category:		Eggs
+[15:01:50.1677094] [Lua] [ExpandedWorldOptions] PalEggDefaultHatchingTime -> Min=0, Max=100
+[15:01:50.1677270] [Lua] [ExpandedWorldOptions] Applying category:		Equipment
+[15:01:50.1677502] [Lua] [ExpandedWorldOptions] EquipmentDurabilityDamageRate -> Min=0, Max=100.0
+[15:01:50.1677730] [Lua] [ExpandedWorldOptions] ItemCorruptionMultiplier -> Min=0, Max=100.0
+[15:01:50.1677903] [Lua] [ExpandedWorldOptions] Applying category:		Base
+[15:01:50.1678129] [Lua] [ExpandedWorldOptions] BaseCampWorkerMaxNum -> Min=0, Max=100
+[15:01:50.1678353] [Lua] [ExpandedWorldOptions] BaseCampMaxNumInGuild -> Min=0, Max=100
+[15:01:50.1679565] [Lua] [ExpandedWorldOptions] ERROR reading field 'BaseCampMaxNum': ...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: [handle_unreal_property_value]: Was unable to retrieve property 'BaseCampMaxNum' mapped to 'ScriptStruct /Script/Pal.PalOptionWorldStaticSettings'
+stack traceback:
+	[C]: in metamethod 'index'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:114>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:168: in upvalue 'apply_category'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:204: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:178>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:215: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:211>
+[15:01:50.1679931] [Lua] [ExpandedWorldOptions] Applying category:		Building
+[15:01:50.1680158] [Lua] [ExpandedWorldOptions] BuildObjectDamageRate -> Min=0, Max=100.0
+[15:01:50.1680385] [Lua] [ExpandedWorldOptions] BuildObjectDeteriorationDamageRate -> Min=0, Max=100.0
+[15:01:50.1680606] [Lua] [ExpandedWorldOptions] BuildObjectHpRate -> Min=0, Max=100.0
+[15:01:50.1681829] [Lua] [ExpandedWorldOptions] ERROR reading field 'MaxBuildingLimitNum': ...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: [handle_unreal_property_value]: Was unable to retrieve property 'MaxBuildingLimitNum' mapped to 'ScriptStruct /Script/Pal.PalOptionWorldStaticSettings'
+stack traceback:
+	[C]: in metamethod 'index'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:114>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:168: in upvalue 'apply_category'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:204: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:178>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:215: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:211>
+[15:01:50.1682223] [Lua] [ExpandedWorldOptions] Applying category:		Guild
+[15:01:50.1682471] [Lua] [ExpandedWorldOptions] AutoResetGuildTimeNoOnlinePlayers -> Min=0, Max=100
+[15:01:50.1682718] [Lua] [ExpandedWorldOptions] GuildPlayerMaxNum -> Min=0, Max=100
+[15:01:50.1682941] [Lua] [ExpandedWorldOptions] GuildRejoinCooldownMinutes -> Min=0, Max=100
+[15:01:50.1683117] [Lua] [ExpandedWorldOptions] Applying category:		Ranching
+[15:01:50.1683347] [Lua] [ExpandedWorldOptions] MonsterFarmActionSpeedRate -> Min=0, Max=100.0
+[15:01:50.1683521] [Lua] [ExpandedWorldOptions] Applying category:		PalCombat
+[15:01:50.1683743] [Lua] [ExpandedWorldOptions] PalDamageRateAttack -> Min=0, Max=100.0
+[15:01:50.1683968] [Lua] [ExpandedWorldOptions] PalDamageRateDefense -> Min=0, Max=100.0
+[15:01:50.1684139] [Lua] [ExpandedWorldOptions] Applying category:		DropLimits
+[15:01:50.1684712] [Lua] [ExpandedWorldOptions] DropItemMaxNum -> Min=0, Max=10000
+[15:01:50.1684937] [Lua] [ExpandedWorldOptions] DropItemMaxNum_UNKO -> Min=0, Max=10000
+[15:01:50.1685927] [Lua] [ExpandedWorldOptions] ERROR reading field 'DropItemAliveMaxHours': ...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: [handle_unreal_property_value]: Was unable to retrieve property 'DropItemAliveMaxHours' mapped to 'ScriptStruct /Script/Pal.PalOptionWorldStaticSettings'
+stack traceback:
+	[C]: in metamethod 'index'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:114>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:168: in upvalue 'apply_category'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:204: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:178>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:215: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:211>
+[15:01:50.1686299] [Lua] [ExpandedWorldOptions] SupplyDropSpan -> Min=0, Max=100
+[15:01:50.1686473] [Lua] [ExpandedWorldOptions] Applying category:		Gathering
+[15:01:50.1686699] [Lua] [ExpandedWorldOptions] CollectionDropRate -> Min=0, Max=100.0
+[15:01:50.1686919] [Lua] [ExpandedWorldOptions] CollectionObjectHpRate -> Min=0, Max=100.0
+[15:01:50.1687144] [Lua] [ExpandedWorldOptions] CollectionObjectRespawnSpeedRate -> Min=0, Max=100.0
+[15:01:50.1687317] [Lua] [ExpandedWorldOptions] Done applying world settings.
+[15:01:51.1796078] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after PalGameSetting creation: 10 update(s).
+[15:01:51.6773222] [FCallbackGarbageCollector] Freed invalid callbacks!
+[15:01:53.7035725] [Lua] [ExpandedWorldOptions] PalOptionSubsystem detected, configuring world options...
+[15:01:53.7036118] [Lua] [ExpandedWorldOptions] Applying world settings...
+[15:01:53.7036349] [Lua] [ExpandedWorldOptions] Global range: Min=0, Max=100
+[15:01:53.7036561] [Lua] [ExpandedWorldOptions] Applying category:		PlayerSurvival
+[15:01:53.7036917] [Lua] [ExpandedWorldOptions] PlayerStomachDecreaceRate -> Min=0, Max=100.0
+[15:01:53.7037166] [Lua] [ExpandedWorldOptions] PlayerStaminaDecreaceRate -> Min=0, Max=100.0
+[15:01:53.7037391] [Lua] [ExpandedWorldOptions] PlayerAutoHPRegeneRate -> Min=0, Max=100.0
+[15:01:53.7037618] [Lua] [ExpandedWorldOptions] PlayerAutoHpRegeneRateInSleep -> Min=0, Max=100.0
+[15:01:53.7037842] [Lua] [ExpandedWorldOptions] ItemWeightRate -> Min=0, Max=100.0
+[15:01:53.7038023] [Lua] [ExpandedWorldOptions] Applying category:		Experience
+[15:01:53.7038242] [Lua] [ExpandedWorldOptions] ExpRate -> Min=0, Max=100.0
+[15:01:53.7038417] [Lua] [ExpandedWorldOptions] Applying category:		PlayerCombat
+[15:01:53.7038638] [Lua] [ExpandedWorldOptions] PlayerDamageRateAttack -> Min=0, Max=100.0
+[15:01:53.7038861] [Lua] [ExpandedWorldOptions] PlayerDamageRateDefense -> Min=0, Max=100.0
+[15:01:53.7039034] [Lua] [ExpandedWorldOptions] Applying category:		EnemyDrops
+[15:01:53.7039252] [Lua] [ExpandedWorldOptions] EnemyDropItemRate -> Min=0, Max=100.0
+[15:01:53.7039426] [Lua] [ExpandedWorldOptions] Applying category:		PalSurvival
+[15:01:53.7039672] [Lua] [ExpandedWorldOptions] PalStomachDecreaceRate -> Min=0, Max=100.0
+[15:01:53.7039897] [Lua] [ExpandedWorldOptions] PalStaminaDecreaceRate -> Min=0, Max=100.0
+[15:01:53.7040138] [Lua] [ExpandedWorldOptions] PalAutoHPRegeneRate -> Min=0, Max=100.0
+[15:01:53.7040375] [Lua] [ExpandedWorldOptions] PalAutoHpRegeneRateInSleep -> Min=0, Max=100.0
+[15:01:53.7040549] [Lua] [ExpandedWorldOptions] Applying category:		CaptureAndSpawn
+[15:01:53.7040773] [Lua] [ExpandedWorldOptions] PalCaptureRate -> Min=0, Max=100.0
+[15:01:53.7040988] [Lua] [ExpandedWorldOptions] PalSpawnNumRate -> Min=0, Max=100.0
+[15:01:53.7041164] [Lua] [ExpandedWorldOptions] Applying category:		Work
+[15:01:53.7041384] [Lua] [ExpandedWorldOptions] WorkSpeedRate -> Min=0, Max=100.0
+[15:01:53.7041558] [Lua] [ExpandedWorldOptions] Applying category:		Time
+[15:01:53.7041775] [Lua] [ExpandedWorldOptions] DayTimeSpeedRate -> Min=0, Max=100.0
+[15:01:53.7041994] [Lua] [ExpandedWorldOptions] NightTimeSpeedRate -> Min=0, Max=100.0
+[15:01:53.7042164] [Lua] [ExpandedWorldOptions] Applying category:		Eggs
+[15:01:53.7042386] [Lua] [ExpandedWorldOptions] PalEggDefaultHatchingTime -> Min=0, Max=100
+[15:01:53.7042556] [Lua] [ExpandedWorldOptions] Applying category:		Equipment
+[15:01:53.7042784] [Lua] [ExpandedWorldOptions] EquipmentDurabilityDamageRate -> Min=0, Max=100.0
+[15:01:53.7043007] [Lua] [ExpandedWorldOptions] ItemCorruptionMultiplier -> Min=0, Max=100.0
+[15:01:53.7043180] [Lua] [ExpandedWorldOptions] Applying category:		Base
+[15:01:53.7043399] [Lua] [ExpandedWorldOptions] BaseCampWorkerMaxNum -> Min=0, Max=100
+[15:01:53.7043618] [Lua] [ExpandedWorldOptions] BaseCampMaxNumInGuild -> Min=0, Max=100
+[15:01:53.7044850] [Lua] [ExpandedWorldOptions] ERROR reading field 'BaseCampMaxNum': ...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: [handle_unreal_property_value]: Was unable to retrieve property 'BaseCampMaxNum' mapped to 'ScriptStruct /Script/Pal.PalOptionWorldStaticSettings'
+stack traceback:
+	[C]: in metamethod 'index'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:114>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:168: in upvalue 'apply_category'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:204: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:178>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:215: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:211>
+[15:01:53.7045206] [Lua] [ExpandedWorldOptions] Applying category:		Building
+[15:01:53.7045439] [Lua] [ExpandedWorldOptions] BuildObjectDamageRate -> Min=0, Max=100.0
+[15:01:53.7045674] [Lua] [ExpandedWorldOptions] BuildObjectDeteriorationDamageRate -> Min=0, Max=100.0
+[15:01:53.7045894] [Lua] [ExpandedWorldOptions] BuildObjectHpRate -> Min=0, Max=100.0
+[15:01:53.7046847] [Lua] [ExpandedWorldOptions] ERROR reading field 'MaxBuildingLimitNum': ...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: [handle_unreal_property_value]: Was unable to retrieve property 'MaxBuildingLimitNum' mapped to 'ScriptStruct /Script/Pal.PalOptionWorldStaticSettings'
+stack traceback:
+	[C]: in metamethod 'index'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:114>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:168: in upvalue 'apply_category'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:204: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:178>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:215: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:211>
+[15:01:53.7047178] [Lua] [ExpandedWorldOptions] Applying category:		Guild
+[15:01:53.7047407] [Lua] [ExpandedWorldOptions] AutoResetGuildTimeNoOnlinePlayers -> Min=0, Max=100
+[15:01:53.7047633] [Lua] [ExpandedWorldOptions] GuildPlayerMaxNum -> Min=0, Max=100
+[15:01:53.7047849] [Lua] [ExpandedWorldOptions] GuildRejoinCooldownMinutes -> Min=0, Max=100
+[15:01:53.7048023] [Lua] [ExpandedWorldOptions] Applying category:		Ranching
+[15:01:53.7048242] [Lua] [ExpandedWorldOptions] MonsterFarmActionSpeedRate -> Min=0, Max=100.0
+[15:01:53.7048413] [Lua] [ExpandedWorldOptions] Applying category:		PalCombat
+[15:01:53.7048632] [Lua] [ExpandedWorldOptions] PalDamageRateAttack -> Min=0, Max=100.0
+[15:01:53.7048849] [Lua] [ExpandedWorldOptions] PalDamageRateDefense -> Min=0, Max=100.0
+[15:01:53.7049022] [Lua] [ExpandedWorldOptions] Applying category:		DropLimits
+[15:01:53.7049243] [Lua] [ExpandedWorldOptions] DropItemMaxNum -> Min=0, Max=10000
+[15:01:53.7049465] [Lua] [ExpandedWorldOptions] DropItemMaxNum_UNKO -> Min=0, Max=10000
+[15:01:53.7050402] [Lua] [ExpandedWorldOptions] ERROR reading field 'DropItemAliveMaxHours': ...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: [handle_unreal_property_value]: Was unable to retrieve property 'DropItemAliveMaxHours' mapped to 'ScriptStruct /Script/Pal.PalOptionWorldStaticSettings'
+stack traceback:
+	[C]: in metamethod 'index'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:114>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:168: in upvalue 'apply_category'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:204: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:178>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:215: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:211>
+[15:01:53.7050856] [Lua] [ExpandedWorldOptions] SupplyDropSpan -> Min=0, Max=100
+[15:01:53.7051051] [Lua] [ExpandedWorldOptions] Applying category:		Gathering
+[15:01:53.7051282] [Lua] [ExpandedWorldOptions] CollectionDropRate -> Min=0, Max=100.0
+[15:01:53.7051503] [Lua] [ExpandedWorldOptions] CollectionObjectHpRate -> Min=0, Max=100.0
+[15:01:53.7051731] [Lua] [ExpandedWorldOptions] CollectionObjectRespawnSpeedRate -> Min=0, Max=100.0
+[15:01:53.7051904] [Lua] [ExpandedWorldOptions] Done applying world settings.
+[15:01:53.7545509] [Lua] [BPModLoaderMod] Loading mod: MapCollectablesMod
+[15:01:53.7643663] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after initial load: 2 update(s).
+[15:01:53.8906734] [Lua] [BPModLoaderMod] Executing 'PostBeginPlay' for mod 'ModActor_C /Game/Pal/Maps/Login/PL_Login.PL_Login:PersistentLevel.ModActor_C_2147481795'
+[15:01:53.8907453] [Lua] [BPModLoaderMod] Actor: ModActor_C /Game/Pal/Maps/Login/PL_Login.PL_Login:PersistentLevel.ModActor_C_2147481795
+[15:01:54.6777209] [FCallbackGarbageCollector] Freed invalid callbacks!
+[15:01:55.1781487] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after PalGameSetting creation: 2 update(s).
+[15:01:55.2544883] [Lua] [ExpandedWorldOptions] PalOptionSubsystem detected, configuring world options...
+[15:01:55.2545535] [Lua] [ExpandedWorldOptions] Applying world settings...
+[15:01:55.2545948] [Lua] [ExpandedWorldOptions] Global range: Min=0, Max=100
+[15:01:55.2546306] [Lua] [ExpandedWorldOptions] Applying category:		PlayerSurvival
+[15:01:55.2546747] [Lua] [ExpandedWorldOptions] PlayerStomachDecreaceRate -> Min=0, Max=100.0
+[15:01:55.2546988] [Lua] [ExpandedWorldOptions] PlayerStaminaDecreaceRate -> Min=0, Max=100.0
+[15:01:55.2547215] [Lua] [ExpandedWorldOptions] PlayerAutoHPRegeneRate -> Min=0, Max=100.0
+[15:01:55.2547441] [Lua] [ExpandedWorldOptions] PlayerAutoHpRegeneRateInSleep -> Min=0, Max=100.0
+[15:01:55.2547667] [Lua] [ExpandedWorldOptions] ItemWeightRate -> Min=0, Max=100.0
+[15:01:55.2547846] [Lua] [ExpandedWorldOptions] Applying category:		Experience
+[15:01:55.2548069] [Lua] [ExpandedWorldOptions] ExpRate -> Min=0, Max=100.0
+[15:01:55.2548247] [Lua] [ExpandedWorldOptions] Applying category:		PlayerCombat
+[15:01:55.2548471] [Lua] [ExpandedWorldOptions] PlayerDamageRateAttack -> Min=0, Max=100.0
+[15:01:55.2548694] [Lua] [ExpandedWorldOptions] PlayerDamageRateDefense -> Min=0, Max=100.0
+[15:01:55.2548869] [Lua] [ExpandedWorldOptions] Applying category:		EnemyDrops
+[15:01:55.2549090] [Lua] [ExpandedWorldOptions] EnemyDropItemRate -> Min=0, Max=100.0
+[15:01:55.2549265] [Lua] [ExpandedWorldOptions] Applying category:		PalSurvival
+[15:01:55.2549488] [Lua] [ExpandedWorldOptions] PalStomachDecreaceRate -> Min=0, Max=100.0
+[15:01:55.2549713] [Lua] [ExpandedWorldOptions] PalStaminaDecreaceRate -> Min=0, Max=100.0
+[15:01:55.2549937] [Lua] [ExpandedWorldOptions] PalAutoHPRegeneRate -> Min=0, Max=100.0
+[15:01:55.2550161] [Lua] [ExpandedWorldOptions] PalAutoHpRegeneRateInSleep -> Min=0, Max=100.0
+[15:01:55.2550335] [Lua] [ExpandedWorldOptions] Applying category:		CaptureAndSpawn
+[15:01:55.2550561] [Lua] [ExpandedWorldOptions] PalCaptureRate -> Min=0, Max=100.0
+[15:01:55.2550783] [Lua] [ExpandedWorldOptions] PalSpawnNumRate -> Min=0, Max=100.0
+[15:01:55.2550958] [Lua] [ExpandedWorldOptions] Applying category:		Work
+[15:01:55.2551180] [Lua] [ExpandedWorldOptions] WorkSpeedRate -> Min=0, Max=100.0
+[15:01:55.2551354] [Lua] [ExpandedWorldOptions] Applying category:		Time
+[15:01:55.2551573] [Lua] [ExpandedWorldOptions] DayTimeSpeedRate -> Min=0, Max=100.0
+[15:01:55.2551798] [Lua] [ExpandedWorldOptions] NightTimeSpeedRate -> Min=0, Max=100.0
+[15:01:55.2551974] [Lua] [ExpandedWorldOptions] Applying category:		Eggs
+[15:01:55.2552231] [Lua] [ExpandedWorldOptions] PalEggDefaultHatchingTime -> Min=0, Max=100
+[15:01:55.2552424] [Lua] [ExpandedWorldOptions] Applying category:		Equipment
+[15:01:55.2552651] [Lua] [ExpandedWorldOptions] EquipmentDurabilityDamageRate -> Min=0, Max=100.0
+[15:01:55.2552874] [Lua] [ExpandedWorldOptions] ItemCorruptionMultiplier -> Min=0, Max=100.0
+[15:01:55.2553048] [Lua] [ExpandedWorldOptions] Applying category:		Base
+[15:01:55.2553272] [Lua] [ExpandedWorldOptions] BaseCampWorkerMaxNum -> Min=0, Max=100
+[15:01:55.2553495] [Lua] [ExpandedWorldOptions] BaseCampMaxNumInGuild -> Min=0, Max=100
+[15:01:55.2554730] [Lua] [ExpandedWorldOptions] ERROR reading field 'BaseCampMaxNum': ...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: [handle_unreal_property_value]: Was unable to retrieve property 'BaseCampMaxNum' mapped to 'ScriptStruct /Script/Pal.PalOptionWorldStaticSettings'
+stack traceback:
+	[C]: in metamethod 'index'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:114>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:168: in upvalue 'apply_category'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:204: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:178>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:215: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:211>
+[15:01:55.2555077] [Lua] [ExpandedWorldOptions] Applying category:		Building
+[15:01:55.2555311] [Lua] [ExpandedWorldOptions] BuildObjectDamageRate -> Min=0, Max=100.0
+[15:01:55.2555549] [Lua] [ExpandedWorldOptions] BuildObjectDeteriorationDamageRate -> Min=0, Max=100.0
+[15:01:55.2555771] [Lua] [ExpandedWorldOptions] BuildObjectHpRate -> Min=0, Max=100.0
+[15:01:55.2556743] [Lua] [ExpandedWorldOptions] ERROR reading field 'MaxBuildingLimitNum': ...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: [handle_unreal_property_value]: Was unable to retrieve property 'MaxBuildingLimitNum' mapped to 'ScriptStruct /Script/Pal.PalOptionWorldStaticSettings'
+stack traceback:
+	[C]: in metamethod 'index'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:114>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:168: in upvalue 'apply_category'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:204: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:178>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:215: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:211>
+[15:01:55.2557080] [Lua] [ExpandedWorldOptions] Applying category:		Guild
+[15:01:55.2557304] [Lua] [ExpandedWorldOptions] AutoResetGuildTimeNoOnlinePlayers -> Min=0, Max=100
+[15:01:55.2557547] [Lua] [ExpandedWorldOptions] GuildPlayerMaxNum -> Min=0, Max=100
+[15:01:55.2557771] [Lua] [ExpandedWorldOptions] GuildRejoinCooldownMinutes -> Min=0, Max=100
+[15:01:55.2564683] [Lua] [ExpandedWorldOptions] Applying category:		Ranching
+[15:01:55.2565093] [Lua] [ExpandedWorldOptions] MonsterFarmActionSpeedRate -> Min=0, Max=100.0
+[15:01:55.2565285] [Lua] [ExpandedWorldOptions] Applying category:		PalCombat
+[15:01:55.2565523] [Lua] [ExpandedWorldOptions] PalDamageRateAttack -> Min=0, Max=100.0
+[15:01:55.2565755] [Lua] [ExpandedWorldOptions] PalDamageRateDefense -> Min=0, Max=100.0
+[15:01:55.2565966] [Lua] [ExpandedWorldOptions] Applying category:		DropLimits
+[15:01:55.2566211] [Lua] [ExpandedWorldOptions] DropItemMaxNum -> Min=0, Max=10000
+[15:01:55.2566435] [Lua] [ExpandedWorldOptions] DropItemMaxNum_UNKO -> Min=0, Max=10000
+[15:01:55.2567588] [Lua] [ExpandedWorldOptions] ERROR reading field 'DropItemAliveMaxHours': ...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: [handle_unreal_property_value]: Was unable to retrieve property 'DropItemAliveMaxHours' mapped to 'ScriptStruct /Script/Pal.PalOptionWorldStaticSettings'
+stack traceback:
+	[C]: in metamethod 'index'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:114>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:168: in upvalue 'apply_category'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:204: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:178>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:215: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:211>
+[15:01:55.2567991] [Lua] [ExpandedWorldOptions] SupplyDropSpan -> Min=0, Max=100
+[15:01:55.2568170] [Lua] [ExpandedWorldOptions] Applying category:		Gathering
+[15:01:55.2568405] [Lua] [ExpandedWorldOptions] CollectionDropRate -> Min=0, Max=100.0
+[15:01:55.2568631] [Lua] [ExpandedWorldOptions] CollectionObjectHpRate -> Min=0, Max=100.0
+[15:01:55.2568864] [Lua] [ExpandedWorldOptions] CollectionObjectRespawnSpeedRate -> Min=0, Max=100.0
+[15:01:55.2569038] [Lua] [ExpandedWorldOptions] Done applying world settings.
+[15:01:55.2724693] [Lua] [BPModLoaderMod] Loading mod: MapCollectablesMod
+[15:01:55.4551362] [Lua] [BPModLoaderMod] Executing 'PostBeginPlay' for mod 'ModActor_C /Game/Pal/Maps/Title/PL_Title.PL_Title:PersistentLevel.ModActor_C_2147481608'
+[15:01:55.4552193] [Lua] [BPModLoaderMod] Actor: ModActor_C /Game/Pal/Maps/Title/PL_Title.PL_Title:PersistentLevel.ModActor_C_2147481608
+[15:01:58.7698361] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after initial load: 2 update(s).
+[15:02:00.1802156] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after PalGameSetting creation: 2 update(s).
+[15:02:08.7664740] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after initial load: 2 update(s).
+[15:02:10.1837318] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after PalGameSetting creation: 2 update(s).
+[15:02:18.6733855] [Lua] [ExpandedWorldOptions] PalOptionSubsystem detected, configuring world options...
+[15:02:18.6734260] [Lua] [ExpandedWorldOptions] Applying world settings...
+[15:02:18.6734569] [Lua] [ExpandedWorldOptions] Global range: Min=0, Max=100
+[15:02:18.6734840] [Lua] [ExpandedWorldOptions] Applying category:		PlayerSurvival
+[15:02:18.6735279] [Lua] [ExpandedWorldOptions] PlayerStomachDecreaceRate -> Min=0, Max=100.0
+[15:02:18.6735695] [Lua] [ExpandedWorldOptions] PlayerStaminaDecreaceRate -> Min=0, Max=100.0
+[15:02:18.6735983] [Lua] [ExpandedWorldOptions] PlayerAutoHPRegeneRate -> Min=0, Max=100.0
+[15:02:18.6736209] [Lua] [ExpandedWorldOptions] PlayerAutoHpRegeneRateInSleep -> Min=0, Max=100.0
+[15:02:18.6736556] [Lua] [ExpandedWorldOptions] ItemWeightRate -> Min=0, Max=100.0
+[15:02:18.6736791] [Lua] [ExpandedWorldOptions] Applying category:		Experience
+[15:02:18.6737100] [Lua] [ExpandedWorldOptions] ExpRate -> Min=0, Max=100.0
+[15:02:18.6737285] [Lua] [ExpandedWorldOptions] Applying category:		PlayerCombat
+[15:02:18.6737544] [Lua] [ExpandedWorldOptions] PlayerDamageRateAttack -> Min=0, Max=100.0
+[15:02:18.6737788] [Lua] [ExpandedWorldOptions] PlayerDamageRateDefense -> Min=0, Max=100.0
+[15:02:18.6737980] [Lua] [ExpandedWorldOptions] Applying category:		EnemyDrops
+[15:02:18.6738210] [Lua] [ExpandedWorldOptions] EnemyDropItemRate -> Min=0, Max=100.0
+[15:02:18.6738392] [Lua] [ExpandedWorldOptions] Applying category:		PalSurvival
+[15:02:18.6738666] [Lua] [ExpandedWorldOptions] PalStomachDecreaceRate -> Min=0, Max=100.0
+[15:02:18.6738984] [Lua] [ExpandedWorldOptions] PalStaminaDecreaceRate -> Min=0, Max=100.0
+[15:02:18.6739248] [Lua] [ExpandedWorldOptions] PalAutoHPRegeneRate -> Min=0, Max=100.0
+[15:02:18.6740272] [Lua] [ExpandedWorldOptions] PalAutoHpRegeneRateInSleep -> Min=0, Max=100.0
+[15:02:18.6740479] [Lua] [ExpandedWorldOptions] Applying category:		CaptureAndSpawn
+[15:02:18.6740729] [Lua] [ExpandedWorldOptions] PalCaptureRate -> Min=0, Max=100.0
+[15:02:18.6741006] [Lua] [ExpandedWorldOptions] PalSpawnNumRate -> Min=0, Max=100.0
+[15:02:18.6741193] [Lua] [ExpandedWorldOptions] Applying category:		Work
+[15:02:18.6741439] [Lua] [ExpandedWorldOptions] WorkSpeedRate -> Min=0, Max=100.0
+[15:02:18.6741637] [Lua] [ExpandedWorldOptions] Applying category:		Time
+[15:02:18.6741861] [Lua] [ExpandedWorldOptions] DayTimeSpeedRate -> Min=0, Max=100.0
+[15:02:18.6742080] [Lua] [ExpandedWorldOptions] NightTimeSpeedRate -> Min=0, Max=100.0
+[15:02:18.6742271] [Lua] [ExpandedWorldOptions] Applying category:		Eggs
+[15:02:18.6742521] [Lua] [ExpandedWorldOptions] PalEggDefaultHatchingTime -> Min=0, Max=100
+[15:02:18.6742740] [Lua] [ExpandedWorldOptions] Applying category:		Equipment
+[15:02:18.6742989] [Lua] [ExpandedWorldOptions] EquipmentDurabilityDamageRate -> Min=0, Max=100.0
+[15:02:18.6743301] [Lua] [ExpandedWorldOptions] ItemCorruptionMultiplier -> Min=0, Max=100.0
+[15:02:18.6743547] [Lua] [ExpandedWorldOptions] Applying category:		Base
+[15:02:18.6743864] [Lua] [ExpandedWorldOptions] BaseCampWorkerMaxNum -> Min=0, Max=100
+[15:02:18.6744192] [Lua] [ExpandedWorldOptions] BaseCampMaxNumInGuild -> Min=0, Max=100
+[15:02:18.6745546] [Lua] [ExpandedWorldOptions] ERROR reading field 'BaseCampMaxNum': ...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: [handle_unreal_property_value]: Was unable to retrieve property 'BaseCampMaxNum' mapped to 'ScriptStruct /Script/Pal.PalOptionWorldStaticSettings'
+stack traceback:
+	[C]: in metamethod 'index'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:114>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:168: in upvalue 'apply_category'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:204: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:178>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:215: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:211>
+[15:02:18.6745921] [Lua] [ExpandedWorldOptions] Applying category:		Building
+[15:02:18.6746255] [Lua] [ExpandedWorldOptions] BuildObjectDamageRate -> Min=0, Max=100.0
+[15:02:18.6746508] [Lua] [ExpandedWorldOptions] BuildObjectDeteriorationDamageRate -> Min=0, Max=100.0
+[15:02:18.6746728] [Lua] [ExpandedWorldOptions] BuildObjectHpRate -> Min=0, Max=100.0
+[15:02:18.6747866] [Lua] [ExpandedWorldOptions] ERROR reading field 'MaxBuildingLimitNum': ...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: [handle_unreal_property_value]: Was unable to retrieve property 'MaxBuildingLimitNum' mapped to 'ScriptStruct /Script/Pal.PalOptionWorldStaticSettings'
+stack traceback:
+	[C]: in metamethod 'index'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:114>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:168: in upvalue 'apply_category'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:204: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:178>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:215: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:211>
+[15:02:18.6748277] [Lua] [ExpandedWorldOptions] Applying category:		Guild
+[15:02:18.6748593] [Lua] [ExpandedWorldOptions] AutoResetGuildTimeNoOnlinePlayers -> Min=0, Max=100
+[15:02:18.6748916] [Lua] [ExpandedWorldOptions] GuildPlayerMaxNum -> Min=0, Max=100
+[15:02:18.6749249] [Lua] [ExpandedWorldOptions] GuildRejoinCooldownMinutes -> Min=0, Max=100
+[15:02:18.6749533] [Lua] [ExpandedWorldOptions] Applying category:		Ranching
+[15:02:18.6749882] [Lua] [ExpandedWorldOptions] MonsterFarmActionSpeedRate -> Min=0, Max=100.0
+[15:02:18.6750151] [Lua] [ExpandedWorldOptions] Applying category:		PalCombat
+[15:02:18.6750500] [Lua] [ExpandedWorldOptions] PalDamageRateAttack -> Min=0, Max=100.0
+[15:02:18.6750849] [Lua] [ExpandedWorldOptions] PalDamageRateDefense -> Min=0, Max=100.0
+[15:02:18.6751150] [Lua] [ExpandedWorldOptions] Applying category:		DropLimits
+[15:02:18.6751551] [Lua] [ExpandedWorldOptions] DropItemMaxNum -> Min=0, Max=10000
+[15:02:18.6751922] [Lua] [ExpandedWorldOptions] DropItemMaxNum_UNKO -> Min=0, Max=10000
+[15:02:18.6753179] [Lua] [ExpandedWorldOptions] ERROR reading field 'DropItemAliveMaxHours': ...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: [handle_unreal_property_value]: Was unable to retrieve property 'DropItemAliveMaxHours' mapped to 'ScriptStruct /Script/Pal.PalOptionWorldStaticSettings'
+stack traceback:
+	[C]: in metamethod 'index'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:115: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:114>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:168: in upvalue 'apply_category'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:204: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:178>
+	[C]: in function 'pcall'
+	...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:215: in function <...iveMods\UE4SS\Mods\ExpandedWorldOptions\Scripts\main.lua:211>
+[15:02:18.6753650] [Lua] [ExpandedWorldOptions] SupplyDropSpan -> Min=0, Max=100
+[15:02:18.6753872] [Lua] [ExpandedWorldOptions] Applying category:		Gathering
+[15:02:18.6754116] [Lua] [ExpandedWorldOptions] CollectionDropRate -> Min=0, Max=100.0
+[15:02:18.6754341] [Lua] [ExpandedWorldOptions] CollectionObjectHpRate -> Min=0, Max=100.0
+[15:02:18.6754600] [Lua] [ExpandedWorldOptions] CollectionObjectRespawnSpeedRate -> Min=0, Max=100.0
+[15:02:18.6754807] [Lua] [ExpandedWorldOptions] Done applying world settings.
+[15:02:19.5891873] [Lua] [PalStuckDiagnostic] event: new PalBaseCampModel appeared
+[15:02:19.5899253] [Lua] [PalStuckDiagnostic] event: new PalBaseCampModel appeared
+[15:02:19.6805394] [RegisterHook] Registered script hook (36, 36) for Function /Game/Pal/Blueprint/UI/BP_PalHUD_InGame.BP_PalHUD_InGame_C:ReceiveDrawHUD
+[15:02:20.6080135] [Lua] [BPModLoaderMod] Loading mod: MapCollectablesMod
+[15:02:20.6201201] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after base camp model creation: 2 update(s).
+[15:02:20.6310768] [Lua] [BPModLoaderMod] Executing 'PostBeginPlay' for mod 'ModActor_C /Game/Pal/Maps/MainWorld_5/PL_MainWorld5.PL_MainWorld5:PersistentLevel.ModActor_C_2147459062'
+[15:02:20.9550221] [Lua] [AutoExpedition] No expedition station model is loaded yet; waiting for the station/base to replicate.
+[15:02:20.9550529] [Lua] [AutoExpedition] Automated expedition loop started.
+[15:02:21.0377890] [Lua] [BPModLoaderMod] Actor: ModActor_C /Game/Pal/Maps/MainWorld_5/PL_MainWorld5.PL_MainWorld5:PersistentLevel.ModActor_C_2147459062
+[15:02:23.5610138] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after palbox creation: 6 update(s).
+[15:02:23.6065117] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after base camp point creation: 6 update(s).
+[15:02:24.4891086] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after player client restart: 6 update(s).
+[15:02:24.5289236] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after player possession: 6 update(s).
+[15:02:24.6325232] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after base camp model creation: 6 update(s).
+[15:02:27.5639429] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after palbox creation: 6 update(s).
+[15:02:27.6049996] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after base camp point creation: 6 update(s).
+[15:02:29.6343456] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after base camp model creation: 6 update(s).
+[15:02:30.9825887] [Lua] [AutoExpedition] Found 2 expedition UI models; waiting until one station menu remains open.
+[15:02:32.5675617] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after palbox creation: 6 update(s).
+[15:02:32.6148845] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after base camp point creation: 6 update(s).
+[15:02:39.6411883] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after base camp model creation: 6 update(s).
+[15:02:42.5755091] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after palbox creation: 6 update(s).
+[15:02:42.6283832] [Lua] [QualityOfLifeBaseRange] [BaseRange] Applied 3.00x after base camp point creation: 6 update(s).
+[15:02:44.7350992] [Lua] [ExpXP] state 1 -> 2 -- sweep in 1.5s
+[15:02:46.2609663] [Lua] [ExpXP] WARN: cannot write crews
+[15:02:46.2609964] [Lua] [ExpXP] snapshot IN-PROGRESS gid=328612B3-476A3547-FFFFFFFFF6F176A9-FFFFFFFFC1194A0A mission=DUNGEON_DESERT crew=100
+[15:02:50.9015408] [Lua] [PalStuckDiagnostic] ready (39 base workers tracked)
+[15:04:19.5683156] [Lua] [ExpXP] WARN: cannot write crews
+[15:04:19.5683462] [Lua] [ExpXP] snapshot IN-PROGRESS gid=328612B3-476A3547-FFFFFFFFF6F176A9-FFFFFFFFC1194A0A mission=DUNGEON_DESERT crew=100
+[15:04:39.7815141] [Lua] [ExpXP] state 2 -> 3 -- sweep in 1.5s
+[15:04:41.2651435] [Lua] [ExpXP] state 3 -> 1 -- sweep in 1.5s
+[15:04:41.3371363] [Lua] [ExpXP] palIID accessor = handle:GetIndividualId().InstanceId
+[15:04:41.3380564] [Lua] [ExpXP]   GRANT BOSS_SheepBall         Lv22->22  total 15436->17116 (+1680, d=-2)  L=true E=true
+[15:04:41.3381221] [Lua] [ExpXP]   GRANT BOSS_ChickenPal        Lv22->22  total 14960->16640 (+1680, d=-2)  L=true E=true
+[15:04:41.3381910] [Lua] [ExpXP]   GRANT BluePlatypus           Lv22->22  total 15171->16851 (+1680, d=-2)  L=true E=true
+[15:04:41.3382746] [Lua] [ExpXP]   GRANT CuteFox                Lv22->22  total 14826->16506 (+1680, d=-2)  L=true E=true
+[15:04:41.3384732] [Lua] [ExpXP]   GRANT BOSS_LeafMomonga       Lv23->23  total 18389->19709 (+1320, d=-3)  L=true E=true
+[15:04:41.3385845] [Lua] [ExpXP]   GRANT CloverFairy            Lv18->20  total 7544->10328 (+2784, d=+2)  L=true E=true
+[15:04:41.3387535] [Lua] [ExpXP]   GRANT BOSS_Monkey            Lv22->23  total 17116->18796 (+1680, d=-2)  L=true E=true
+[15:04:41.3388047] [Lua] [ExpXP]   GRANT Monkey_Fire            Lv22->22  total 15267->16947 (+1680, d=-2)  L=true E=true
+[15:04:41.3390304] [Lua] [ExpXP]   GRANT FlameBambi             Lv22->22  total 15136->16816 (+1680, d=-2)  L=true E=true
+[15:04:41.3391998] [Lua] [ExpXP]   GRANT Bastet                 Lv22->23  total 15991->17671 (+1680, d=-2)  L=true E=true
+[15:04:41.3394516] [Lua] [ExpXP]   GRANT NegativeOctopus        Lv22->22  total 15136->16816 (+1680, d=-2)  L=true E=true
+[15:04:41.3395276] [Lua] [ExpXP]   GRANT CuteMole               Lv22->22  total 14826->16506 (+1680, d=-2)  L=true E=true
+[15:04:41.3395972] [Lua] [ExpXP]   GRANT Deer_Ground            Lv24->24  total 24399->25359 (+960, d=-4)  L=true E=true
+[15:04:41.3396766] [Lua] [ExpXP]   GRANT BerryGoat              Lv23->23  total 17759->19079 (+1320, d=-3)  L=true E=true
+[15:04:41.3397751] [Lua] [ExpXP]   GRANT MopBaby                Lv22->22  total 15136->16816 (+1680, d=-2)  L=true E=true
+[15:04:41.3399871] [Lua] [ExpXP]   GRANT BOSS_MopKing           Lv22->22  total 15267->16947 (+1680, d=-2)  L=true E=true
+[15:04:41.3400406] [Lua] [ExpXP]   GRANT BOSS_WindChimes        Lv23->23  total 18139->19459 (+1320, d=-3)  L=true E=true
+[15:04:41.3400929] [Lua] [ExpXP]   GRANT SweetsSheep            Lv22->22  total 15136->16816 (+1680, d=-2)  L=true E=true
+[15:04:41.3401449] [Lua] [ExpXP]   GRANT ElecCat                Lv22->22  total 15436->17116 (+1680, d=-2)  L=true E=true
+[15:04:41.3413289] [Lua] [ExpXP]   GRANT BOSS_Eagle             Lv24->24  total 22658->23618 (+960, d=-4)  L=true E=true
+[15:04:41.3417580] [Lua] [ExpXP]   GRANT BOSS_NaughtyCat        Lv22->23  total 16709->18389 (+1680, d=-2)  L=true E=true
+[15:04:41.3421540] [Lua] [ExpXP]   GRANT GrassMinotaur          Lv25->25  total 29607->30207 (+600, d=-5)  L=true E=true
+[15:04:41.3426518] [Lua] [ExpXP]   GRANT StuffedShark           Lv22->22  total 14960->16640 (+1680, d=-2)  L=true E=true
+[15:04:41.3437051] [Lua] [ExpXP]   GRANT MimicDog               Lv23->23  total 17749->19069 (+1320, d=-3)  L=true E=true
+[15:04:41.3488140] [Lua] [ExpXP] pay gid=328612B3-476A3547-FFFFFFFFF6F176A9-FFFFFFFFC1194A0A mission=DUNGEON_DESERT anchor=20 (FALLBACK (unknown id)) want=100 paid=100 == ARMED ==
+[15:04:41.3489422] [Lua] [ExpXP] WARN: cannot write ledger
+[15:04:41.3489938] [Lua] [ExpXP] WARN: cannot write crews
+[15:09:02.4920630] [Lua] [ExpXP] state 1 -> 2 -- sweep in 1.5s
+[15:09:04.0366501] [Lua] [ExpXP] WARN: cannot write ledger
+[15:09:04.0380039] [Lua] [ExpXP] WARN: cannot write crews
+[15:09:04.0380484] [Lua] [ExpXP] snapshot IN-PROGRESS gid=328612B3-476A3547-FFFFFFFFF6F176A9-FFFFFFFFC1194A0A mission=DUNGEON_DESERT crew=100
+[15:10:19.6868313] [Lua] [ExpXP] WARN: cannot write crews
+[15:10:19.6870114] [Lua] [ExpXP] snapshot IN-PROGRESS gid=328612B3-476A3547-FFFFFFFFF6F176A9-FFFFFFFFC1194A0A mission=DUNGEON_DESERT crew=100
+[15:10:57.5393510] [Lua] [ExpXP] state 2 -> 3 -- sweep in 1.5s
+[15:10:59.1127991] [Lua] [ExpXP]   GRANT BOSS_SheepBall         Lv22->23  total 17116->18796 (+1680, d=-2)  L=true E=true
+[15:10:59.1128694] [Lua] [ExpXP]   GRANT BOSS_ChickenPal        Lv22->23  total 16640->18320 (+1680, d=-2)  L=true E=true
+[15:10:59.1129382] [Lua] [ExpXP]   GRANT BluePlatypus           Lv22->23  total 16851->18531 (+1680, d=-2)  L=true E=true
+[15:10:59.1130170] [Lua] [ExpXP]   GRANT CuteFox                Lv22->23  total 16506->18186 (+1680, d=-2)  L=true E=true
+[15:10:59.1132251] [Lua] [ExpXP]   GRANT BOSS_LeafMomonga       Lv23->23  total 19709->21029 (+1320, d=-3)  L=true E=true
+[15:10:59.1133364] [Lua] [ExpXP]   GRANT CloverFairy            Lv20->21  total 10328->12728 (+2400, d=+0)  L=true E=true
+[15:10:59.1135019] [Lua] [ExpXP]   GRANT BOSS_Monkey            Lv23->23  total 18796->20116 (+1320, d=-3)  L=true E=true
+[15:10:59.1135645] [Lua] [ExpXP]   GRANT Monkey_Fire            Lv22->23  total 16947->18627 (+1680, d=-2)  L=true E=true
+[15:10:59.1136448] [Lua] [ExpXP]   GRANT FlameBambi             Lv22->23  total 16816->18496 (+1680, d=-2)  L=true E=true
+[15:10:59.1137103] [Lua] [ExpXP]   GRANT Bastet                 Lv23->23  total 17671->18991 (+1320, d=-3)  L=true E=true
+[15:10:59.1139269] [Lua] [ExpXP]   GRANT Boar                   Lv5->16  total 138->4458 (+4320, d=+15)  L=true E=true
+[15:10:59.1142781] [Lua] [ExpXP]   GRANT NegativeOctopus        Lv22->23  total 16816->18496 (+1680, d=-2)  L=true E=true
+[15:10:59.1143485] [Lua] [ExpXP]   GRANT CuteMole               Lv22->23  total 16506->18186 (+1680, d=-2)  L=true E=true
+[15:10:59.1144155] [Lua] [ExpXP]   GRANT Deer_Ground            Lv24->25  total 25359->26319 (+960, d=-4)  L=true E=true
+[15:10:59.1144942] [Lua] [ExpXP]   GRANT BerryGoat              Lv23->23  total 19079->20399 (+1320, d=-3)  L=true E=true
+[15:10:59.1145830] [Lua] [ExpXP]   GRANT MopBaby                Lv22->23  total 16816->18496 (+1680, d=-2)  L=true E=true
+[15:10:59.1146357] [Lua] [ExpXP]   GRANT BOSS_MopKing           Lv22->23  total 16947->18627 (+1680, d=-2)  L=true E=true
+[15:10:59.1146865] [Lua] [ExpXP]   GRANT BOSS_WindChimes        Lv23->23  total 19459->20779 (+1320, d=-3)  L=true E=true
+[15:10:59.1147411] [Lua] [ExpXP]   GRANT SweetsSheep            Lv22->23  total 16816->18496 (+1680, d=-2)  L=true E=true
+[15:10:59.1147933] [Lua] [ExpXP]   GRANT ElecCat                Lv22->23  total 17116->18796 (+1680, d=-2)  L=true E=true
+[15:10:59.1149531] [Lua] [ExpXP]   GRANT BOSS_Eagle             Lv24->24  total 23618->24578 (+960, d=-4)  L=true E=true
+[15:10:59.1153701] [Lua] [ExpXP]   GRANT BOSS_NaughtyCat        Lv23->23  total 18389->19709 (+1320, d=-3)  L=true E=true
+[15:10:59.1160113] [Lua] [ExpXP]   GRANT GrassMinotaur          Lv25->25  total 30207->30807 (+600, d=-5)  L=true E=true
+[15:10:59.1167278] [Lua] [ExpXP]   GRANT StuffedShark           Lv22->23  total 16640->18320 (+1680, d=-2)  L=true E=true
+[15:10:59.1187704] [Lua] [ExpXP]   GRANT MimicDog               Lv23->23  total 19069->20389 (+1320, d=-3)  L=true E=true
+[15:10:59.1239706] [Lua] [ExpXP] pay gid=328612B3-476A3547-FFFFFFFFF6F176A9-FFFFFFFFC1194A0A mission=DUNGEON_DESERT anchor=20 (FALLBACK (unknown id)) want=100 paid=100 == ARMED ==
+[15:10:59.1241061] [Lua] [ExpXP] WARN: cannot write ledger
+[15:10:59.1241596] [Lua] [ExpXP] WARN: cannot write crews
+[15:11:04.8048723] [Lua] [AutoExpedition] Expedition loot is still present after 3 collection requests; leaving the station in Reward state.
+[15:11:22.1573343] [Lua] [ExpXP] state 3 -> 1 -- sweep in 1.5s
+[15:16:01.4929191] [Lua] [ExpXP] state 1 -> 2 -- sweep in 1.5s
+[15:16:03.0317340] [Lua] [ExpXP] WARN: cannot write ledger
+[15:16:03.0335795] [Lua] [ExpXP] WARN: cannot write crews
+[15:16:03.0336332] [Lua] [ExpXP] snapshot IN-PROGRESS gid=328612B3-476A3547-FFFFFFFFF6F176A9-FFFFFFFFC1194A0A mission=DUNGEON_DESERT crew=99
+[15:16:19.8044887] [Lua] [ExpXP] WARN: cannot write crews
+[15:16:19.8045349] [Lua] [ExpXP] snapshot IN-PROGRESS gid=328612B3-476A3547-FFFFFFFFF6F176A9-FFFFFFFFC1194A0A mission=DUNGEON_DESERT crew=99
+[15:17:56.5433473] [Lua] [ExpXP] state 2 -> 3 -- sweep in 1.5s
+[15:17:58.1266466] [Lua] [ExpXP]   GRANT BOSS_SheepBall         Lv23->23  total 18796->20116 (+1320, d=-3)  L=true E=true
+[15:17:58.1267599] [Lua] [ExpXP]   GRANT BOSS_ChickenPal        Lv23->23  total 18320->19640 (+1320, d=-3)  L=true E=true
+[15:17:58.1268636] [Lua] [ExpXP]   GRANT BluePlatypus           Lv23->23  total 18531->19851 (+1320, d=-3)  L=true E=true
+[15:17:58.1269810] [Lua] [ExpXP]   GRANT CuteFox                Lv23->23  total 18186->19506 (+1320, d=-3)  L=true E=true
+[15:17:58.1272885] [Lua] [ExpXP]   GRANT BOSS_LeafMomonga       Lv23->24  total 21029->22349 (+1320, d=-3)  L=true E=true
+[15:17:58.1274503] [Lua] [ExpXP]   GRANT CloverFairy            Lv21->22  total 12728->14768 (+2040, d=-1)  L=true E=true
+[15:17:58.1276484] [Lua] [ExpXP]   GRANT BOSS_Monkey            Lv23->24  total 20116->21436 (+1320, d=-3)  L=true E=true
+[15:17:58.1277014] [Lua] [ExpXP]   GRANT Monkey_Fire            Lv23->23  total 18627->19947 (+1320, d=-3)  L=true E=true
+[15:17:58.1277810] [Lua] [ExpXP]   GRANT FlameBambi             Lv23->23  total 18496->19816 (+1320, d=-3)  L=true E=true
+[15:17:58.1278572] [Lua] [ExpXP]   GRANT Bastet                 Lv23->23  total 18991->20311 (+1320, d=-3)  L=true E=true
+[15:17:58.1279381] [Lua] [ExpXP]   GRANT Boar                   Lv16->18  total 4458->7626 (+3168, d=+4)  L=true E=true
+[15:17:58.1280537] [Lua] [ExpXP]   GRANT NegativeOctopus        Lv23->23  total 18496->19816 (+1320, d=-3)  L=true E=true
+[15:17:58.1281313] [Lua] [ExpXP]   GRANT CuteMole               Lv23->23  total 18186->19506 (+1320, d=-3)  L=true E=true
+[15:17:58.1281984] [Lua] [ExpXP]   GRANT Deer_Ground            Lv25->25  total 26319->26919 (+600, d=-5)  L=true E=true
+[15:17:58.1282901] [Lua] [ExpXP]   GRANT BerryGoat              Lv23->24  total 20399->21719 (+1320, d=-3)  L=true E=true
+[15:17:58.1295274] [Lua] [ExpXP]   GRANT MopBaby                Lv23->23  total 18496->19816 (+1320, d=-3)  L=true E=true
+[15:17:58.1295972] [Lua] [ExpXP]   GRANT BOSS_MopKing           Lv23->23  total 18627->19947 (+1320, d=-3)  L=true E=true
+[15:17:58.1296538] [Lua] [ExpXP]   GRANT BOSS_WindChimes        Lv23->24  total 20779->22099 (+1320, d=-3)  L=true E=true
+[15:17:58.1297069] [Lua] [ExpXP]   GRANT SweetsSheep            Lv23->23  total 18496->19816 (+1320, d=-3)  L=true E=true
+[15:17:58.1297592] [Lua] [ExpXP]   GRANT ElecCat                Lv23->23  total 18796->20116 (+1320, d=-3)  L=true E=true
+[15:17:58.1299266] [Lua] [ExpXP]   GRANT BOSS_Eagle             Lv24->24  total 24578->25538 (+960, d=-4)  L=true E=true
+[15:17:58.1303404] [Lua] [ExpXP]   GRANT BOSS_NaughtyCat        Lv23->23  total 19709->21029 (+1320, d=-3)  L=true E=true
+[15:17:58.1307126] [Lua] [ExpXP]   GRANT GrassMinotaur          Lv25->25  total 30807->31407 (+600, d=-5)  L=true E=true
+[15:17:58.1312020] [Lua] [ExpXP]   GRANT StuffedShark           Lv23->23  total 18320->19640 (+1320, d=-3)  L=true E=true
+[15:17:58.1321799] [Lua] [ExpXP]   GRANT MimicDog               Lv23->24  total 20389->21709 (+1320, d=-3)  L=true E=true
+[15:17:58.1384851] [Lua] [ExpXP] pay gid=328612B3-476A3547-FFFFFFFFF6F176A9-FFFFFFFFC1194A0A mission=DUNGEON_DESERT anchor=20 (FALLBACK (unknown id)) want=99 paid=99 == ARMED ==
+[15:17:58.1385950] [Lua] [ExpXP] WARN: cannot write ledger
+[15:17:58.1386456] [Lua] [ExpXP] WARN: cannot write crews
+[15:17:58.8073772] [Lua] [ExpXP] state 3 -> 1 -- sweep in 1.5s
