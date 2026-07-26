@@ -35,6 +35,7 @@ local Config = {
     CheckInterval = 10000,
     StartDelay = 1500,
     ActionDelay = 750,
+    AutoAssignDelay = 1500,
 
     -- A failed request is retried a few times, then the station is left alone
     -- until the next cooldown so the mod cannot spam the server.

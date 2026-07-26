@@ -749,7 +749,7 @@ workflowStep = function(model, key, workflow)
                 clearWorkflow(key, true)
                 return
             end
-            schedule(key, model)
+            schedule(key, model, Config.AutoAssignDelay)
             return
         end
 
@@ -762,7 +762,7 @@ workflowStep = function(model, key, workflow)
         end
         setPhase(workflow, "auto", "auto-assign request sent")
         workflow.attempts = 0
-        schedule(key, model)
+        schedule(key, model, Config.AutoAssignDelay)
         return
     end
 
@@ -786,7 +786,7 @@ workflowStep = function(model, key, workflow)
                 invoke("retry auto-assign expedition party", function()
                     return workflow.ui:RequestSelectAuto()
                 end)
-                schedule(key, model)
+                schedule(key, model, Config.AutoAssignDelay)
                 return
             end
 
@@ -808,7 +808,7 @@ workflowStep = function(model, key, workflow)
         invoke("retry auto-assign expedition party", function()
             return workflow.ui:RequestSelectAuto()
         end)
-        schedule(key, model)
+        schedule(key, model, Config.AutoAssignDelay)
         return
     end
 
@@ -889,7 +889,8 @@ workflowStep = function(model, key, workflow)
             return
         end
 
-        local requestId = NewGuid()
+        local requestId = value(function() return model:GetInstanceId() end)
+            or value(function() return model.InstanceId end)
         if debugEnabled() then
             dlog(
                 "Storage move request: station=%s targetContainer=%s slotMoves=%d requestId=%s",
