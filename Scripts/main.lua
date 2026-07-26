@@ -389,6 +389,26 @@ local function beginBulkStorage(model, key, workflow)
     schedule(key, model, Config.StorageReadyDelay)
 end
 
+local function collectExpeditionLoot(inventory, containerId)
+    local methodNames = {
+        "RequestMoveItemToInventoryFromTargetContainer_ToServer",
+        "RequestMoveItemFromTargetContainerToInventory_ToServer",
+        "RequestFillSlotToInventoryFromTargetContainer_ToServer",
+    }
+
+    for _, methodName in ipairs(methodNames) do
+        local method = value(function() return inventory[methodName] end)
+        if type(method) == "function" then
+            local ok = invoke("collect expedition loot via " .. methodName, function()
+                return method(inventory, containerId)
+            end)
+            if ok then return true end
+        end
+    end
+
+    return false
+end
+
 workflowStep = function(model, key, workflow)
     local currentState = stateOf(model)
     if currentState == nil then return end
@@ -506,9 +526,9 @@ workflowStep = function(model, key, workflow)
             return
         end
 
-        invoke("collect expedition loot", function()
-            return inventory:RequestFillSlotToInventoryFromTargetContainer_ToServer(containerId)
-        end)
+        if not collectExpeditionLoot(inventory, containerId) then
+            logOnce(key, "No supported loot transfer RPC was available for the expedition reward container.")
+        end
         workflow.phase = "collect"
         workflow.attempts = (workflow.attempts or 0) + 1
         if workflow.attempts > Config.MaxCollectionRetries then
