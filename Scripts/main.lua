@@ -163,7 +163,7 @@ local function guidString(guid)
         if a and b and c and d then
             return string.format("%08X-%08X-%08X-%08X", a, b, c, d)
         end
-        return tostring(guid)
+        return nil
     end)
     return formatted and tostring(formatted) or nil
 end
