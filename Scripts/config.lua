@@ -55,9 +55,9 @@ local Config = {
     --   DebugVerbose: includes per-phase scheduling and retry details.
     --   DebugSlotDetails: includes per-slot move details during reward routing.
     --   DebugLoopHeartbeat: logs each polling loop, even without state changes.
-    DebugEnabled = false,
-    DebugWarmupMs = 30000,
-    DebugVerbose = false,
+    DebugEnabled = true,
+    DebugWarmupMs = 60000,
+    DebugVerbose = true,
     DebugSlotDetails = false,
     DebugLoopHeartbeat = false,
 }

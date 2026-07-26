@@ -692,6 +692,39 @@ workflowStep = function(model, key, workflow)
             return
         end
 
+        local ok = invoke("start expedition UI replication", function()
+            return workflow.ui:RequestStartReplication()
+        end)
+        if not ok then
+            clearWorkflow(key, true)
+            return
+        end
+
+        setPhase(workflow, "ui_ready", "expedition UI replication requested")
+        workflow.attempts = 0
+        schedule(key, model)
+        return
+    end
+
+    if workflow.phase == "ui_ready" then
+        if not valid(workflow.ui) then
+            logOnce(key, "Expedition UI model closed before it could finish replicating; waiting for the station menu again.")
+            clearWorkflow(key, true)
+            return
+        end
+
+        local hasAssignInfo = value(function() return workflow.ui:IsExistAssignInfo() end)
+        if hasAssignInfo ~= true then
+            workflow.attempts = (workflow.attempts or 0) + 1
+            if workflow.attempts > Config.MaxRequestRetries then
+                log("Expedition UI did not report assigned info after %d attempts; dispatch was not started.", Config.MaxRequestRetries)
+                clearWorkflow(key, true)
+                return
+            end
+            schedule(key, model)
+            return
+        end
+
         local ok = invoke("auto-assign expedition party", function()
             return workflow.ui:RequestSelectAuto()
         end)
