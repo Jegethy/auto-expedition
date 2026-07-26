@@ -1,5 +1,5 @@
 === Lua Error Report ===
-Time: 2026-07-26 22:33:56
+Time: 2026-07-26 23:00:00
 Mod: AutoExpedition (async)
 
 Error:
@@ -12,12 +12,14 @@ stack traceback:
 	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:118: in function <...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:118>
 	[C]: in function 'pcall'
 	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:118: in upvalue 'unwrap'
-	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:163: in upvalue 'guidString'
-	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:189: in upvalue 'modelKey'
-	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:1067: in function 'ProcessExpeditionLoop'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:182: in upvalue 'guidString'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:208: in upvalue 'modelKey'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:492: in upvalue 'getRewardContainer'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:1003: in upvalue 'workflowStep'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:696: in function <...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:692>
 
 === Lua Error Report ===
-Time: 2026-07-26 22:35:27
+Time: 2026-07-26 23:00:28
 Mod: AutoExpedition (async)
 
 Error:
@@ -30,8 +32,27 @@ stack traceback:
 	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:118: in function <...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:118>
 	[C]: in function 'pcall'
 	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:118: in upvalue 'unwrap'
-	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:163: in upvalue 'guidString'
-	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:189: in upvalue 'modelKey'
-	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:616: in upvalue 'getUiModelFor'
-	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:984: in upvalue 'startDispatch'
-	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:1088: in function 'ProcessExpeditionLoop'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:182: in upvalue 'guidString'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:208: in upvalue 'modelKey'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:1114: in function 'ProcessExpeditionLoop'
+
+=== Lua Error Report ===
+Time: 2026-07-26 23:00:57
+Mod: AutoExpedition (async)
+
+Error:
+[handle_unreal_property_value]: Was unable to retrieve property 'Get' mapped to 'ScriptStruct /Script/CoreUObject.Guid'
+
+Traceback:
+[handle_unreal_property_value]: Was unable to retrieve property 'Get' mapped to 'ScriptStruct /Script/CoreUObject.Guid'
+stack traceback:
+	[C]: in metamethod 'index'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:118: in function <...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:118>
+	[C]: in function 'pcall'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:118: in upvalue 'unwrap'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:182: in upvalue 'guidString'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:466: in upvalue 'sameGuid'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:576: in upvalue 'getStorageTargetContainerId'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:720: in upvalue 'beginBulkStorage'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:933: in upvalue 'workflowStep'
+	...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:696: in function <...ds\NativeMods\UE4SS\Mods\AutoExpedition\Scripts\main.lua:692>
