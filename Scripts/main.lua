@@ -52,9 +52,40 @@ end
 
 local function dlog(message, ...)
     if not debugEnabled() then return end
-    if select("#", ...) > 0 then
-        message = string.format(message, ...)
+
+    local function safeArg(any)
+        local kind = type(any)
+        if kind == "nil" then return "nil" end
+        if kind == "boolean" or kind == "number" or kind == "string" then
+            return tostring(any)
+        end
+        if kind == "table" then
+            local count = 0
+            for _ in pairs(any) do
+                count = count + 1
+                if count > 20 then break end
+            end
+            return string.format("table(size~%d)", count)
+        end
+        return string.format("<%s>", kind)
     end
+
+    if select("#", ...) > 0 then
+        local packed = {}
+        for i = 1, select("#", ...) do
+            packed[i] = safeArg(select(i, ...))
+        end
+
+        local ok, formatted = pcall(function()
+            return string.format(message, table.unpack(packed))
+        end)
+        if ok then
+            message = formatted
+        else
+            message = tostring(message) .. " [debug-format-failed]"
+        end
+    end
+
     print("[AutoExpedition][Debug] " .. tostring(message))
 end
 
@@ -72,7 +103,7 @@ local function shortValue(any)
         end
         return string.format("table(size~%d)", count)
     end
-    return tostring(any)
+    return string.format("<%s>", kind)
 end
 
 local function unwrap(value)
@@ -96,7 +127,8 @@ local function invoke(label, callback)
 
     local ok, result = pcall(callback)
     if not ok then
-        log("%s failed: %s", label, tostring(result))
+        local errorText = shortValue(result)
+        log("%s failed: %s", label, errorText)
         dlog("RPC failure: %s (elapsed=%.4fs)", label, os.clock() - started)
         return false, nil
     end
